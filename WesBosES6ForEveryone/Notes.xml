@@ -1,0 +1,17 @@
+1. ES6 switch values => syntax: [a,b] = [b,a];
+
+2. Default Function Argument
+        function calculateBill(total, tax, tip){
+            return total + (total * tax) + (total * tip);
+        }
+    Old:
+        if(tax === undefined){
+            tax = 0.13;
+        }
+        if(tip === undefined){
+            tip = 0.15;
+        }
+    ES6:
+        Add things in declaration 
+        such that:
+        function calculateBill(total, tax = 0.13,tip = 0.15){...};
