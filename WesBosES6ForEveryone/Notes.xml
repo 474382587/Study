@@ -14,4 +14,53 @@
     ES6:
         Add things in declaration 
         such that:
-        function calculateBill(total, tax = 0.13,tip = 0.15){...};
+        function calculateBill(total, tax = 0.13,tip = 0.15){
+            ...
+        };
+        calculateBill(100, undefined, 0.1);
+
+3. When not to use an arrow function
+    1. When you really need "this"
+    2. When you need a method to bind an object
+    3. When you need to add a prototype method
+    4. When you need arguments object
+
+4. template strings 
+    1. Multi-line strings
+    2. Expression interpolation
+    3. Nesting templates
+    syntax: 
+        1)  "Bob loves playing " + sport  " with June." 
+            ==> 
+            `Bob loves playing ${sport} with June.`
+
+        2)  "Hello there\
+            I am here\
+            How are you"
+            =>
+            `Hello there
+            I am here
+            How are you`
+    Examples:
+        1. const name = `
+        <div class="name">
+            <h2>
+                John
+            </h2>
+        </div>
+        `;
+        2. 
+        const classes = `header ${ isLargeScreen() ? '' :
+        `icon-${(item.isCollapsed ? 'expander' : 'collapser')}` }`; //note the parens
+        3. 
+            const dogs = [
+            {name: "Sun", age:8},
+            {name: "John", age:2},
+            {name:"Bob", age: 3 }
+            ];        
+            const markup = `<ul class = "dogs">
+                ${dogs.map(dogs => `<li>${dogs.name} is ${dogs.age}s old.</li>`)}
+        </ul>`;
+        4.  var markup4 = `${song.name} is a song 
+            written by ${song.artist} ${song.feature ? `${song.feature}`:``}`
+
