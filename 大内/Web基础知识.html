@@ -17,21 +17,106 @@
     </head>
     <body>
         <h1 align = "center">HTML5 <span style="color:red;">&lt;Day01&gt;</span></h1>
+        
+        <!--list-->
+        <ol>
+            <li>
+                HTML 文档片段
+                <ul>
+                    <li><a href="#wenti">问题</a></li>
+                    <li><a href="#fangan">方案</a></li>
+                    <li><a href="#shixian">实现</a></li>
+                    <li><a href="#kuozhan">扩展</a></li>                    
+                </ul>
+            </li>
+            <li>
+                我的第一个 HTML 文档
+                <ul>
+                    <li>问题</li>
+                    <li>方案</li>
+                    <li>实现</li>
+                </ul>
+            </li>
+        </ol>
+
+        
         <hr>
-        <h2><b>1 HTML 文档片段</b></h2>
-        <h3><b>1.1 问题</b></h3>
+        <h2>1 HTML 文档片段 </h2>
+        <h3 id="wenti"> 1.1 问题 </h3>
         <p>创建如图-1所示的 HTML 页面：</p>
-        <h3><b>1.2 方案</b></h3>
+        <div align="center">
+            <img src="screen.png" alt="图-1">
+            <h4>图-1</h4>
+        </div>
+        <!-- <a href="#1-4">跳转至1.3</a> -->
+
+        <h3 id="fangan"> 1.2 方案 </h3>
         <p>使用 HTML 标记来完成该页面效果</p>
-        <h3><b>1.3 实现</b></h3>
+        <h3 id="shixian">
+             1.3 实现 
+        </h3>
         <p>建立一个文本文件，并修改文件名称为 first.html ，然后使用文本编辑器打开该文件，并为该文件添加代码，已创建标准格式的 HTML 文档。</p>
+        <div align="center">
+            <a href="https://drivedigital.ca/#project-grid"><img src="screen.png" alt="图-2"></a>
+            <h4>图-2</h4>
+        </div>
         <p>然后，在 body 元素中添加代码，以创建居中显示的段落文本。代码如下所示：</p>
         <pre>
             &lt;p align = "center" title = "段落"&gt;
                 居中显示的段落
             &lt;/p&gt;
         </pre>
-    </body>
+
+        <h3 id="kuozhan">1.4 扩展</h3>
+
+        <p>创建如下所示的表格：</p>
+        <div align = "center">
+            <caption>表-1</caption>  
+            <table border = "1" width=600 cellpadding = 5px;>
+                <tr>
+                    <td>全月应纳税所得额</td>
+                    <td>税率</td>
+                    <td>速算扣除数</td>
+                </tr>
+                <tr>
+                    <td>全月应纳税所得额&lt;1500</td>
+                    <td>3%</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1500=&lt;全月应纳税所得额&lt;4500</td>
+                    <td>10%</td>
+                    <td>105</td>
+                </tr>
+                <tr>
+                    <td colspan="3">...</td>
+                </tr>
+                <tr>
+                    <td colspan="3">计算公式为： 应纳税额=全月纳税所得额*适用税率-速算扣除数</td>
+                </tr>
+            </table> 
+        </div>
+        
+
+        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum sapiente cupiditate accusamus quas modi commodi
+            nostrum in quia id, voluptates molestias, animi ipsum beatae maxime culpa omnis natus laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum sapiente cupiditate accusamus quas modi commodi
+            nostrum in quia id, voluptates molestias, animi ipsum beatae maxime culpa omnis natus laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum sapiente cupiditate accusamus quas modi commodi
+            nostrum in quia id, voluptates molestias, animi ipsum beatae maxime culpa omnis natus laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum sapiente cupiditate accusamus quas modi commodi
+            nostrum in quia id, voluptates molestias, animi ipsum beatae maxime culpa omnis natus laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum sapiente cupiditate accusamus quas modi commodi
+            nostrum in quia id, voluptates molestias, animi ipsum beatae maxime culpa omnis natus laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum sapiente cupiditate accusamus quas modi commodi
+            nostrum in quia id, voluptates molestias, animi ipsum beatae maxime culpa omnis natus laudantium.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum sapiente cupiditate accusamus quas modi commodi
+            nostrum in quia id, voluptates molestias, animi ipsum beatae maxime culpa omnis natus laudantium.</p>
+        <h3 id="1-4">
+             1.4 
+        </h3> -->
+    
+        </body>
 
 
 </html>
