@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>复杂表单</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <h1>修改个人信息</h1>
+    <form action="get">
+        <table border = 2px cellspacing = 0 cellpadding=5px>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" value="mary"></td>
+                <td rowspan="7" valign ="top" width = 300px;>
+                    <details>
+                        <summary>各项<mark>技能</mark>指数</summary>
+                        <ul type = "none">
+                            <li>HTML : <meter min=0 value=70 max=100>HTML</meter></li>
+                            <li>CSS3 : <meter min=0 value=60 max=100>CSS</meter></li>
+                            <li>AJAX : <meter min=0 value=55 max=100>JavaScript</meter></li>
+                        </ul>
+                    </details>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <input id ="female" type="radio" name ="gender" checked>
+                        <label for = "female">女士</label>     
+                    <input type="radio" name = "gender" id ="male">
+                        <label for="male">男士</label>
+                </td>
+            </tr>
+            <tr>
+                <td>学历：</td>
+                <td>
+                    <select name="education" id="sel">
+                        <option value="其他">其他</option>
+                        <option value="专科">专科</option>
+                        <option value="本科">本科</option>
+                        <option value="硕士及以上">硕士及以上</option>                        
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>意向工作城市：</td>
+                <td>
+                    <select size = 5 name="target-city" id="target-city">
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="南京">南京</option>
+                        <option value="深圳">深圳</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>个人描述：</td>
+                <td><textarea cols = 30 rows = 5></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" id="consent"> 
+                   <label for="cons ent">不要公开我的个人信息</label> 
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <!-- <input type="submit" value="保存"> -->
+                    <button type="submit">保存</button>
+                    <input type="reset" value="重填">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
