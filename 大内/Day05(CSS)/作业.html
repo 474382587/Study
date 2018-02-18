@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>作业</title>
     <style>
         .img_list{
             overflow-x: auto;
@@ -24,8 +24,54 @@
             border:1px solid red;
             border-radius: 5px; 
         }
-
-    
+        .comment{
+            width: 700px;
+            margin-top: 10px;
+            border:1px solid gainsboro;
+        }
+        .comment>div{
+            margin-left:10px;
+            
+        }
+        .comment>.display{
+            width:96%;
+            margin:auto;
+            border-bottom: 1px solid gainsboro;
+        }
+        .rating{
+            margin-top: 5px;
+            /* margin-left: 10px; */
+            height: 20px;
+            width: 77.5px;
+            background: url(iconlist_1.png) -106px -237px;
+        }
+        .tags{
+            /* margin: auto; */
+            width: 95%;
+            
+        }
+        span{
+            background-color: mistyrose;
+            margin:5px;
+            font-weight: bold;
+            padding: 2px 5px;
+        }
+        
+        .pagination{
+            margin-top: 10px;
+        }
+        a{
+            margin: 0 5px;
+            border: 1px solid gainsboro;
+            border-radius: 5px;
+            padding: 0px 8px;
+        }
+        a:first-child{
+            border:none;
+        }
+        a:hover{
+            background-color: dodgerblue;
+        }
     </style>
 
 
@@ -43,6 +89,32 @@
                 <img src="Images\p_small_007.jpg" alt="7"> 
             </p>
         </div>
+
+        <div class = "comment">
+            <div class = "display">
+                <div class = "rating"></div>
+                <!-- <img src="G:\Study\大内\Day05(CSS)\Images\iconlist_1.png" alt="五星好评"> -->
+            </div>
+            <div class = "tags">
+                <p>标签：<span>比洗衣粉好</span><span>去污能力强</span></p>
+            </div>
+            <div class ="thought">
+                <p>心得：买了几次了，挺好用的，洗的衣服都挺干净的，以后就它了！</p>
+            </div>
+            <div class="purchase-date">
+                <p>购买日期： 2014-12-01</p>
+            </div>
+        </div>
+        <div class = "pagination">
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+        </div>
+
+
     
 </body>
 </html>
