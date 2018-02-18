@@ -1,0 +1,77 @@
+1. 边框属性
+   1. 边框
+       1. 边框的简写方式
+        通过一个 属性 控制四个方向边框的效果
+        属性：
+            border：width style color;
+                    宽度  样式  颜色
+                width：宽度，边框粗细，以px为单位
+                style：样式，边框样式，实线，虚线
+                    取值：
+                        solid：实线
+                        dotted：虚线（点）
+                        dashed：虚线
+                color：颜色，边框颜色
+                    取值：合法的颜色值（#rrggbb,rgn(x,x,x)）
+                            取值为 transparent（透明）
+        注意：
+            border:none; 或 border:0; 可以取消元素边框
+        2. 单边定义
+            属性：
+                border-方向: width style color;
+                方向：top/right/bottom/left
+                ex：
+                    border-left: 1px dotted red;
+        3. 单属性定义
+            属性：
+                border-属性：值;
+                ex:
+                    border-color: #00f; 四个边框颜色
+                    border-style: ddotted; 四个边框样式
+        4. 单边单属性
+            属性：
+                border-方向-属性：值;
+                ex:
+                    border-left-color:red;
+                    border-bottom-style: dotted;
+    注意：边框是由四个三角形或梯形构成的
+        例如：
+            #d1{
+                width:0px;
+                height:0px;
+                border-top-color:50px solid red;
+            }                        
+            这个表示的是向下的红色箭头        
+    2. 边框倒角
+        将四个方向的角到成圆角
+        属性：
+            border-radius
+            取值：
+                绝对的数值 或者 百分比
+            ex: 
+                border-radius:5px;
+                border-radius:50%; 如果当前元素的宽和高相等的话，则能将当前元素改为圆形
+        单独定义:
+            border-top-left-radius 左上角
+            border-bottom-left-radius 左下角
+            border-top-right-radius 右上角
+            border-bottom-right-radius 右下角
+    3. 边框阴影
+        属性：box-shadow
+        取值：h-shadow v-shadow blur spread color inset;
+            h-shadow：必须 阴影的水平位置偏移，+，右偏移，-，左偏移
+            v-shadow：必须 阴影垂直位置偏移，+，下偏移，-，上偏移
+            blur：可选 模糊距离
+            spread：可选 阴影的尺寸
+            color：可选 颜色
+            inset：可选 值，默认的外阴影更改为内阴影
+    4. 轮廓
+        作用：绘制于元素周围的一条线，位于边框之外
+        属性：
+            outline：width style color；
+            outline-width：轮廓的宽度
+            outline-style：轮廓的样式
+            outline-color：轮廓的颜色
+
+            outline：none； 或 outline：0； 取消元素轮廓
+            
