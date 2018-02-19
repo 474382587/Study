@@ -30,6 +30,7 @@
     2. Expression interpolation
     3. Nesting templates
     4. Tagged templates
+    Interesting stuff: DOMPurify.sanitize();
 
     syntax: 
         1)  "Bob loves playing " + sport  " with June." 
@@ -117,8 +118,145 @@
                 });
             }
 
-            
-            
+################################################################################################################################################################################################
 
-            
+ -- 02.16 --
+ New String Method
 
+//.startsWith()
+string.startsWith()
+1. Case sensative
+2. .startsWith("",3) starts after 3 characters
+
+//endsWith()
+string.endsWith()
+ 
+//.includes()
+
+//.repeat()
+repeat a string n times
+
+
+Distructuring Object
+1. 
+var person = {
+    name: "Joseph",
+    age: 24,
+    gender: "male"
+};
+
+const {name,age,gender} = person;
+
+2.
+var o = {p: 42, q: true};
+var {p, q} = o;
+
+console.log(p); // 42
+console.log(q); // true
+
+3. nested 
+
+const wes = {
+    first:"wes",
+    last:"bos",
+    links:{
+        social:{
+            twitter:"t",
+            facebook:"f"
+        }
+    }
+}
+
+var {facebook, twitter} = wes.links.social;
+//You are able to rename it this way while destructuring
+var {facebook: FB, twitter: TW} = wes.links.social;
+
+4. default values
+
+    const settings = {
+        height: 100;
+        width: 200;
+        length: 100;
+    }
+
+    if novalue take default value roll back to default
+    const {height=101, width, length, color = "red"} = settings;
+Practice:
+
+// Object destructuring with variable renaming and default values
+const {w:width = 400 , h:height = 500} = {w:800}     
+
+
+Distructuring Array
+
+Basic:
+
+1. 
+const details = ['Joseph Jin', 24, 'jerkjoe'];
+const [name, age, username] = details;
+console.log(name, age, username);
+
+2.
+const details = 'Joseph Jin,24,jerkjoe';
+const [name, age, username] = details.split(',');
+
+3. 
+what if array is larger than Distructuring?
+1) you do not need it --> dont care
+2) you want them all
+    var team =['Pop','Pau','Kobe','James','Jordan'];
+    user ... (rest operator)
+    var [coach, assistant, ...players] = team;
+
+Swapping variables with destructuring
+
+var a =3;
+var b =9;
+//Swapping
+[a,b] = [b,a];
+
+
+
+for...of...
+//for..in.. gives us index
+Syntax:
+for(const/var/let iterableElement of iterableArray){...}
+
+1.
+var arr  = [["a","b"],["c","d"],["e","f"],["g","h"]];
+
+for([first,last] of arr){
+    console.log(`${first} and ${last}`);
+}
+
+2. 
+function addNumbers(){
+    //console.log(arguments); //not an array arguments
+    let total = 0;
+    for(num of arguments){
+        total += num;
+    }
+
+}
+
+addNumbers(10,1,2,4,5,4,22,447,724);
+
+for...in... loop
+Syntax:
+for(const index in iterable ){
+    console.log(iterable[index]);
+}
+
+** for..in.. with Objects **
+
+var person = {
+    name:"Joseph",
+    age: 24,
+    gender: "male"
+}
+
+for(const prop in person){
+
+    console.log(person[prop]);
+
+}
