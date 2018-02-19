@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <style>
+        #d1,#d2{
+            width: 200px;
+            height: 200px;
+            background: tomato;
+        }
+        #d2{
+            background-color: skyblue;
+        }
+        #d1{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #d3,#d4{
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+        }
+        #d3{
+            margin-bottom: 20px;
+        }
+        #d4{
+            margin-top: 40px;
+        }
+        
+        #d5{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 父元素增加border来解决子元素外边距溢出问题 */
+            border-top: 1px solid transparent;
+        }
+        #d6{
+            background-color: rebeccapurple;
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;/*子元素影响父元素的margin*/
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+
+    <!-- 外边距合并 -->
+    <div id = "d3">
+    </div>
+    <div id = "d4"></div>
+
+    <!-- 外边距溢出 -->
+    <div id="d5">
+        <div id="d6"></div>
+    </div>
+    
+
+    <!-- 具备默认外边距的元素 -->
+    <p></p>
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+    <ol>
+        <li></li>
+        <li></li>
+    </ol>
+    <dl>
+        <dt></dt>
+        <dd></dd>
+    </dl>
+    <pre></pre>
+</body>
+</html>

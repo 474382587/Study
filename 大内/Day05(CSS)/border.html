@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <style>
+        #d1{
+            width: 200px;
+            height: 200px;
+
+            /* boder */
+            border: 1px dashed red;
+            border-left: 2px solid blue;
+            border-color: #f0f;
+            /* 倒角 */
+            /* bord er-radius: 50% */
+
+            /* 边框阴影 */
+            box-shadow: 10px 10px 5px 10px red inset;
+        }
+        #d2{
+            width: 0px;
+            height: 0px;
+            border: 50px solid transparent;
+            border-top-color: red;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+        }
+        input{
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+    用户名称：<input type="text">
+    <div id = "d1"></div>
+    <div id = "d2"></div>
+</body>
+</html>
