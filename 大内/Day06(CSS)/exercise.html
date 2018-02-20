@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <style>
+        #d1{
+            width:200px;
+            height: 200px;
+
+            /*线性渐变 从下向上填充，红色 绿色 蓝色 */
+            background-image: linear-gradient(to top,red,green,blue);
+        }
+        #d2{
+            margin: 15px;
+            width: 200px;
+            height: 200px;
+            /* 径向渐变 */
+            background-image: radial-gradient(100px at right center,red,green,blue );
+        }
+        #d3{
+            width:200px;
+            height: 200px;
+
+            /*重复线性渐变 从下向上填充，红色 绿色 蓝色 */
+            background-image: repeating-linear-gradient(to top,red,green,blue);
+        }
+        #d4{
+            margin: 15px;
+            width: 200px;
+            height: 200px;
+            /* 重复径向渐变 */
+            background-image: repeating-radial-gradient(100px at right center,red,green,blue );
+        }
+        #d5{
+            font-variant:small-caps;
+        }
+    </style>
+</head>
+<body>
+    <div id = "d1"></div>
+    <div id = "d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id ="d5">This is a small-caps font-variant</div>
+</body>
+</html>

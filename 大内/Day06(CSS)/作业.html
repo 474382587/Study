@@ -60,6 +60,8 @@
         
         .pagination{
             margin-top: 10px;
+            text-align: right;
+            width: 702px;
         }
         a{
             margin: 0 5px;
@@ -73,13 +75,27 @@
         a:hover{
             background-color: blue;
         }
+    .vote{
+        margin:15px;
+        text-align: right;
+    }
+        .vote>a{
+            
+            border: 1px solid gainsboro;
+            border-radius: 5px;
+            background-image: linear-gradient(to bottom,white,gainsboro,#BBB);
+            text-decoration: none;
+            padding: 2px 5px;
+            /* margin:5px; */
+
+        }
     </style>
 
 
 
 </head>
 <body>
-        <div class="img_list">
+        <!-- <div class="img_list">
             <p>
                 <img src="Images\p_small_001.jpg" alt="1"> 
                 <img src="Images\p_small_002.jpg" alt="2"> 
@@ -89,7 +105,7 @@
                 <img src="Images\p_small_006.jpg" alt="6"> 
                 <img src="Images\p_small_007.jpg" alt="7"> 
             </p>
-        </div>
+        </div> -->
 
         <div class = "comment">
             <div class = "display">
@@ -104,6 +120,10 @@
             </div>
             <div class="purchase-date">
                 <p>购买日期： 2014-12-01</p>
+            </div>
+            <div class = "vote">
+                <a href="">有用(3)</a>
+                <a href="">回复(3)</a>
             </div>
         </div>
         <div class = "pagination">
