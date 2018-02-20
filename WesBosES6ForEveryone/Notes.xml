@@ -260,3 +260,85 @@ for(const prop in person){
     console.log(person[prop]);
 
 }
+
+
+
+Array.from()
+Syntax: Array.from(array like)
+turning array like in to array
+
+const people = document.querySelectorAll('.people p');
+const peopleArray = Array.from(people);
+
+
+// Using an arrow function as the map function to
+// manipulate the elements
+Array.from([1, 2, 3], x => x + x);      
+// [2, 4, 6]
+
+
+// Generate a sequence of numbers
+// Since the array is initialized with `undefined` on each position,
+// the value of `v` below will be `undefined`
+Array.from({length: 5}, (v, i) => i);
+// [0, 1, 2, 3, 4]
+
+
+array.find()
+
+Find an object in an array by one of its properties
+var inventory = [
+    {name: 'apples', quantity: 2},
+    {name: 'bananas', quantity: 0},
+    {name: 'cherries', quantity: 5}
+];
+
+function isCherries(fruit) { 
+    return fruit.name === 'cherries';
+}
+
+console.log(inventory.find(isCherries)); 
+// { name: 'cherries', quantity: 5 }
+
+Find a prime number in an array
+The following example finds an element in the array that is a prime number (or returns undefined if there is no prime number).
+
+function isPrime(element, index, array) {
+  var start = 2;
+  while (start <= Math.sqrt(element)) {
+    if (element % start++ < 1) {
+      return false;
+    }
+  }
+  return element > 1;
+}
+
+console.log([4, 6, 8, 12].find(isPrime)); // undefined, not found
+console.log([4, 5, 8, 12].find(isPrime)); // 5
+
+
+array.findIdex() //arr.findIndex(callback[, thisArg])
+var array1 = [5, 12, 8, 130, 44];
+
+function findFirstLargeNumber(element) {
+  return element > 13;
+}
+
+console.log(array1.findIndex(findFirstLargeNumber));
+// expected output: 3
+
+
+Array.some()
+
+at least one adult
+var group = [18,18,17,20];
+group.some(people => people>=19);
+
+All old enough to drink?
+group.every(person => person>18);
+
+
+
+Spread Operator
+iterable means anyhing that you can loop over with our "for of" loop
+
