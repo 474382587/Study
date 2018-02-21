@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东购物商城</title>
+    <style>
+        #my_jd{
+            width:100px;
+            height:30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid #333;
+            background-color: red;
+            /* overflow: hidden; */
+            position: relative;
+            cursor: pointer;
+        }
+        /* #my_jd:hover{
+            overflow: visible;
+        } */
+        #parent:hover #my_jd{
+            border-bottom: 0;
+            z-index: 200;
+        }
+        #parent:hover #menu{
+            display: block;
+            z-index: 50;
+        }
+        #menu{            
+            width: 300px;
+            height: 200px;
+            border: 1px solid #333;
+            background-color: red;
+            display: none;
+            position: absolute;
+            top: 29px;
+            left: 0px;
+            padding: 20px;
+            
+        }
+        #parent{
+            width: 100px;
+            height: 30px;
+            position: relative;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id = "parent">
+        <div id = "my_jd">
+            我的京东 
+        </div>
+        <div id ="menu">
+            京东弹出菜单
+        </div>
+    </div>
+    
+</body>
+</html>
