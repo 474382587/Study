@@ -341,4 +341,41 @@ group.every(person => person>18);
 
 Spread Operator
 iterable means anyhing that you can loop over with our "for of" loop
+MDN
 
+
+...rest parameter in Fucntions and destructuring
+
+function bind(statement,...member){
+
+		return member.map(person => {
+			return person + statement;
+		});
+
+}
+var a = bind(" is a part of Joseph's family! ","Joseph","Queen","Yifa").join("");
+
+const runner =["Joseph Jin", 75998, 4,5,8,12,17];
+const[name,id,runs] = runner; // take only one runner
+const[name,id,...runs] = runner; // take the rest of parameters
+
+
+Object Literals
+If propery names are the same as variables
+you dont need to add an value
+var name = "pengpeng"
+var dog ={
+
+	name,
+	age:3,
+	gender:"male",
+    //shorthand of function
+    create(){
+    
+    },
+    delete(){
+    
+    }
+};
+
+promise
