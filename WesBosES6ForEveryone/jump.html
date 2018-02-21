@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <style>
+        body{
+            background-color: yellow;
+        }
+        span{
+            display: inline-block;
+            transition:  0.2s;
+        }
+        span:hover{
+            transform:translateY(-2px) rotate(10deg) scale(1.5);
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class = "jump">SPREADS!</h2>
+    <script>
+        var heading = document.querySelector(".jump");
+        heading.innerHTML = sparanWrap(heading.textContent);
+        //console.log(spans);
+        
+        function sparanWrap(word){
+            return [...word].map(letter => `<span>${letter}</span>`).join('');
+        }
+    </script>
+</body>
+</html>
