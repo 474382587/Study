@@ -5,159 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    
+    <link rel="stylesheet" type = "text/css" href="jingdong.css">
     <style>
         /* 测试属性 */
         #top_main,#nav,#banner,#main,#foot_box,#footer{
             border: 1px solid #000000;
         }
-        /* 1. 页面通用样式 */
-        body{
-            font: 12px "微软雅黑",Arial,Helvetica,sans-serif;
-            color:#666;
-            margin:0;
+        #top_main>.logo,#top_main>.search,#top_main>.utility{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 5px 10px;
         }
-        p1,h1,h2,h3,h4,h5,h6,ul,ol,dd,dl{
-            list-style: none;
+        #top_main{
+            height: 80px;
+        }
+
+        .logo{
+            width: 25%;
+            height: 70px;
+        }
+        .search{
+            width: 45%;
+            height: 70px;
+        }
+        .utility{
+            width: 24%;
+            height: 70px;
+        }
+        .search>input{
+            width: 70%;
+            margin-top: 10px;
+            margin-left: 10px; 
             padding: 0;
-            margin: 0;
+            border: 2px solid red;
+            height: 32px
         }
-        .lf{
-            float: left;
+        .search>a{
+            margin-top: 10px;
         }
-        .rf{
-            float: right ;
+        .search>ul{
+            margin-top: 5px;
+            margin-left: 10px;
         }
-        .clear{
-            clear:both;
+        .search>ul>li{
+            display: inline-block;
+            color: #aaa;
         }
-        a{
-            color: #666;
-            text-decoration: none;
+        .search>ul>li>a{
+            color: #aaa;
         }
-        a:hover{
+        .search>ul>li>a:hover{
             color: #ff0700;
             text-decoration: underline;
         }
-
-        /* 布局样式 */
-        #top_box,#top_main,#nav,#banner,#main,#foot_box,#footer{
-            width: 1211px;
-            margin: 0;
+        .utility{
+            height: 70px;
+            line-height: 70px;
         }
-        /* top 灰色长条 */
-        #top{
-            width: 100%;
-            height: 30px;
-            background-color: #f7f7f7;
-            line-height: 30px;
-        }
-        #top_box>img{
-            /* 上外边距 左外边距 */
-            margin-top:9px;
-            margin-right: 5px;
-        }
-        #top_box>ul>li{
-            float: left;
-            margin-right:5px;
-        }
-
-        /* 模拟分割线 */
-        #top_box>ul>li>i{
-            margin-right:5px;
-            border-left: 1px solid #DDDCCC; 
-        }
-        /* 会员俱乐部的背景图像 */
-        .vip>a{
-            padding-left: 29px;
-             /*position*/
-            background: url(Images/vip.jpg) left center no-repeat; 
-        }
-        .BJD>a{
-            padding-left: 29px;
-             /*position*/
-            background: url(Images/dakehu.jpg) left center no-repeat; 
-        }
-        .mobile>a{
+        .utility>li{
             display: inline-block;
-            height: 22px;
-            line-height:22px; 
-            padding-left: 18px;
-             /*position*/
-            background: url(Images/iconlist_2.png) -128px -360px no-repeat; 
+            vertical-align: middle;
+            margin: auto 5px;
+            
         }
-        .mobile>a:hover{
-            background: url(Images/iconlist_2.png) -128px -399px no-repeat ; 
+        .utility>li>a{
+            border: 1px solid #efefef; 
+            border-radius: 1px;
+            height: 23.5px;
+            line-height: 23.5px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 25px;
+            padding-right: 15px;
         }
-
-        /* 鼠标悬停下拉显示 */
-        li.service>a{
-            /* 左右内边距模拟宽度 */
-            padding: 0 15px;
-            /* 设置 高度 行高 */
-            display: inline-block;
-            height: 26px;
-            line-height: 26px;
-            /* 边框： 左右上边框 */
-            border-top: 1px solid transparent;
-            border-left: 1px solid transparent;
-            border-right: 1px solid transparent;
-            border-bottom: 0;
-            background:url(Images/jt_down.jpg) no-repeat 95% center;
+        .utility>li>#myjd{
+            
+            background: url(Images/jt_down.jpg) 77px no-repeat, url(Images/user.jpg) 4px center no-repeat #f7f7f7; 
         }
-        li.service>a:hover{
-            border-color:#ddd;
-            background:url(Images/jt_up.jpg) no-repeat 95% center;
-            background-color: #ffffff ;
+        #cart{
+            background-color: #333;
+            background: url(Images/jt_down.jpg) 77px no-repeat, url(Images/gwc0.jpg) 2px center no-repeat #f7f7f7; 
         }
-        li.service{
-            position: relative;
-        }
-        .service>ul{
-            width: 67.5%;
-            padding:0 10px;
-            position:absolute;
-            top:28px;
-            left: 6px;
-           
-            border: 1px solid #ddd;
-            border-top:none;
-            /* z-index: 100; */
-            text-align: center;
-            background-color: white;
-            display: none;
-        }
-        li.service:hover>ul{
-            display:block;
-        } 
-        li.service:hover>a{
-            border-color:#ddd;
-            background:url(Images/jt_up.jpg) no-repeat 95% center;
-            background-color: #ffffff ;
-        }
-        #footer>ul,#footer>p{
-            width: 70%;
-            margin:10px auto;
-            text-align: center;
-        }
-        #footer>ul>li{
-            display: inline-block;
-            margin:auto 10px;
-        }
-        #footer>.links>li{
-            margin:auto;
-            margin-right: 5px; 
-        }
-        #footer>.links>li>a{
-            padding-left: 5px;
-            border-left: 1px solid #ddd; 
-        }
-        #footer>.navbottom{
-            margin: 15px auto;
-        }
-        #footer>ul>.dy>a{
-            border:none;
-        }
+        
     </style>
     
 </head>
@@ -233,12 +162,82 @@
 
     <!-- 2. Logo 搜索框 -->
     <div id= "top_main">
-        Logo 搜索框
+        <!-- 左边的logo -->
+        <div class = "logo">
+            <img src="Images/logo-201305.png" alt="JD_logo" class="lf">
+        </div>
+        
+        <!-- 中间的搜索框和热门搜索 -->
+        <div class = "search">
+            <input type="text" class ="lf">
+            <a href="" class ="lf"><img src="Images/search.jpg" alt="search"></a>
+            <div class ="clear"></div>
+            <ul>
+                <li>热门搜索：</li>
+                <li>
+                    <a href="">家纺11月大促</a>
+                </li>
+                <li>
+                    <a href="">彩虹电热毯</a>
+                </li>
+                <li>
+                    <a href="">博洋家纺</a>
+                </li>
+                <li>
+                    <a href="">霞珍</a>
+                </li>
+                <li>
+                    <a href="">床垫床褥</a>
+                </li>
+                <li>
+                    <a href="">九洲鹿被子</a>
+                </li>
+                <li>
+                    <a href="">南极人家纺</a>
+                </li>
+            </ul>
+            
+        </div>
+        <!-- 右侧按钮 -->
+        <ul class ="utility">
+            <li><a href="" id="myjd">我的京东</a></li>
+            <li><a href="" id ="cart">去购物车</a></li>
+        </ul>
+        <!-- <div id = "search" class = "lf">
+            <input type="text">
+            <a href=""><img src="Images/search.jpg" alt=""></a>
+            <ul>
+                <li>热门搜索：</li>
+                <li>
+                    <a href="">家纺11月大促</a>
+                </li>
+                <li>
+                    <a href="">彩虹电热毯</a>
+                </li>
+                <li>
+                    <a href="">博洋家纺</a>
+                </li>
+                <li>
+                    <a href="">霞珍</a>
+                </li>
+                <li>
+                    <a href="">床垫床褥</a>
+                </li>
+                <li>
+                    <a href="">九洲鹿被子</a>
+                </li>
+                <li>
+                    <a href="">南极人家纺</a>
+                </li>
+            </ul>
+        </div> -->
+        <p class="clear"></p>
     </div>
      
     <!-- 页面主导航 -->
     <nav id = "nav">
         页面主导航
+
     </nav>
 
     <!-- banner部分 -->
