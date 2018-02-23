@@ -11,6 +11,8 @@
         #top_main,#nav,#banner,#main,#foot_box,#footer{
             border: 1px solid #000000;
         }
+
+        /* 自己写的 */
         #top_main>.logo,#top_main>.search,#top_main>.utility{
             display: inline-block;
             vertical-align: middle;
@@ -85,6 +87,43 @@
         #cart{
             background-color: #333;
             background: url(Images/jt_down.jpg) 77px no-repeat, url(Images/gwc0.jpg) 2px center no-repeat #f7f7f7; 
+        }
+        /* 自己写的 */
+
+        /* 页面主导航 */
+        #nav{
+            height:30px;
+            line-height: 30px;
+        }
+        #nav>p,#nav>ul{
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            margin:0 0;
+        }
+        #nav>p{
+            background-color:#BD2A2C;
+            color: white;
+            font-weight: 600;
+            padding-left: 10px;
+            padding-right: 100px;  
+            width: 10.5%;
+            margin:0;
+        }
+        #nav>ul>li{
+            margin: 0px;
+            display: inline-block;
+            padding: 0 35px;
+        }
+        #nav>ul{
+            margin:0px;
+            width:80.415%;
+            background-color:#e64346; 
+        }
+        #nav>ul>li>a{
+            margin: 0;
+            font-weight: 600;
+            color: white;
         }
         
     </style>
@@ -236,8 +275,31 @@
      
     <!-- 页面主导航 -->
     <nav id = "nav">
-        页面主导航
+        <p>全部商品分类
 
+        </p><ul>
+            <li>
+                <a href="">首页</a>
+            </li>
+            <li>
+                <a href="">服装城</a>
+            </li>
+            <li>
+                <a href="">食品</a>
+            </li>
+            <li>
+                <a href="">团购</a>
+            </li>
+            <li>
+                <a href="">夺宝岛</a>
+            </li>
+            <li>
+                <a href="">闪购</a>
+            </li>
+            <li>
+                <a href="">金融</a>
+            </li>
+        </ul>
     </nav>
 
     <!-- banner部分 -->
