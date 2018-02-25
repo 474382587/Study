@@ -1,0 +1,163 @@
+/* 自己写的 */
+        #top_main>.logo,#top_main>.search,#top_main>.utility{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 5px 10px;
+        }
+        #top_main{
+            height: 80px;
+        }
+
+        .logo{
+            width: 25%;
+            height: 70px;
+        }
+        .search{
+            width: 45%;
+            height: 70px;
+        }
+        .utility{
+            width: 24%;
+            height: 70px;
+        }
+        .search>input{
+            width: 70%;
+            margin-top: 10px;
+            margin-left: 10px; 
+            padding: 0;
+            border: 2px solid red;
+            height: 32px
+        }
+        .search>a{
+            margin-top: 10px;
+        }
+        .search>ul{
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+        .search>ul>li{
+            display: inline-block;
+            color: #aaa;
+        }
+        .search>ul>li>a{
+            color: #aaa;
+        }
+        .search>ul>li>a:hover{
+            color: #ff0700;
+            text-decoration: underline;
+        }
+        .utility{
+            height: 70px;
+            line-height: 70px;
+        }
+        .utility>li{
+            display: inline-block;
+            vertical-align: middle;
+            margin: auto 5px;
+            
+        }
+        .utility>li>a{
+            border: 1px solid #efefef; 
+            border-radius: 1px;
+            height: 23.5px;
+            line-height: 23.5px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 25px;
+            padding-right: 15px;
+        }
+        .utility>li>#myjd{
+            
+            background: url(Images/jt_down.jpg) 77px no-repeat, url(Images/user.jpg) 4px center no-repeat #f7f7f7; 
+        }
+        #cart{
+            background-color: #333;
+            background: url(Images/jt_down.jpg) 77px no-repeat, url(Images/gwc0.jpg) 2px center no-repeat #f7f7f7; 
+        }
+        /* 自己写的 */
+
+        /* 页面主导航 */
+        #nav{
+            height:30px;
+            line-height: 30px;
+        }
+        #nav>p,#nav>ul{
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            margin:0 0;
+        }
+        #nav>p>i{
+            position: absolute;
+            right:10px;
+            padding: 5px;
+            top:10px;
+            background: url(Images/jtr.jpg) no-repeat center;
+        }
+        #nav>p{
+            position: relative;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            font-weight: 600;
+            padding-left: .5%;
+            width: 19.5%;
+            background: #cb2e2e ;
+        }
+        #nav>ul>li{
+            display: inline-block;
+            padding: 0 35px;
+        }
+        #nav>ul{
+            width:80%;
+            background-color:#e64346; 
+        }
+        #nav>ul>li>a{
+            font-weight: 600;
+            color: white;
+        }
+
+        /* <div id= "top_main">
+        <!-- 左边的logo -->
+        <div class = "logo">
+            <img src="Images/logo-201305.png" alt="JD_logo" class="lf">
+        </div>
+        
+        <!-- 中间的搜索框和热门搜索 -->
+        <div class = "search">
+            <input type="text" class ="lf">
+            <a href="" class ="lf"><img src="Images/search.jpg" alt="search"></a>
+            <div class ="clear"></div>
+            <ul>
+                <li>热门搜索：</li>
+                <li>
+                    <a href="">家纺11月大促</a>
+                </li>
+                <li>
+                    <a href="">彩虹电热毯</a>
+                </li>
+                <li>
+                    <a href="">博洋家纺</a>
+                </li>
+                <li>
+                    <a href="">霞珍</a>
+                </li>
+                <li>
+                    <a href="">床垫床褥</a>
+                </li>
+                <li>
+                    <a href="">九洲鹿被子</a>
+                </li>
+                <li>
+                    <a href="">南极人家纺</a>
+                </li>
+            </ul>
+            
+        </div>
+        <!-- 右侧按钮 -->
+        <ul class ="utility">
+            <li><a href="" id="myjd">我的京东</a></li>
+            <li><a href="" id ="cart">去购物车</a></li>
+        </ul>
+        <p class="clear"></p>
+    </div> */
