@@ -605,7 +605,7 @@
                     font-weight: 600;
                     vertical-align: bottom;
                 } */
-                #F1{
+                /* #F1{
                     height: 40px;
                     background-color: #ddd;
                 }
@@ -619,6 +619,9 @@
                     font-weight: bold;
                     color: #EEE;
                     margin-left: 10px;
+                }
+                #F1>span:hover{
+                    background-position: -40px 0;
                 }
                 #F1>span,#F1>h2,#F1>ul{
                     float: left;
@@ -653,26 +656,387 @@
                     float: left;
                     background: url(Images/youjiantou.png) no-repeat;
                 }
+                #F1>li>b{
+                    border: 3px solid 
+                } */
+
+
+                .floor{
+                    height: 40px;
+                }
+                .floor>p,.floor>ul,.floor>span,.floor>ul>li{
+                    float:left;
+                }
+                .floor>span{
+                    width:26px;
+                    height: 33px;
+                    padding:3px 0 2px 0;
+                    border-bottom: 2px solid #aaa;
+                    background: url(Images/index/index_iconlist_01.png) no-repeat;
+                    font-size: 18px;
+                    text-align: center;
+                    font-weight: bolder;
+                    color: #fff;
+                }
+                .floor>span:hover{
+                    background: url(Images/index/index_iconlist_01.png) no-repeat -40px 0;
+                }
+                .floor>p{
+                    padding:6px 0;
+                    width: 185px;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 20px;
+                    border-bottom: 2px solid #aaa;
+                    margin: 0;
+                }
+                .floor>ul.tab>li>a{
+                    display: block;
+                    border-bottom: 2px solid #aaa;
+                    width: 158px;
+                    font-size: 14px;
+                    padding: 13px 0 6px 0;
+                    text-align: center;
+                }
+                .floor>ul.tab>li>a:hover{
+                	background:url(Images/index/tab_arraw.png) no-repeat center bottom;
+                }
+                .floor>ul.links>li>a{
+                    display: block;
+                    width: 105px;
+                    border-bottom: 2px solid #aaa;
+                    padding: 16px 0 6px 0;
+                }
+                .lf_list{
+                    float: left;
+                    width: 210px;
+                    height: 361px;
+                    border-right: 1px solid #ddd;
+                    border-bottom: 1px solid #ddd;
+                }
+                .lf_list>ul{
+                    float: left;
+                }
+                .lf_list>ul>li{
+                    float: left;
+                    width: 50%;
+                    line-height: 25px;
+                }
+                .lf_list>ul>li>a{
+                    padding-left: 5px;
+                    text-decoration: none;
+                }
+                .lf_list>p{
+                    text-align: center;
+                }
+
+                .rt_list{
+                    float: right;
+                    width: 210px;
+                    height: 361px;
+                    border-bottom: 1px solid #ddd;
+                }
+                .rt_list>ul{
+                    float: right;
+                }
+                .rt_list>ul>li{
+                    float: right;
+                    width: 50%;
+                    line-height: 25px;
+                }
+                .rt_list>ul>li>a{
+                    padding-left: 5px;
+                    text-decoration: none;
+                }
+                .rt_list>p{
+                    text-align: center;
+                }
+                
+                .content_box{
+                    width: 790px;
+                    float: left;
+                }
+                .content_box>dl{
+                    width: 157px;
+                    height: 180px;
+                    float: left;
+                    border-right: 1px solid #ddd;
+                    border-bottom: 1px solid #ddd;
+                    text-align: center;
+                }
+                .content_box>dl>dt{
+                    padding: 10px 0 5px 0;
+                }
+                .content_box>dl>dd{
+                    padding: 5px;
+                    color: #E4393C;
+                }
+                .content_box>div{
+                    float: left;
+                    width: 473px;
+                    height: 180px;
+
+                    border-right: 1px solid #ddd;
+                    border-bottom: 1px solid #ddd;
+                }
+                .blog>ul.share>li>p>img{
+                    width: 50px;
+                    padding-right: 15px;
+                }
+                .blog>ul.share>li>p>i{
+                    position: absolute;
+                    width: 17px;
+                    height: 19px;
+                    background: url(Images/iconlist_3.png) no-repeat -200px -50px;
+                    top: -5px;
+                    right: 3px;
+                }
+                .blog>ul.share>li>p{
+                    margin-right: 10px;
+                    float: left;
+                    position: relative;
+                }
+                .blog>ul.share>li>div{
+                    float: left;
+                }
             </style>
             <!-- 1st Floor -->
-            <div id = "F1">
+            <div class = "floor">
                 <span>1F</span>
-                <h2>家电通讯</h2>
-                <ul>
-                    <li>特价商品</li>
-                    <li>大家电</li>
-                    <li>小家电</li>
-                    <li>手机通讯</li>
-                    <li>汽车五金</li>
+                <p>家电通讯</p>
+                <ul class = "tab">
+                    <li>
+                        <a href="">特价商品</a>
+                    </li>
+                    <li><a href="">大家电</a></li>
+                    <li><a href="">小家电</a></li>
+                    <li><a href="">手机通讯</a></li>
+                    <li><a href="">汽车五金</a></li>
                 </ul>
-                <a href="">合约计划说明</a>
-                <b></b>
-                <a href="">大家电配送</a>
+                <ul class ="links">
+                    <li>
+                        <a href="">合约计划说明</a>
+                    </li>
+                    <li> 
+                        <a href="">大家电配送</a>
+                    </li>
+                </ul>
+                <aside class = "lf_list">
+                    <ul>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                        <li>
+                            <a href="">手机</a>
+                        </li>
+                    </ul>
+                    <p>
+                        <a href=""><img src="Images/index/fl_01.jpg" alt=""></a>
+                    </p>
+
+                </aside>
+                <div class = "content_box">
+                    <dl>
+                        <dt>
+                            <img src="Images/index/fl_dl_01.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <a href="">48英寸智能电视2499</a>
+                        </dd>
+                        <dd>
+                            送澳门风云2电影票
+                        </dd>
+                    </dl>
+                    <div class = "banner">
+                        <img src="Images/index/fl_ad_01.jpg" alt="">
+                    </div>
+                    <dl>
+                        <dt>
+                            <img src="Images/index/fl_dl_02.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <a href="">48英寸智能电视2499</a>
+                        </dd>
+                        <dd>
+                            送澳门风云2电影票
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="Images/index/fl_dl_03.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <a href="">48英寸智能电视2499</a>
+                        </dd>
+                        <dd>
+                            送澳门风云2电影票
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="Images/index/fl_dl_04.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <a href="">48英寸智能电视2499</a>
+                        </dd>
+                        <dd>
+                            送澳门风云2电影票
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="Images/index/fl_dl_05.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <a href="">48英寸智能电视2499</a>
+                        </dd>
+                        <dd>
+                            送澳门风云2电影票
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="Images/index/fl_dl_06.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <a href="">48英寸智能电视2499</a>
+                        </dd>
+                        <dd>
+                            送澳门风云2电影票
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="Images/index/fl_dl_07.jpg" alt="">
+                        </dt>
+                        <dd>
+                            <a href="">48英寸智能电视2499</a>
+                        </dd>
+                        <dd>
+                            送澳门风云2电影票
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <aside class="rt_list">
+                <ul>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                    <li>
+                        <a href="">手机</a>
+                    </li>
+                </ul>
+                <p>
+                    <a href="">
+                        <img src="Images/index/fl_01.jpg" alt="">
+                    </a>
+                </p>
+            
+            </aside>
+            <div class = "blog">
+                <ul class = "share">
+                    <li>
+                        <p>
+                            <img src="Images/index/share_01.jpg" alt="">
+                            <i></i>
+                        </p>
+                        <div>
+                            <h3><a href="">咔哟YOYO4.0蓝牙音箱低音炮立体声音响</a></h3>
+                            <h4>音质还可以，不错的，很小，很大声，很好看。</h4>
+                        </div>
+                    </li>
+                    <li></li>
+                </ul>
             </div>
             
 
 
-            <p class = "clear"></p>
+            <h5 class = "clear"></h5>
         </div>
         
     </section>
