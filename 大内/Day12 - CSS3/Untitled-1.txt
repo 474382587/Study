@@ -1,0 +1,19 @@
+Command Line
+
+Windows - Cmd
+Linux(Ubuntu) - terminal
+Unix(mac OS) - terminal
+
+Use command line to develop
+Gulp, Webpack, Node.js
+
+
+##########
+文件与目录
+
+符号  含义
+~   当前用户目录
+/   整个硬盘
+.   当前目录
+..  父目录
+$   没有实际意义

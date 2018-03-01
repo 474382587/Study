@@ -1,1 +1,102 @@
 1. 复杂选择器
+    1. 兄弟选择器
+    2. 属性选择器
+    3. 伪类选择器
+        1. 目标伪类
+            1. 作用
+                突出显示活动的HTML锚元素
+            2. 语法
+                elem:target
+                ex:
+                    div:target --> div 作为 锚点 被激活的时候
+        2. 元素状态伪类
+            1. 作用
+                匹配 元素 已启用，被禁用，被选中的状态 主要应用在表单控件上
+            2. 语法
+                1. :enabled    
+                    匹配 每个已启用（未被禁用）的元素
+                2. :disabled 
+                    匹配 每个被禁用的元素
+                3. :checked
+                    匹配 每个被选中的元素（radio，checkbox）
+        3. 结构伪类
+            1. 作用
+                通过元素之间的结构关系，来匹配元素
+            2. 语法
+                1. :first-child 
+                    匹配属于其父元素中的首个子元素
+                    ex：
+                        td:first-child{} 每个tr中的第一个td
+                2. :last-child 
+                    匹配属于其父元素中的最后一个子元素
+                    ex:
+                        td:last-child{} 每个tr中的最后一个td
+                3. :nth-child(n)
+                    匹配属于其父元素中的第n个子元素
+                    ex： 
+                        td:nth-child(5){} 每个tr中的第五个td
+                4. :empty
+                    匹配没有子元素的元素
+                    注意：也不能包含文本
+                5. :only-child
+                    匹配属于其父元素中的唯一子元素
+        4. 否定伪类
+            1. 作用
+                将 满足条件的 选择器匹配的元素 排除出去
+            2. 语法
+                :not(选择器)
+                ex:
+                    #tbl td:not(:first-child){
+                        color:red;
+                    }
+                    id 为 tbl 的元素中 不为其父元素第一个子元素的 td 元素
+                    匹配 除每一行第一列以外的所有td
+    4. 伪元素选择器
+        伪类：匹配元素的不同状态，匹配到的是元素
+        伪元素：匹配某个元素中的某部分内容
+        1. :first-letter 或 ::first-letter
+            匹配某元素的首字符
+        2. :fisrt-line 或 ::first-line
+            匹配某元素的首行字符
+        3. ::selection
+            匹配被用户选取的部分
+        : 和 :: 的区别
+        1. : 
+            既能表示 伪类选择器
+            也能表示 伪元素选择器(CSS2)
+        2. ::
+            在CSS3当中负责表示伪元素选择器
+            尽量选择 : 来使用，即表示伪类选择器又表示伪元素选择器
+            有不支持CSS3的浏览器
+2. 内容生成
+    1. 伪元素选择器
+        1. :before 或 ::before
+            匹配 某元素 的内容区域之前
+            <div>(::before)这是一个div</div>
+        2. :after 或 ::after
+            <div>只是一个div(::after)</div>
+    2. 属性
+        属性：content
+        取值：
+            1. 字符串 ：纯文本
+                使用时用""引起来
+                content:"this is a text content";
+            2. 图像 ：url
+                content:url(image.jpg);
+            3. 计数器
+
+                demo：
+                学而时习之，不亦说乎！
+    3. 解决的问题
+        1. 浮动元素的父元素高度
+            #d1{
+                content:"";
+                display:block;
+                clear:both;
+            }
+            通用解决方案，在高度撑不起来的时候使用
+            .clear:after{
+                content:"";
+                display:block;
+                clear:both;
+            }
