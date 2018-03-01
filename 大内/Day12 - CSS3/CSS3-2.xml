@@ -1,0 +1,218 @@
+3. 解决的问题
+    1. 浮动元素的父元素高度
+        .clear::after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+        <div class="clear"></div>
+    2. 外边距溢出
+        <div id="d1"></div>
+        <div id = "d2"></div>
+        #d2::before{
+            content:"";
+            display:table;
+        }
+4. 计数器
+    1. 什么是计数器
+        使用CSS 动态生成一组 有序的数字并且插入到元素中
+    2. 语法
+        1. 属性 - counter-reset
+            1. 作用
+                声明或重置计数器
+            2. 语法
+                counter-reset：名 初始值； 两部分
+                counter-reset：名1 值1 名2 值2；
+                注意：
+                    1. 初始值可以省略 默认为0
+                    2. 不能放在使用的元素中声明，大部分情况下，可以将计数器声明在使用元素的父元素上
+        2. 属性 - counter-increment
+            1. 作用
+                指定计数器每次出现的增量
+                即每次出现的计数器值得变化范围
+            2. 语法
+                 counter-increment：名 增量
+                 counter-increment：名1 增量1 名2 增量2
+            注意：
+                1， 增量值可以为正也可以为负，也可以省略
+                    正：递增
+                    负：递减
+                    省略：默认增量为1
+                2. 哪个元素使用计数器，在哪个元素中设置计数器增量
+        3. 函数 - counter
+            1. 作用
+                在指定元素中，使用计数器的值
+                必须要配合 content 属性 一起使用
+                content 要配合着 ::before 或 ::after 一起使用
+            2. 语法
+                xx::before{
+                    content:counter(名);
+                }
+                ex:
+                    1. Web 基础知识
+                    2. html 快速入门
+                    3. 网页中的文本
+	3. 多列
+		1. 语法
+            1. 分隔列
+                属性：column-count
+                取值：数字
+            2. 列间隔
+                属性：col-gap
+                取值： px为单位的数值
+            3. 列规则
+                作用：定义每两列之间的线条样式
+                属性：column-rule
+                取值：width style color    
+		2. 兼容性
+            Chrome:
+                -webkit- prefix
+            Firefox:
+				-moz- prefix
+4. CSS Hack(浏览器兼容性)
+	1. 原理
+        使用CSS属性优先级解决兼容性问题
+    2. CSS Hack 的实现方式
+        1. CSS 类内部 Hack
+            在样式属性名或值的前后增加前后缀以便识别不同的浏览器
+            *color：red；
+            -color：red；
+        2. 选择器 Hack 
+            在选择器前增加前缀以便识别不同的浏览器
+            *div{} IE6
+            *+div{} IE7 
+        3. HTML头部引用 Hack
+            使用HTML条件注释判断浏览器版本
+            1. 什么是头部引用Hack？
+                使用 IE 条件注释 来解决兼容性的问题
+            2. 语法
+                <!--[if "condition" IE "version"]>
+                    operations
+                <![endif]-->
+
+                1. 版本
+                    取值： 
+                        1. 6~10 之间的任意数字
+                        2. 省略版本，判断是否为IE浏览器
+                            <!-- [if IE 6]>
+                                只在 IE 6 中使用
+                            <![endif]-->
+                2. 条件
+                    1. gt ： greater than
+                        只在 大于 指定版本 的浏览器中解析内容
+                        <!--[if gt IE 6]>
+                            <h1>This text will only be displayed in higher than IE6 version of IE</h1>
+                        <![endif]-->
+                    2. lt: less than
+                        只在 小于 指定版本 的浏览器中解析内容
+                        <!--[if lt IE 6]>
+                            <h1>This text will only be displayed in lower than IE6 version of IE</h1>
+                        <![endif]-->
+                    3. gte ： greater than
+                        只在 大于等于 指定版本 的浏览器中解析内容
+                        <!--[if gt IE 6]>
+                            <h1>This text will only be displayed in higher than or equal to IE6 version of IE</h1>
+                        <![endif]-->
+                    4. lte ： greater than
+                        只在 小于等于 指定版本 的浏览器中解析内容
+                        <!--[if gt IE 6]>
+                            <h1>This text will only be displayed in lower than or equal to IE6 version of IE</h1>
+                        <![endif]-->
+                    5. ! : not equal to
+                        只在  条件版本以外 的所有版本浏览器中解析内容
+                        <!--[if !IE 6]>
+                            Exclude IE6
+                        <![endif]-->
+                    6. 省略
+                        判断是否为 IE 或 是否为指定版本
+
+
+#############################################################################################################
+
+1. 转换
+    1. 转换简介
+        1.什么是转换
+            转换是改变元素在页面中的大小，位置形状，角度的一种方式
+            转换分为 2D转换 和 3D转换
+            2D转换：使元素在x轴和y轴进行的转换操作
+        2. 转换属性
+            属性： transform
+            取值：
+                1. none
+                2. transform-functions
+                    一组转换函数，表示一个或多个转换函数，多个的话， 用空格隔开   
+        3. 转换的原点
+            属性：transform-origin
+            默认：原点在元素的中心处
+            取值：
+                两个值：值1 x 值2 y
+                三个值：值1 x 值2 y 值3 z
+    2. 2D转换
+        1. 2D位移
+            1. 作用：改变元素在x轴和y轴上的位置
+            2. 语法
+                属性：transform
+                函数：
+                    translate（x）
+                        改变元素在x轴上的位置
+                        取值为正 右移
+                        取值为负的时候 左移
+                    translate(x,y)
+                        改变元素在x轴和y轴上的距离
+                        取值为负的时候 上移
+                        取值为正的时候 下移
+                    translateX(x)
+                        改变元素在x轴上的位置
+                    translateY(y)
+                        改变元素在y轴上的位置
+        2. 2D缩放
+            1. 什么是缩放
+                改变元素在x轴或y轴上的大小
+            2. 语法
+                属性：transform
+                函数：
+                    scale(value)
+                        xy轴都是等比缩放
+                        值是缩放倍数
+
+                        取值： 
+                            默认值 1 原始大小
+                            缩小： 0~1之间的小数
+                            放大： 大于1的值
+                            负值： 改变方向，以旋转190度效果显示
+                    scale(x,y)
+                        分别改变元素在x轴和y轴上的大小
+                    scaleX(x)
+                        x轴缩放
+                    scaleY(y)
+                        y轴缩放
+        3. 2D旋转
+            1. 语法
+                属性：transform
+                函数：rotate(ndeg)
+                    n为旋转角度  
+                    取值为正 顺时针旋转
+                    取值为负 逆时针旋转
+            2. 注意 
+                1. 转换的原点   
+                    旋转围绕着转换原点来做的，所以原点位置不同，转换效果也不同 
+                2. 旋转时连同坐标轴也一同跟着旋转
+        4. 2D倾斜
+            1. 什么是倾斜
+                改变元素在页面中的形状
+                医院点为中心，围绕着x轴和y轴产生的倾斜角度
+            2. 语法
+                1. 属性： transform
+                2. 函数： 
+                    skew(x)
+                        向横向产生倾斜效果，实际改变的是y轴的倾斜角度
+                        值为正，y轴按逆时针角度倾斜
+                        值为负，y轴按顺时针角度倾斜
+                    skew(x,y)
+                        x 横向倾斜
+                            值为负，x轴按逆时针角度倾斜
+                            值为正，x轴按顺时针角度倾斜
+                    skewX(x)
+                    skewY(y)
+
+ 
