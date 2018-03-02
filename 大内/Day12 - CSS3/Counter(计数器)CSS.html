@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Counter(计数器)</title>
+    <style>
+        /* counter initialization */
+        body{
+            counter-reset: 0 list 0 sublist;
+        }
+        /* set increment */
+        h2{
+            counter-increment:list 1;            
+        }
+        /* use counter + increment */
+        h2::before{
+            content: counter(list)". 1";
+        }
+        /* use another counter inside */
+        p{
+            counter-increment:sublist 1;    
+            margin-left: 40px;        
+        }
+        p::before{
+            content: counter(sublist)") ";
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h2>
+        Web Development
+        <p>FE</p>    
+        <p>BE</p>        
+        <p>QA</p>
+    </h2>
+    <h2>
+        HTML Introduction
+        <p>Tag</p>    
+        <p>Atttibute</p>        
+        <p>Value</p>
+        <p>Usage</p>
+
+    </h2>
+    <h2>
+        CSS3 Quick Start
+        <p>Property</p>    
+        <p>Value</p>        
+        <p>Selector</p>
+    </h2>
+</body>
+</html>
