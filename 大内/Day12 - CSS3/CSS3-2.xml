@@ -214,5 +214,170 @@
                             值为正，x轴按顺时针角度倾斜
                     skewX(x)
                     skewY(y)
+    3. 3D转换
+        1. perspective 属性
+            模拟 人眼 到 3D变换物体 之间的距离
+            该属性要添加在 3D转换元素 的父元素上
 
- 
+            浏览器兼容性：
+                Chrome 和 Safari：
+                    -webkit-perspective：数值
+        2. 3D转换 - 旋转
+            属性：transform
+            取值：
+                1. rotateX(ndeg)
+                2. rotateY(ndeg)
+                3. rotateZ(ndeg)
+                    取值为正 顺时针旋转
+                    取值为负 逆时针旋转
+                4. rotate3D(x,y,z,ndeg)
+                    xyz
+                    取值为0的时候表示该轴不参与旋转
+                    取值为1的时候表示该轴参与到旋转操作当中
+        3. 3D 转换 - 位移
+            1. 什么是3D位移
+                改变元素在 x,y,z 上的位置
+            2. 语法
+                1. tranform-style
+                    如何处理子元素的摆放位置
+                    取值：
+                    1. flat
+                        默认值，不保留子元素的3D位置
+                    2. preserve-3d
+                        保留子元素的3D位置 
+                2. transform 属性
+                    取值
+                        translateZ(z);
+                        translate3d(x,y,z); 
+
+        
+
+2. 过渡
+    1. 什么是过渡
+        使得CSS属性值，在一段时间内，平缓变化的一个效果
+    2. 过渡效果四要素
+        1. 指定过渡属性
+            指定哪个属性值在变化时需要使用过渡效果
+        2. 指定过渡时间
+            多长时间内完成过渡效果
+        3. 指定过渡时间的速率
+            过渡过程中的变化速率（匀速，先快后慢）
+        4. 指定过渡延迟时间
+            当用户激发操作后，等待多长时间才激发效果
+    3. 过渡属性
+        1. 指定过渡属性
+            属性：transition-property
+            取值：none | all | property-name
+                property-name指的是要使用过渡效果的属性名称
+            ex：
+                transition-property: background;
+                transition-property: border-radius;
+            可以使用过渡效果的属性
+                1. 颜色属性
+                    color,background-color,border-color
+                2. 取值为数值的属性
+                    尺寸，background-size,margin,padding
+                3. 转换属性
+                    transform
+                4. 渐变属性
+                    background: linear-gradient()
+                5. 阴影属性
+                6. visibility
+        2. 指定过渡时长
+            属性：transition-duration
+            取值：s/ms 单位数值
+            注意：默认值为0s 即没有过渡效果
+        3. 制定过渡时间速率
+            属性：transition-timing-function
+            取值：
+                1. ease
+                    默认值，先慢后快再慢
+                2. linear
+                    匀速
+                3. ease-in
+                    慢速开始快速结束
+                4. ease-out
+                    快速开始慢速结束
+                5. ease-in-out
+                    慢速开始慢速结束 中间先快后慢
+        4. 过渡延迟
+            属性：transition-delay
+            取值：s/ms 为单位的时间
+        5. 过渡属性简写方式
+            transition: property-name duration timing-function delay;       
+3. 动画
+    1. 什么是动画
+        使元素从一种样式逐渐变化为另一种样式的过程
+        CSS中实现动画，会存在兼容性问题，与动画相关的操作尽量加上浏览器前缀
+    2. 使用动画的步骤
+        1. 声明动画
+            指定动画名称以及创建动画中的每个状态（关键帧）
+        2. 为元素调用动画
+            指定 调用的动画名称，时长，播放次数
+        3. 声明动画
+            指定动画名称以及各个关键帧
+            关键帧：当前元素状态的 时间点 及 样式
+            语法：
+                在样式表中声明
+                @keyframes <动画名称>{
+                    0% 和 100% 可以写成
+                    from  to
+                    但是有些浏览器是不支持的 尽量用百分数
+
+
+                    0%{
+                        动画开始时的 样式
+                    }
+                    ... ... 
+                    50%{
+                        动画执行到一半的时候的 样式
+                    }
+                    100%{
+                        动画结束时的 样式
+                    }
+                }
+        4. 调用动画
+            1. animation-name
+                作用：指定调用动画名称
+            2. animation-duration
+                作用：指定动画完成一个周期所用时间 s/ms
+            3. animation-timing-function
+                作用：指定动画的执行速率
+                取值：ease，linear，ease-in，ease-out，ease-in-out
+            4. animation-delay
+                作用：指定动画的延迟 s/ms 
+            5. animation-count 
+                作用：指定动画播放次数
+                取值： 
+                    1. 具体数值
+                    2. infinite：无限次数
+            6. animation-direction 
+                作用：指定动画播放方向
+                默认：由0%播放到100%
+                取值： 
+                    1. normal
+                        默认播放
+                    2. reverse
+                        逆向播放
+                    3. alternate
+                        轮流播放
+                            - 奇数播放：0% ~ 100%
+                            - 偶数播放：100% ~ 0%
+            7. 简写
+                属性：animation
+                取值：name duration timing-function delay iteration-count direction；
+            8. animation-fill-mode 
+                作用：规定动画播放前后的填充效果
+                取值： 
+                    1. none：默认，即无填充效果
+                    2. forwards：动画播放完成后，会保持在最后一个帧的状态上
+                    3. backwards：动画在播放前，应用在第一个帧的状态上（只有在延迟(delay)的时间内 才会显示在第一个帧的状态上）
+                    4. both：动画播放前后分别使用对应填充状态
+            9. animation-play-state 
+                作用：规定动画是播放还是暂停
+                取值： 
+                    1. paused
+                        暂停
+                    2. running
+                        播放
+4. CSS 优化

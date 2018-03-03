@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock</title>
+    <style>
+        .clock{
+            margin: 200px auto;
+            width: 300px;
+            height: 300px;
+            border: 5px solid #66ddfd;
+            border-radius:50%;
+            position: relative;
+        }
+        .hour{
+            width: 75px;
+            height: 10px;
+            background: rebeccapurple;
+            position: absolute;
+            top:145px;
+            left:145px;
+        }
+        .minute{
+            width: 125px;
+            height: 8px;
+            background: purple;
+            position: absolute;
+            top:146px;
+            left:146px;
+            transform-origin: 0;
+            transform: rotate(-37deg);
+        }
+        .second{
+            width: 140px;
+            height: 4px;
+            background: green;
+            position: absolute;
+            top:148px;
+            left:148px;
+            transform-origin: 0;
+            transform: rotate(-89deg);
+        }
+        .clock:hover>.second{
+            transform: rotate(360deg);
+            transition: transform linear 60s;
+        }
+         .clock:hover>.minute{
+            transform: rotate(6deg);
+            transition: transform linear 60s;
+         }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="second"></div>
+        <div class="minute"></div>
+        <div class="hour"></div>
+    </div>
+</body>
+</html>
