@@ -13,3 +13,6 @@
   Finish algorithm books and the exercise problem sets
   Pass Realtor test
 ```
+
+Read Books
+0/10 
