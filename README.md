@@ -16,3 +16,5 @@
 
 Read Books
 0/10 
+
+Going to gym --> no more excuse
