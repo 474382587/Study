@@ -20,3 +20,5 @@ Read Books
 Going to gym --> no more excuse
 
 CS Test
+
+Keep bedroom and work station clean and neat
