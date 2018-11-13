@@ -25,3 +25,5 @@ Keep bedroom and work station clean and neat
 
 -- Buying more Books!
 -- React!
+
+-- New Resume
