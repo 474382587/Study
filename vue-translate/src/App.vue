@@ -22,17 +22,17 @@ export default {
     TranslateOutput
   },
   data() {
-      return {
-          translatedText: []
-      }
+    return {
+      translatedText: []
+    };
   },
   methods: {
     TranslateText(e) {
       console.log("text to translate", e);
       let requestUrl = apiBaseUrl + "en-zh&text=" + e;
-      axios.get(requestUrl).then(res=> {
-          console.log(res.data.text)
-          this.translatedText = res.data.text
+      axios.get(requestUrl).then(res => {
+        console.log(res.data.text);
+        this.translatedText = res.data.text;
       });
     }
   }
