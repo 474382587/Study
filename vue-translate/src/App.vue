@@ -3,6 +3,7 @@
     <h1>Yandex 翻译</h1>
     <h5>Powered by Yandex.Translate & Vue.js</h5>
     <TranslateForm @translateSubmit="TranslateText"></TranslateForm>
+    <!-- Need to add a language selector -->
     <TranslateOutput v-if="translatedText.length" v-text="translatedText[0]"></TranslateOutput>
   </div>
 </template>
