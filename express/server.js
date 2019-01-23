@@ -12,5 +12,5 @@ app.get('/new', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server Started!    ' + port)
+    console.log('Server Started! ' + port)
 })
