@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <button id="btn">Button</button>
     <script>
 
         var MyModel = Backbone.Model.extend({
@@ -36,6 +37,21 @@
         }
         myModel.on(event)
 
+
+        var MyView = Backbone.View.extend({
+            el: '#btn',
+            events: {
+                'click': 'changeColor'
+            },
+            changeColor: function () {
+                console.log('Color Changed')
+            }
+        })
+
+        var myView = new MyView({
+            
+        })
+        console.log(myView)
 
     </script>
 </body>
