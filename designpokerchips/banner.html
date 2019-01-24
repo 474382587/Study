@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <div class="home-banner">
+            <h1>Design Poker Chips</h1>
+            <p>from America's #1 Poker Chip Company</p>
+            <a href="https://google.ca">START DESIGN</a>
+            <div class="abs-image-wrapper">
+                <img
+                    id="banner-img"
+                    src="https://www.chiplab.com/skin/frontend/default/chiplab_new/images/8stripe/stack_8stripe_red.png"
+                    alt=""
+                />
+            </div>
+            <div class="color-picker">
+                <div class="color-indicator red" data-color="red"></div>
+                <div class="color-indicator grey" data-color="grey"></div>
+                <div class="color-indicator yellow" data-color="yellow"></div>
+                <div class="color-indicator black" data-color="black"></div>
+            </div>
+            <div class="style-picker">
+                <div class="stripe8" data-style="8stripe">
+                    <img
+                        src="https://www.chiplab.com/skin/frontend/default/chiplab_new/images/pattern3.png"
+                        alt=""
+                    />
+                </div>
+                <div class="spot8" data-style="8spot">
+                    <img
+                        src="https://www.chiplab.com/skin/frontend/default/chiplab_new/images/pattern4.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+        <style>
+            .home-banner * {
+                margin: 0;
+                padding: 0;
+            }
+            .banner-row,
+            .banner-padding {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .home-banner {
+                text-align: center;
+                padding: 20px 0;
+                background-image: linear-gradient(
+                    to right,
+                    #2ab0ed 0%,
+                    #d0effc 50%,
+                    #d0effc 51%,
+                    #2ab0ed 100%
+                );
+                height: 500px;
+                position: relative;
+            }
+            .home-banner > h1,
+            .home-banner > p {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            .home-banner > a {
+                font-weight: bold;
+                display: block;
+                margin: 0 auto;
+                width: 180px;
+                padding: 10px;
+                color: white;
+                text-decoration: none;
+                background-color: #3cb878;
+            }
+            .home-banner > a:hover {
+                background-color: #5eddf4;
+            }
+
+            .abs-image-wrapper {
+                z-index: 1;
+                position: absolute;
+                left: 35%;
+                bottom: 0;
+                width: 30%;
+            }
+            .abs-image-wrapper > img {
+                width: 100%;
+            }
+            .color-picker {
+                display: flex;
+                justify-content: center;
+                padding: 20px 0;
+            }
+            .color-indicator {
+                cursor: pointer;
+                margin: 0 5px;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                box-sizing: border-box;
+            }
+            .color-indicator:hover {
+                border: 2px solid #fff;
+            }
+            .color-indicator.active {
+                border: 2px solid #fff;
+            }
+            .red {
+                background-color: red;
+            }
+            .grey {
+                background-color: grey;
+            }
+            .yellow {
+                background-color: yellow;
+            }
+            .black {
+                background-color: black;
+            }
+            .style-picker {
+                position: relative;
+                z-index: 3;
+                padding: 0px 0;
+                display: flex;
+                justify-content: center;
+            }
+            .style-picker > * {
+                width: 57px;
+                margin: 0 5px;
+                box-sizing: border-box;
+                /* height: 40px; */
+            }
+            .style-picker > *:hover {
+                cursor: pointer;
+                border: 1px solid #fff;
+            }
+            .style-picker > *.active {
+                border: 1px solid #fff;
+            }
+            @media screen and (max-width: 900px) {
+                .abs-image-wrapper {
+                    position: absolute;
+                    left: calc(50% - 112.5px);
+                    bottom: 0;
+                    width: 225px;
+                }
+                .home-banner {
+                    height: 350px;
+                }
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(event) {
+                // console.log('DOM fully loaded and parsed')
+                var allColors = document.querySelectorAll('.color-indicator')
+                var allStyles = document.querySelectorAll('.style-picker>*')
+                var color = 'red'
+                var style = '8stripe'
+                var preColor = document.querySelector('.color-indicator.red')
+                preColor.classList.add('active')
+                var preStyle = document.querySelector('.stripe8')
+                preStyle.classList.add('active')
+
+                allColors = [].slice.apply(allColors)
+                allStyles = [].slice.apply(allStyles)
+
+                allColors.forEach(function(el) {
+                    el.addEventListener('click', function(e) {
+                        console.dir(e.target.dataset.color)
+                        color = e.target.dataset.color
+                        e.target.classList.add('active')
+                        preColor.classList.remove('active')
+                        preColor = e.target
+                        var tempUrl =
+                            'https://www.chiplab.com/skin/frontend/default/chiplab_new/images/' +
+                            style +
+                            '/stack_' +
+                            style +
+                            '_' +
+                            color +
+                            '.png'
+                        changeImage(tempUrl)
+                    })
+                })
+
+                allStyles.forEach(function(el) {
+                    el.addEventListener('click', function(e) {
+                        console.dir(e.currentTarget.dataset.style)
+                        style = e.currentTarget.dataset.style
+                        if (e.currentTarget === preStyle) {
+                            console.log('same')
+                        } else {
+                            e.currentTarget.classList.add('active')
+                            preStyle.classList.remove('active')
+                            preStyle = e.currentTarget
+                            var tempUrl =
+                                'https://www.chiplab.com/skin/frontend/default/chiplab_new/images/' +
+                                style +
+                                '/stack_' +
+                                style +
+                                '_' +
+                                color +
+                                '.png'
+                            changeImage(tempUrl)
+                        }
+                    })
+                })
+            })
+
+            function changeImage(src) {
+                document.getElementById('banner-img').src = src
+            }
+        </script>
+    </body>
+</html>
