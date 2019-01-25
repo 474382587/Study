@@ -15,9 +15,10 @@ app.get('/new', (req, res) => {
     res.send('<h1>New Hello World!</h1>')
 })
 
-app.post('/', (req, res) => {
-    var a = req
-    res.send('')
+app.post('/post', (req, res) => {
+    var a = req.body
+    console.log(a)
+    res.send('Hello World')
 })
 
 

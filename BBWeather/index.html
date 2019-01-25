@@ -18,7 +18,9 @@
         </div>
         <script src="./main.js"></script>
         <script>
-            axios.post('http://localhost:3030', {})
+            axios.post('http://localhost:3030/post', {name: 'Joseph'}).then(res => {
+                console.log(res)
+            })
         </script>
     </body>
 </html>
