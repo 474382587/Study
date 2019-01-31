@@ -8,7 +8,30 @@ const notes = require('./note.js')
 
 console.log(process.argv)
 
-const argv = yargs.argv
+const titleOptions = {
+    describe: 'Title of note',
+    demand: true,
+    alias: 't'
+}
+const bodyOptions = {
+    describe: 'Body of note',
+    demand: true,
+    alias: 'b'
+}
+
+const argv = yargs
+    .command('add', 'Add a new note', {
+        title: titleOptions,
+        body: bodyOptions
+    })
+    .command('list', 'List all notes')
+    .command('read', 'Add a new note', {
+        title: titleOptions
+    })
+    .command('remove', 'Remove a new note', {
+        title: titleOptions
+    })
+    .help().argv
 
 var command = process.argv[2]
 console.log(argv, ' yargs')
@@ -35,3 +58,12 @@ switch (command) {
         console.log('command not defined')
         break
 }
+
+/**
+ * debugging, add inspect before your cmd
+ * node inspect app.js
+ * n --> next step
+ * c --> continue
+ * repl --> read and evaluate  -- where you can use JS
+ *
+ */
