@@ -26,8 +26,10 @@ switch (command) {
         notes.readNote(argv.title)
         break
     case 'remove':
-        notes.removeNote(argv.title)
         console.log('remove note')
+        notes.removeNote(argv.title)
+            ? console.log('remove note fail')
+            : console.log('remove note success')
         break
     default:
         console.log('command not defined')
