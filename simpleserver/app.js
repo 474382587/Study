@@ -16,7 +16,8 @@ console.log(command, 'command')
 
 switch (command) {
     case 'add':
-        notes.addNote(argv.title, argv.body)
+        var note = notes.addNote(argv.title, argv.body)
+        note ? console.log('note added') : console.log('duplicate found!')
         break
     case 'list':
         notes.getAll()
