@@ -56,7 +56,7 @@ console.log(dfd)
 function getList(index) {
     console.log('end Now ', index)
     console.log(index)
-    if(index === 5) {
+    if(index === 100) {
         console.log('end Now')
         console.table(arr)
         dfd.resolve(arr)
@@ -70,7 +70,7 @@ function getList(index) {
     })
 }
 
-dfd.done(function(e) {
+dfd.then(function(e) {
 
     console.log(e)
 })
