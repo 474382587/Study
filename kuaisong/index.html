@@ -34,7 +34,11 @@
             .solution > img {
                 transition: transform 0.3s ease-in-out;
             }
+            .solution:hover .solution-title {
+                background-color: transparent;
+            }
             .solution-title {
+                transition: all 0.3s;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -71,7 +75,143 @@
             .solution-detail.active {
                 display: block;
             }
+            .services {
+                background-image: url('https://www.uupt.com/images/home-bg-one.jpg');
+                height: 756px;
+            }
+            .services > .services-container {
+                top: -40px;
+                width: 1200px;
+                margin: 0 auto;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .service {
+                margin-bottom: 30px;
+                width: 45%;
+                display: flex;
+                box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.08);
+            }
+            .service > .text-wrapper {
+                background-color: #fff;
+                flex: 1;
+            }
+            .service > .text-wrapper > h3,
+            .service > .text-wrapper > p {
+                margin-top: 20px;
+                padding: 0 20px;
+            }
+            .service > .image-wrapper {
+                overflow: hidden;
+                font-size: 0;
+            }
+            .service > .image-wrapper > img {
+                transition: all 0.4s ease-in-out;
+            }
+
+            .service > .image-wrapper:hover > img {
+                transform: scale(1.15);
+            }
+            .service > .text-wrapper > h2 > span {
+                color: #ffffff;
+                background-color: #111;
+                padding: 0px 20px;
+                height: 50px;
+                line-height: 50px;
+                display: inline-block;
+            }
         </style>
+        <div class="centered-title">
+            <h2>
+                一呼百应，UU跑腿为您提供安全专业的即时同城跑腿服务
+            </h2>
+            <p>
+                YY跑腿服务人员实名认证，全城送取极速完成
+            </p>
+        </div>
+        <div class="services">
+            <div class="services-container">
+                <div class="service">
+                    <div class="image-wrapper">
+                        <img
+                            src="https://www.uupt.com/images/home-peo1.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="text-wrapper">
+                        <h2><span>代买</span></h2>
+                        <h3>
+                            美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
+                        </h3>
+                        <p>生鲜百货，一单全搞定</p>
+                        <p>名吃美味，吃遍全城大小美食</p>
+                        <p>紧急药品，24小时快速救急</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="image-wrapper">
+                        <img
+                            src="https://www.uupt.com/images/home-peo1.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="text-wrapper">
+                        <h2><span>代买</span></h2>
+                        <h3>
+                            美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
+                        </h3>
+                        <p>生鲜百货，一单全搞定</p>
+                        <p>名吃美味，吃遍全城大小美食</p>
+                        <p>紧急药品，24小时快速救急</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="image-wrapper">
+                        <img
+                            src="https://www.uupt.com/images/home-peo1.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="text-wrapper">
+                        <h2><span>代买</span></h2>
+                        <h3>
+                            美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
+                        </h3>
+                        <p>生鲜百货，一单全搞定</p>
+                        <p>名吃美味，吃遍全城大小美食</p>
+                        <p>紧急药品，24小时快速救急</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="image-wrapper">
+                        <img
+                            src="https://www.uupt.com/images/home-peo1.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="text-wrapper">
+                        <h2><span>代买</span></h2>
+                        <h3>
+                            美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
+                        </h3>
+                        <p>生鲜百货，一单全搞定</p>
+                        <p>名吃美味，吃遍全城大小美食</p>
+                        <p>紧急药品，24小时快速救急</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="centered-title">
+            <h2>
+                全行业定制化配送解决方案 服务无忧 体验更优
+            </h2>
+            <p>
+                超过100000+来自不同行业的商家选择使用YY跑腿
+            </p>
+        </div>
         <div class="solutions">
             <div class="solution-list">
                 <div class="solution" data-index="0">
@@ -192,7 +332,8 @@
             .centered-title {
                 width: 100%;
                 text-align: center;
-                padding-bottom: 80px;
+                padding: 80px 0 100px;
+                margin-bottom: 60px;
             }
             .centered-title > h2 {
                 font-size: 36px;
@@ -609,21 +750,28 @@
         }
     </style>
     <script>
-        var allProvince = document.querySelectorAll('province')
-        allProvince.forEach(e => {})
-
+        // var allProvince = document.querySelectorAll('province')
+        // allProvince.forEach(e => {})
         var allSolutions = document.querySelectorAll('.solution')
         var allSolutionDetails = document.querySelectorAll('.solution-detail')
+        var preActiveDetail = allSolutionDetails[0]
+
+        preActiveDetail.classList.add('active')
         allSolutions.forEach(el => {
             el.addEventListener('mouseenter', e => {
-                console.dir(e.currentTarget.dataset.index)
+                // console.dir(e.currentTarget.dataset.index)
+                allSolutionDetails.forEach(e => {
+                    e.classList.remove('active')
+                })
                 var activeDetail = e.currentTarget.dataset.index
                 allSolutionDetails[activeDetail].classList.add('active')
             })
-            el.addEventListener('mouseleave', e => {
-                var deactiveDetail = e.currentTarget.dataset.index
-                allSolutionDetails[deactiveDetail].classList.remove('active')
-            })
+            // el.addEventListener('mouseleave', e => {
+            //     var deactiveDetail = e.currentTarget.dataset.index
+            //     allSolutionDetails[deactiveDetail].classList.remove('active')
+            //     preActiveDetail = e.currentTarget
+            //     preActiveDetail.classList.add('active')
+            // })
         })
     </script>
 </html>
