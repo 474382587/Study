@@ -844,23 +844,29 @@
         }
         function moveMobilePage(direction) {
             if (direction) {
-                window.scrollTo({
-                    top:
-                        currentPosition >= 2 * deviceHeight
+                window.scroll(0, currentPosition >= 2 * deviceHeight
                             ? currentPosition
-                            : (currentPosition += createRuler()),
-                    left: 0,
-                    behavior: 'smooth'
-                })
+                            : (currentPosition += createRuler()))
+                // window.scrollTo({
+                //     top:
+                //         currentPosition >= 2 * deviceHeight
+                //             ? currentPosition
+                //             : (currentPosition += createRuler()),
+                //     left: 0,
+                //     behavior: 'smooth'
+                // })
             } else {
-                window.scrollTo({
-                    top:
-                        currentPosition <= 0
+                window.scroll(0, currentPosition <= 0
                             ? 0
-                            : (currentPosition -= createRuler()),
-                    left: 0,
-                    behavior: 'smooth'
-                })
+                            : (currentPosition -= createRuler()))
+                // window.scrollTo({
+                //     top:
+                //         currentPosition <= 0
+                //             ? 0
+                //             : (currentPosition -= createRuler()),
+                //     left: 0,
+                //     behavior: 'smooth'
+                // })
             }
             console.log('currentPosition: ', currentPosition)
         }
