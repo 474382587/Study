@@ -808,54 +808,76 @@
             })
         })
 
-        // var isMobileDevice = window.innerWidth > 560 ? false : true
-        // var moveDistance = 0
-        // var currentPosition = 0
-        // const deviceHeight = window.innerHeight
-        // if (isMobileDevice) {
-        //     console.log(deviceHeight)
-        //     window.addEventListener(
-        //         'touchmove',
-        //         e => {
-        //             e.preventDefault()
-        //         },
-        //         { passive: false }
-        //     )
-        //     window.addEventListener('touchstart', function(e) {
-        //         console.log(e.touches[0].clientY)
-        //         moveDistance = e.touches[0].clientY
-        //     })
-        //     window.addEventListener('touchend', function(e) {
-        //         console.log(e.changedTouches[0].clientY)
-        //         moveDistance -= e.changedTouches[0].clientY
-        //         console.log(moveDistance)
-        //         if (moveDistance > 10) {
-        //             moveMobilePage(true)
-        //         } else if (moveDistance < -10) {
-        //             moveMobilePage(false)
-        //         }
-        //     })
-        // }
-        // function moveMobilePage(direction) {
-        //     if (direction) {
-        //         window.scrollTo({
-        //             top:
-        //                 currentPosition > 2 * deviceHeight
-        //                     ? currentPosition
-        //                     : (currentPosition += deviceHeight),
-        //             left: 0,
-        //             behavior: 'smooth'
-        //         })
-        //     } else {
-        //         window.scrollTo({
-        //             top:
-        //                 currentPosition < 0
-        //                     ? 0
-        //                     : (currentPosition -= deviceHeight),
-        //             left: 0,
-        //             behavior: 'smooth'
-        //         })
-        //     }
-        // }
+        var isMobileDevice = window.innerWidth > 560 ? false : true
+        var moveDistance = 0
+        var currentPosition = 0
+        const deviceHeight = window.innerHeight
+        if (isMobileDevice) {
+            console.log(deviceHeight)
+            window.addEventListener(
+                'touchmove',
+                e => {
+                    e.preventDefault()
+                },
+                { passive: false }
+            )
+            window.addEventListener('touchstart', function(e) {
+                console.log(e.touches[0].clientY)
+                moveDistance = e.touches[0].clientY
+            })
+            window.addEventListener('touchend', function(e) {
+                console.log(e.changedTouches[0].clientY)
+                moveDistance -= e.changedTouches[0].clientY
+                console.log(moveDistance)
+                if (moveDistance > 10) {
+                    moveMobilePage(true)
+                } else if (moveDistance < -10) {
+                    moveMobilePage(false)
+                }
+            })
+        }
+        function moveMobilePage(direction) {
+            if (direction) {
+                window.scrollTo({
+                    top:
+                        currentPosition >= 2 * deviceHeight
+                            ? currentPosition
+                            : (currentPosition += createRuler()),
+                    left: 0,
+                    behavior: 'smooth'
+                })
+            } else {
+                window.scrollTo({
+                    top:
+                        currentPosition <= 0
+                            ? 0
+                            : (currentPosition -= createRuler()),
+                    left: 0,
+                    behavior: 'smooth'
+                })
+            }
+            console.log('currentPosition: ', currentPosition)
+        }
+        var axis = Math.abs(window.orientation);
+        var dims = { w: 0, h: 0 }
+        var createRuler = function() {
+            var ruler = document.createElement('div')
+
+            ruler.style.position = 'fixed'
+            ruler.style.height = '100vh'
+            ruler.style.width = 0
+            ruler.style.top = 0
+
+            document.documentElement.appendChild(ruler)
+
+            // Set cache conscientious of device orientation
+            dims.w = axis === 90 ? ruler.offsetHeight : window.innerWidth
+            dims.h = axis === 90 ? window.innerWidth : ruler.offsetHeight
+
+            // Clean up after ourselves
+            document.documentElement.removeChild(ruler)
+            ruler = null
+            return dims.h
+        }
     </script>
 </html>
