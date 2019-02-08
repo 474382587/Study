@@ -5,824 +5,793 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Page Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script> -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="desktop.css"
+        />
+        <!-- <script src="main.js"></script> -->
+        <script>
+            console.log(document.querySelector('.padding'))
+            document.querySelector('.solution').addEventListener('click', e => {
+                console.log(e)
+            })
+        </script>
     </head>
     <body>
-        <div class="padding"></div>
-        <style>
-            .solutions {
-                height: 690px;
-                background-image: url('https://www.uupt.com/images/home-bg-two.jpg');
-                display: flex;
-                justify-content: space-between;
-            }
-            .solutions > .solution-list {
-                width: 396px;
-                margin-left: 10%;
-                height: 110%;
-                position: relative;
-                top: -11%;
-            }
-            .solution {
-                overflow: hidden;
-                position: relative;
-            }
-            .solution:hover > img {
-                transform: scale(1.15);
-            }
-            .solution > img {
-                transition: transform 0.3s ease-in-out;
-            }
-            .solution:hover .solution-title {
-                background-color: transparent;
-            }
-            .solution-title {
-                transition: all 0.3s;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-color: rgba(2, 4, 3, 0.6);
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .solution-title > h3 {
-                width: 60%;
-                text-align: center;
-                color: #e3e3e3;
-            }
-            .solution:hover > .solution-title > h3 {
-                background-color: #000;
-                padding: 10px 0;
-                color: #ff8b03;
-            }
-            .solution-details {
-                box-sizing: border-box;
-                padding: 30px 48px;
-                display: flex;
-                justify-items: center;
-                align-items: center;
-            }
-            .solution-detail {
-                height: 100%;
-                width: 100%;
-                color: #e3e3e3;
-                display: none;
-            }
-            .solution-detail.active {
-                display: block;
-            }
-            .services {
-                background-image: url('https://www.uupt.com/images/home-bg-one.jpg');
-                height: 756px;
-            }
-            .services > .services-container {
-                top: -40px;
-                width: 1200px;
-                margin: 0 auto;
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-            .service {
-                margin-bottom: 30px;
-                width: 45%;
-                display: flex;
-                box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.08);
-            }
-            .service > .text-wrapper {
-                background-color: #fff;
-                flex: 1;
-            }
-            .service > .text-wrapper > h3,
-            .service > .text-wrapper > p {
-                margin-top: 20px;
-                padding: 0 20px;
-            }
-            .service > .image-wrapper {
-                overflow: hidden;
-                font-size: 0;
-            }
-            .service > .image-wrapper > img {
-                transition: all 0.4s ease-in-out;
-            }
-
-            .service > .image-wrapper:hover > img {
-                transform: scale(1.15);
-            }
-            .service > .text-wrapper > h2 > span {
-                color: #ffffff;
-                background-color: #111;
-                padding: 0px 20px;
-                height: 50px;
-                line-height: 50px;
-                display: inline-block;
-            }
-        </style>
-        <div class="centered-title">
-            <h2>
-                一呼百应，UU跑腿为您提供安全专业的即时同城跑腿服务
-            </h2>
-            <p>
-                YY跑腿服务人员实名认证，全城送取极速完成
-            </p>
-        </div>
-        <div class="services">
-            <div class="services-container">
-                <div class="service">
-                    <div class="image-wrapper">
-                        <img
-                            src="https://www.uupt.com/images/home-peo1.png"
-                            alt=""
-                        />
-                    </div>
-                    <div class="text-wrapper">
-                        <h2><span>代买</span></h2>
-                        <h3>
-                            美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
-                        </h3>
-                        <p>生鲜百货，一单全搞定</p>
-                        <p>名吃美味，吃遍全城大小美食</p>
-                        <p>紧急药品，24小时快速救急</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="image-wrapper">
-                        <img
-                            src="https://www.uupt.com/images/home-peo1.png"
-                            alt=""
-                        />
-                    </div>
-                    <div class="text-wrapper">
-                        <h2><span>代买</span></h2>
-                        <h3>
-                            美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
-                        </h3>
-                        <p>生鲜百货，一单全搞定</p>
-                        <p>名吃美味，吃遍全城大小美食</p>
-                        <p>紧急药品，24小时快速救急</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="image-wrapper">
-                        <img
-                            src="https://www.uupt.com/images/home-peo1.png"
-                            alt=""
-                        />
-                    </div>
-                    <div class="text-wrapper">
-                        <h2><span>代买</span></h2>
-                        <h3>
-                            美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
-                        </h3>
-                        <p>生鲜百货，一单全搞定</p>
-                        <p>名吃美味，吃遍全城大小美食</p>
-                        <p>紧急药品，24小时快速救急</p>
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="image-wrapper">
-                        <img
-                            src="https://www.uupt.com/images/home-peo1.png"
-                            alt=""
-                        />
-                    </div>
-                    <div class="text-wrapper">
-                        <h2><span>代买</span></h2>
-                        <h3>
-                            美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
-                        </h3>
-                        <p>生鲜百货，一单全搞定</p>
-                        <p>名吃美味，吃遍全城大小美食</p>
-                        <p>紧急药品，24小时快速救急</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="centered-title">
-            <h2>
-                全行业定制化配送解决方案 服务无忧 体验更优
-            </h2>
-            <p>
-                超过100000+来自不同行业的商家选择使用YY跑腿
-            </p>
-        </div>
-        <div class="solutions">
-            <div class="solution-list">
-                <div class="solution" data-index="0">
-                    <img
-                        src="https://www.uupt.com/images/home-send1.png"
-                        alt=""
-                    />
-                    <div class="solution-title">
-                        <h3>外卖餐饮配送</h3>
-                    </div>
-                </div>
-                <div class="solution" data-index="1">
-                    <img
-                        src="https://www.uupt.com/images/home-send2.png"
-                        alt=""
-                    />
-                    <div class="solution-title">
-                        <h3>鲜花配送</h3>
-                    </div>
-                </div>
-                <div class="solution" data-index="2">
-                    <img
-                        src="https://www.uupt.com/images/home-send3.png"
-                        alt=""
-                    />
-                    <div class="solution-title">
-                        <h3>3C数码配送</h3>
-                    </div>
-                </div>
-                <div class="solution" data-index="3">
-                    <img
-                        src="https://www.uupt.com/images/home-send4.png"
-                        alt=""
-                    />
-                    <div class="solution-title">
-                        <h3>蛋糕配送</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="solution-details">
-                <div class="solution-detail active">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tempore consequuntur eveniet expedita enim itaque, illo
-                </div>
-                <div class="solution-detail">
-                    nat us non quo aperiam Lorem ipsum dolor sit ame onsectetur
-                    adipi sicing elit. Tempore consequuntur eveniet expedita
-                    enim itaque, illo nisi quae numquam velit a nat us non quo
-                    aperiam placeat? Praesentium vitae sed iure repudiandae.
-                </div>
-                <div class="solution-detail">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tempore consequuntur eveniet expedita enim itaque, illo nisi
-                    quae numquam velit a natus non quo aperiam placeat?
-                    Praesentium vitae sed iure repudiandae. Lorem ipsum dolor
-                    sit amet consectetur adipisicing elit. Tempore consequuntur
-                    eveniet expedita enim itaque, illo nisi quae numquam velit a
-                    natus non quo aperiam placeat? Praesentium vitae sed iure
-                    repudiandae.
-                </div>
-                <div class="solution-detail">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Tempore consequuntur eveniet expedita enim itaque, illo nisi
-                    quae numquam velit a natus non quo aperiam placeat?
-                    Praesentium vitae sed iure repudiandae.
-                </div>
-            </div>
-        </div>
-
-        <style>
-            * {
-                padding: 0;
-                margin: 0;
-            }
-            .padding {
-                padding: 40px;
-            }
-            .partnership {
-                height: 756px;
-                display: flex;
-                justify-content: space-between;
-                background-image: url('https://www.uupt.com/images/home-bg-one.jpg');
-            }
-            .partnership > .contact {
-                position: relative;
-                height: 105%;
-                top: -5%;
-                box-sizing: border-box;
-                background-color: #fff;
-                margin-left: 10%;
-                padding: 92px 48px;
-                box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.08);
-            }
-            .partnership > .contact > * {
-                padding-bottom: 20px;
-            }
-            @media screen and (max-width: 1200px) {
-                .partnership {
-                    height: 456px;
-                }
-                .partnership > .contact {
-                    padding: 20px 40px;
-                }
-                .partnership > .contact > .image-wrapper {
-                    display: none;
-                }
-            }
-
-            .partnership > .map {
-                overflow: hidden;
-                flex: 1;
-                text-align: center;
-            }
-            svg {
-                height: 100%;
-                width: 90%;
-            }
-            .centered-title {
-                width: 100%;
-                text-align: center;
-                padding: 80px 0 100px;
-                margin-bottom: 60px;
-            }
-            .centered-title > h2 {
-                font-size: 36px;
-            }
-            .centered-title > p {
-                font-size: 20px;
-                color: #e3e3e3;
-            }
-        </style>
-
-        <div class="centered-title">
-            <h2>
-                YY跑腿 全国城市合伙人计划
-            </h2>
-            <p>
-                携手YY顶尖智囊团 共创分享经济奇迹
-            </p>
-        </div>
-        <div class="partnership">
-            <div class="contact">
-                <div class="image-wrapper">
-                    <img
-                        src="
-                https://www.uupt.com/images/home-icon-quote.png"
-                        alt=""
-                    />
-                </div>
-                <h2>城市合伙人咨询电话</h2>
+        <!-- <div class="padding"></div> -->
+        <div class="desktop">
+            <div class="centered-title">
+                <h2>
+                    一呼百应，UU跑腿为您提供安全专业的即时同城跑腿服务
+                </h2>
                 <p>
-                    778 788 7888
+                    YY跑腿服务人员实名认证，全城送取极速完成
                 </p>
-                <p>
-                    604 6046 044
-                </p>
-                <h2>咨询时间</h2>
-                <p>
-                    周一至周六 09:00~20:00
-                </p>
-                <div class="image-wrapper">
-                    <img
-                        src="https://www.uupt.com/images/Cooperation.JPG"
-                        alt=""
-                    />
+            </div>
+
+            <div class="services">
+                <div class="services-container">
+                    <div class="service">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://www.uupt.com/images/home-peo1.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="text-wrapper">
+                            <h2><span>代买</span></h2>
+                            <h3>
+                                美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
+                            </h3>
+                            <p>生鲜百货，一单全搞定</p>
+                            <p>名吃美味，吃遍全城大小美食</p>
+                            <p>紧急药品，24小时快速救急</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://www.uupt.com/images/home-peo1.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="text-wrapper">
+                            <h2><span>代买</span></h2>
+                            <h3>
+                                美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
+                            </h3>
+                            <p>生鲜百货，一单全搞定</p>
+                            <p>名吃美味，吃遍全城大小美食</p>
+                            <p>紧急药品，24小时快速救急</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://www.uupt.com/images/home-peo1.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="text-wrapper">
+                            <h2><span>代买</span></h2>
+                            <h3>
+                                美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
+                            </h3>
+                            <p>生鲜百货，一单全搞定</p>
+                            <p>名吃美味，吃遍全城大小美食</p>
+                            <p>紧急药品，24小时快速救急</p>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="image-wrapper">
+                            <img
+                                src="https://www.uupt.com/images/home-peo1.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="text-wrapper">
+                            <h2><span>代买</span></h2>
+                            <h3>
+                                美食生鲜百货 想购就购<br />足不出户 轻松购遍全城
+                            </h3>
+                            <p>生鲜百货，一单全搞定</p>
+                            <p>名吃美味，吃遍全城大小美食</p>
+                            <p>紧急药品，24小时快速救急</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="map">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="923"
-                    height="1208"
-                    viewBox="0 0 800 900"
-                    class="element-hidden--mobile"
-                >
-                    <g>
-                        <g id="CA" transform="translate(-13.785, -100)">
-                            <g
-                                id="NL"
-                                class="province province-group"
-                                data-code="NL"
-                                transform="translate(695.378 497.65)"
-                            >
+
+            <div class="centered-title">
+                <h2>
+                    全行业定制化配送解决方案 服务无忧 体验更优
+                </h2>
+                <p>
+                    超过100000+来自不同行业的商家选择使用YY跑腿
+                </p>
+            </div>
+            <div class="solutions">
+                <div class="solution-list">
+                    <div class="solution" data-index="0">
+                        <img
+                            src="https://www.uupt.com/images/home-send1.png"
+                            alt=""
+                        />
+                        <div class="solution-title">
+                            <h3>外卖餐饮配送</h3>
+                        </div>
+                    </div>
+                    <div class="solution" data-index="1">
+                        <img
+                            src="https://www.uupt.com/images/home-send2.png"
+                            alt=""
+                        />
+                        <div class="solution-title">
+                            <h3>鲜花配送</h3>
+                        </div>
+                    </div>
+                    <div class="solution" data-index="2">
+                        <img
+                            src="https://www.uupt.com/images/home-send3.png"
+                            alt=""
+                        />
+                        <div class="solution-title">
+                            <h3>3C数码配送</h3>
+                        </div>
+                    </div>
+                    <div class="solution" data-index="3">
+                        <img
+                            src="https://www.uupt.com/images/home-send4.png"
+                            alt=""
+                        />
+                        <div class="solution-title">
+                            <h3>蛋糕配送</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution-details">
+                    <div class="solution-detail active">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempore consequuntur eveniet expedita enim itaque, illo
+                    </div>
+                    <div class="solution-detail">
+                        nat us non quo aperiam Lorem ipsum dolor sit ame
+                        onsectetur adipi sicing elit. Tempore consequuntur
+                        eveniet expedita enim itaque, illo nisi quae numquam
+                        velit a nat us non quo aperiam placeat? Praesentium
+                        vitae sed iure repudiandae.
+                    </div>
+                    <div class="solution-detail">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempore consequuntur eveniet expedita enim itaque, illo
+                        nisi quae numquam velit a natus non quo aperiam placeat?
+                        Praesentium vitae sed iure repudiandae. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Tempore
+                        consequuntur eveniet expedita enim itaque, illo nisi
+                        quae numquam velit a natus non quo aperiam placeat?
+                        Praesentium vitae sed iure repudiandae.
+                    </div>
+                    <div class="solution-detail">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tempore consequuntur eveniet expedita enim itaque, illo
+                        nisi quae numquam velit a natus non quo aperiam placeat?
+                        Praesentium vitae sed iure repudiandae.
+                    </div>
+                </div>
+            </div>
+
+            <div class="centered-title">
+                <h2>
+                    YY跑腿 全国城市合伙人计划
+                </h2>
+                <p>
+                    携手YY顶尖智囊团 共创分享经济奇迹
+                </p>
+            </div>
+            <div class="partnership">
+                <div class="contact">
+                    <div class="image-wrapper">
+                        <img
+                            src="
+                            https://www.uupt.com/images/home-icon-quote.png"
+                            alt=""
+                        />
+                    </div>
+                    <h2>城市合伙人咨询电话</h2>
+                    <p>
+                        778 788 7888
+                    </p>
+                    <p>
+                        604 6046 044
+                    </p>
+                    <h2>咨询时间</h2>
+                    <p>
+                        周一至周六 09:00~20:00
+                    </p>
+                    <div class="image-wrapper">
+                        <img
+                            src="https://www.uupt.com/images/Cooperation.JPG"
+                            alt=""
+                        />
+                    </div>
+                </div>
+                <div class="map">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="923"
+                        height="1208"
+                        viewBox="0 0 800 900"
+                        class="element-hidden--mobile"
+                    >
+                        <g>
+                            <g id="CA" transform="translate(-13.785, -100)">
+                                <g
+                                    id="NL"
+                                    class="province province-group"
+                                    data-code="NL"
+                                    transform="translate(695.378 497.65)"
+                                >
+                                    <path
+                                        d="M133.2,208.1c-2-2.5-1.9-5.5,0.1-8.3c2.2-3,2.4-6.6,0.5-7.2c-1.8-0.6-1.8-2.1,0.1-5.1c1.3-2.2,1.5-3.1,1-8.6
+                                    c-0.7-9.9-0.5-21.5,0.6-33c0.1-0.8,0.4-3.9,0.7-7c0.6-6.5,1.9-8.9,7-12.8c2.8-2.1,3.5-2.4,4.4-1.7c2.7,2.2,3.2,4.7,2.9,13.3
+                                    c-0.2,4.6-0.5,8.6-0.7,9c-0.2,0.3-0.6,2.5-0.8,4.8l-0.5,4.2l1.8-2.1c1-1.2,1.8-2.3,1.8-2.6c0.1-1.1,3-1.3,5.3-0.5
+                                    c2.6,0.9,2.7,1.1,2.5,4.7l-0.1,2.3h3.6c2,0,3.7-0.3,3.9-0.6c0.2-0.3,1.9-1,3.8-1.5c1.9-0.5,5-1.7,6.9-2.6
+                                    c3.5-1.6,6.7-1.7,9.6-0.2c1.5,0.8,2.2,4.6,1.2,6.3c-0.7,1.1-0.6,1.6,0.5,2.8c1.2,1.2,1.9,1.3,5,0.8c4.5-0.7,5.3-0.4,5.3,1.9
+                                    c0,2-1.5,4.6-3.8,6.6c-0.8,0.7-1,1.2-0.6,1.2c0.5,0,0.8,1.1,0.8,2.4c0,1.3,0.2,2.9,0.4,3.5c0.5,1.3,1.7,1.5,1.7,0.3
+                                    c0-1.3,3.5-5.5,4.6-5.5c0.6,0,1.4,1.3,1.8,2.8c1,3.2,1.9,3.5,4.9,1.3c1.1-0.8,2.3-1.3,2.6-1s0.6,2.7,0.7,5.3
+                                    c0.1,2.6,0.2,5.9,0.3,7.3c0.2,3.8-2.7,7.9-5.7,8.2c-1.8,0.1-2.4-0.2-3-1.6c-1-2.2-1.5-2.2-2.7,0c-1.9,3.6-3.5,1.4-4.3-6.1
+                                    c-0.6-5.5-1.4-7.7-2.8-7.7c-0.3,0-0.6,1.2-0.6,2.6c0,2.1-0.5,3.1-2.8,5.2c-2.5,2.4-2.9,3.1-3.5,7.8c-0.9,6.8-2.6,8.7-8.2,8.8
+                                    c-4.8,0.1-5.2-1-1.4-4.5c2-1.9,2.5-2.9,2.5-5.1c0-2.6-0.1-2.7-1.5-2c-2.7,1.4-5.8,2.1-6.6,1.4c-0.8-0.7-2.1-0.2-9.2,4.1
+                                    c-2.2,1.3-4.8,2.5-5.9,2.7c-1.1,0.2-3.1,0.5-4.4,0.7c-1.3,0.2-5.6,1.7-9.6,3.3c-3.9,1.6-7.5,3-7.9,3.2
+                                    C135.1,209.9,134,209.2,133.2,208.1z M45.2,157.3c-0.1-0.1-1.4-0.4-2.9-0.6c-1.5-0.2-3.3-0.9-4.1-1.6c-1.1-1-2.2-1.2-5.4-0.9
+                                    c-5.2,0.4-5.7,0.2-6.2-2.5c-0.8-4.5-0.9-5.1-1-5.9c0-0.5-0.5-1.3-1.1-1.9c-1-1-1.3-0.9-3.4,0.3c-1.3,0.8-2.9,1.4-3.8,1.4
+                                    c-1.8,0-4.3-2.5-3.2-3.1c0.8-0.5,1-4.7,0.3-7.2c-0.3-1-1.5-1.9-3.4-2.7c-5.2-2-10.7-10.6-8.9-13.9c0.4-0.8,1.1-1.4,1.4-1.4
+                                    c0.7,0,2-2.7,2.3-5.1c0.1-0.8,0.9-1.9,1.7-2.6c0.8-0.6,1.8-2,2.2-3c0.7-1.8,0.8-1.8,3.8-1.2c1.7,0.4,3.8,1.2,4.8,1.9
+                                    c2.5,1.7,5.1,1.2,6.7-1.3c1.3-2,1.6-2.1,4.9-1.6c1.9,0.3,4.1,0.5,4.8,0.4c1,0,1.2,0.4,1,2.4c-0.1,1.3-0.4,2.5-0.5,2.6
+                                    c-3.1,2.1-5.6,4.3-5.9,5.2c-0.2,0.7-1.4,1.9-2.5,2.7c-2.5,1.7-2.6,2.5-0.7,4.2c1.7,1.5,5.9,1,7.3-0.9c1.7-2.3,5.2-3.6,7.8-2.8
+                                    c3.3,1,5.9-0.2,7.4-3.5c1.2-2.8,1.4-6.4,0.3-7.5c-0.4-0.4-1.3,0-2.1,0.9c-0.9,0.9-2.4,1.5-3.9,1.5c-5.3,0-5.8-1.4-2.5-7.5
+                                    c1.2-2.2,2.1-4.7,2.1-5.6c0-2.1-2.3-7.5-3.8-8.7c-0.6-0.5-1.2-1.5-1.2-2.1c0-2-3.5-8.1-5.8-10.1c-1.5-1.3-2.3-2.9-2.7-4.9
+                                    c-0.3-1.7-0.9-5.1-1.4-7.6c-0.5-2.5-0.8-6.7-0.9-9.2c0-5.3-1.4-8.2-4-8.7c-1-0.2-2.9-1-4.1-1.8c-2.6-1.6-3-3.7-1.2-6.2
+                                    c0.7-1.1,0.9-2,0.5-3.2c-0.6-1.7-0.6-2.3,0.2-6.2c0.5-2.4,0.1-2.6-6.3-2.3c-1.5,0.1-2.6-0.1-2.4-0.3s-0.2-2.7-0.8-5.5
+                                    c-0.9-4-1.5-5.2-2.6-5.3c-0.8-0.1-1.7-0.8-2.2-1.5c-1-1.6-3.9-12.2-3.5-12.7c0.7-0.7,9,6.5,11.8,10.5c1.7,2.3,3.6,4.2,4.3,4.2
+                                    c0.7,0,1.9,0.9,2.7,2.1c0.8,1.1,2.5,2.7,3.9,3.5c1.6,1,2.9,2.7,3.9,5c1,2.3,2,3.5,2.7,3.5c0.7,0,1.9,1.1,2.8,2.4
+                                    c1.2,1.8,2.2,2.5,4.4,2.8c2.5,0.4,3.1,0.9,4.4,3.5c0.9,1.6,1.7,4.3,2,5.8c0.4,2.6,0.6,2.9,3.7,3.7c1.8,0.5,3.8,1.5,4.5,2.3
+                                    c1.1,1.2,1.1,1.6,0.2,4.8c-0.9,2.9-0.9,3.8-0.1,5.2c0.5,0.9,1.1,2.5,1.3,3.5c0.3,1.5,1.4,2.1,8,4.4c4.2,1.5,8.2,2.7,8.9,2.7
+                                    c0.7,0,2.5,1.3,4,2.9l2.7,2.9l6.3,0.3c3.5,0.2,7.5,0.8,9,1.3c2.8,1.1,4.5,0.7,6.6-1.5c0.7-0.7,2-0.6,6,0.6
+                                    c2.8,0.8,5.4,1.7,5.6,2.1c0.9,1.4-0.3,4-2.2,4.8c-1.1,0.5-3.7,2.7-5.8,5.1c-2.1,2.3-4.7,5.3-5.9,6.5c-1.2,1.2-3.6,3.8-5.4,5.7
+                                    c-3.4,3.6-5,7.8-3.1,8.5c1.5,0.6,8.8-7.1,9.3-9.8c0.3-1.7,2.1-4.2,5.9-8.2c4.9-5.2,5.7-5.8,8.1-5.8c2.2,0,2.9,0.4,4.2,2.3
+                                    c1.4,2,1.9,2.3,3.4,1.8c3.3-0.9,6.9-0.7,8.6,0.7c0.9,0.7,3.6,2.4,5.9,3.7c2.3,1.3,4.3,2.4,4.5,2.5c0.1,0.1-0.2,1-0.6,2
+                                    c-1.2,2.6,0.2,6.9,3.2,9.9c2.3,2.3,5.3,7.4,5.3,8.9c0,1.2-4.8,8.5-7.3,11.1l-2.2,2.3l-2.9-3.7c-1.6-2-3.2-3.9-3.6-4.2
+                                    c-0.4-0.3-1.8,0.1-3.2,0.8c-1.4,0.7-4.2,1.7-6.2,2.1c-2,0.5-6,1.8-8.9,2.8c-2.8,1.1-8.6,3.3-12.9,4.9c-4.3,1.6-9.3,3.6-11.2,4.3
+                                    c-6.8,2.8-21.5,7.9-24.2,8.4c-2.3,0.4-3.6,0.1-6.8-1.4c-2.2-1.1-4.3-1.7-4.7-1.5c-0.4,0.3-0.8,1.7-0.8,3.3
+                                    c-0.1,3.5-0.9,9.8-1.2,10.2C48.8,157.2,45.5,157.6,45.2,157.3z"
+                                    ></path>
+                                </g>
+                                <g
+                                    id="NS"
+                                    class="province province-group"
+                                    data-code="NS"
+                                    transform="translate(764.774 723.855)"
+                                >
+                                    <path
+                                        d="M9,82.5c-4.1-0.9-6.2-3.2-7.8-9.1c-0.8-2.9-1-4.5-0.5-5.8c1-2.7,5.7-9.6,8.8-13c1.5-1.6,3.2-3.6,3.7-4.3
+                                    c0.5-0.7,1.8-1.6,2.7-1.8c2-0.5,8.2-4.6,8.2-5.5c0-0.7-3.2,0.5-6.9,2.7c-6.5,3.8-5.6-2.4,1.6-10.5c3.2-3.6,3.9-4.1,6.1-4
+                                    c6.7,0.2,14.3-1,16.8-2.7c1.5-1,3-1.5,3.7-1.2c0.6,0.3,2.6,0.5,4.4,0.6c3.7,0.1,6.7,1.8,7.9,4.4c0.8,1.7,0.5,2.1-3.7,6.3
+                                    c-2.5,2.5-5,5.1-5.6,5.7c-2.5,2.7-8.7,7.4-10.2,7.8c-0.9,0.2-2.4,1.9-3.7,3.9c-1.9,3.2-2.2,3.5-4.3,3.2c-1.8-0.3-2.4,0-3,1.4
+                                    c-0.4,1-0.8,2.1-0.8,2.5c0,0.4-1,3-2.1,5.8c-1.6,3.9-3.3,6.3-6.8,9.8c-2.5,2.6-4.7,4.7-4.8,4.6C12.5,83.3,10.8,82.9,9,82.5z
+                                     M56.6,28.8c-0.6-0.5-2.6-2.5-4.5-4.6c-2.5-2.7-3.2-3.9-2.7-4.6c0.4-0.5,1.7-3.8,2.9-7.4C54.8,4.9,57.1,0,58,0
+                                    c1.3,0,2.9,3.2,2.9,5.6c0,4,0.7,5.5,2.7,6c2.5,0.6,5.8,3.8,5.8,5.6c0,0.8-1,2.9-2.2,4.8c-1.6,2.5-2.7,3.4-3.8,3.4
+                                    c-1,0-2.2,0.8-3.2,2.1C58.5,29.9,58.2,30,56.6,28.8z"
+                                    ></path>
+                                </g>
                                 <path
-                                    d="M133.2,208.1c-2-2.5-1.9-5.5,0.1-8.3c2.2-3,2.4-6.6,0.5-7.2c-1.8-0.6-1.8-2.1,0.1-5.1c1.3-2.2,1.5-3.1,1-8.6
-                        c-0.7-9.9-0.5-21.5,0.6-33c0.1-0.8,0.4-3.9,0.7-7c0.6-6.5,1.9-8.9,7-12.8c2.8-2.1,3.5-2.4,4.4-1.7c2.7,2.2,3.2,4.7,2.9,13.3
-                        c-0.2,4.6-0.5,8.6-0.7,9c-0.2,0.3-0.6,2.5-0.8,4.8l-0.5,4.2l1.8-2.1c1-1.2,1.8-2.3,1.8-2.6c0.1-1.1,3-1.3,5.3-0.5
-                        c2.6,0.9,2.7,1.1,2.5,4.7l-0.1,2.3h3.6c2,0,3.7-0.3,3.9-0.6c0.2-0.3,1.9-1,3.8-1.5c1.9-0.5,5-1.7,6.9-2.6
-                        c3.5-1.6,6.7-1.7,9.6-0.2c1.5,0.8,2.2,4.6,1.2,6.3c-0.7,1.1-0.6,1.6,0.5,2.8c1.2,1.2,1.9,1.3,5,0.8c4.5-0.7,5.3-0.4,5.3,1.9
-                        c0,2-1.5,4.6-3.8,6.6c-0.8,0.7-1,1.2-0.6,1.2c0.5,0,0.8,1.1,0.8,2.4c0,1.3,0.2,2.9,0.4,3.5c0.5,1.3,1.7,1.5,1.7,0.3
-                        c0-1.3,3.5-5.5,4.6-5.5c0.6,0,1.4,1.3,1.8,2.8c1,3.2,1.9,3.5,4.9,1.3c1.1-0.8,2.3-1.3,2.6-1s0.6,2.7,0.7,5.3
-                        c0.1,2.6,0.2,5.9,0.3,7.3c0.2,3.8-2.7,7.9-5.7,8.2c-1.8,0.1-2.4-0.2-3-1.6c-1-2.2-1.5-2.2-2.7,0c-1.9,3.6-3.5,1.4-4.3-6.1
-                        c-0.6-5.5-1.4-7.7-2.8-7.7c-0.3,0-0.6,1.2-0.6,2.6c0,2.1-0.5,3.1-2.8,5.2c-2.5,2.4-2.9,3.1-3.5,7.8c-0.9,6.8-2.6,8.7-8.2,8.8
-                        c-4.8,0.1-5.2-1-1.4-4.5c2-1.9,2.5-2.9,2.5-5.1c0-2.6-0.1-2.7-1.5-2c-2.7,1.4-5.8,2.1-6.6,1.4c-0.8-0.7-2.1-0.2-9.2,4.1
-                        c-2.2,1.3-4.8,2.5-5.9,2.7c-1.1,0.2-3.1,0.5-4.4,0.7c-1.3,0.2-5.6,1.7-9.6,3.3c-3.9,1.6-7.5,3-7.9,3.2
-                        C135.1,209.9,134,209.2,133.2,208.1z M45.2,157.3c-0.1-0.1-1.4-0.4-2.9-0.6c-1.5-0.2-3.3-0.9-4.1-1.6c-1.1-1-2.2-1.2-5.4-0.9
-                        c-5.2,0.4-5.7,0.2-6.2-2.5c-0.8-4.5-0.9-5.1-1-5.9c0-0.5-0.5-1.3-1.1-1.9c-1-1-1.3-0.9-3.4,0.3c-1.3,0.8-2.9,1.4-3.8,1.4
-                        c-1.8,0-4.3-2.5-3.2-3.1c0.8-0.5,1-4.7,0.3-7.2c-0.3-1-1.5-1.9-3.4-2.7c-5.2-2-10.7-10.6-8.9-13.9c0.4-0.8,1.1-1.4,1.4-1.4
-                        c0.7,0,2-2.7,2.3-5.1c0.1-0.8,0.9-1.9,1.7-2.6c0.8-0.6,1.8-2,2.2-3c0.7-1.8,0.8-1.8,3.8-1.2c1.7,0.4,3.8,1.2,4.8,1.9
-                        c2.5,1.7,5.1,1.2,6.7-1.3c1.3-2,1.6-2.1,4.9-1.6c1.9,0.3,4.1,0.5,4.8,0.4c1,0,1.2,0.4,1,2.4c-0.1,1.3-0.4,2.5-0.5,2.6
-                        c-3.1,2.1-5.6,4.3-5.9,5.2c-0.2,0.7-1.4,1.9-2.5,2.7c-2.5,1.7-2.6,2.5-0.7,4.2c1.7,1.5,5.9,1,7.3-0.9c1.7-2.3,5.2-3.6,7.8-2.8
-                        c3.3,1,5.9-0.2,7.4-3.5c1.2-2.8,1.4-6.4,0.3-7.5c-0.4-0.4-1.3,0-2.1,0.9c-0.9,0.9-2.4,1.5-3.9,1.5c-5.3,0-5.8-1.4-2.5-7.5
-                        c1.2-2.2,2.1-4.7,2.1-5.6c0-2.1-2.3-7.5-3.8-8.7c-0.6-0.5-1.2-1.5-1.2-2.1c0-2-3.5-8.1-5.8-10.1c-1.5-1.3-2.3-2.9-2.7-4.9
-                        c-0.3-1.7-0.9-5.1-1.4-7.6c-0.5-2.5-0.8-6.7-0.9-9.2c0-5.3-1.4-8.2-4-8.7c-1-0.2-2.9-1-4.1-1.8c-2.6-1.6-3-3.7-1.2-6.2
-                        c0.7-1.1,0.9-2,0.5-3.2c-0.6-1.7-0.6-2.3,0.2-6.2c0.5-2.4,0.1-2.6-6.3-2.3c-1.5,0.1-2.6-0.1-2.4-0.3s-0.2-2.7-0.8-5.5
-                        c-0.9-4-1.5-5.2-2.6-5.3c-0.8-0.1-1.7-0.8-2.2-1.5c-1-1.6-3.9-12.2-3.5-12.7c0.7-0.7,9,6.5,11.8,10.5c1.7,2.3,3.6,4.2,4.3,4.2
-                        c0.7,0,1.9,0.9,2.7,2.1c0.8,1.1,2.5,2.7,3.9,3.5c1.6,1,2.9,2.7,3.9,5c1,2.3,2,3.5,2.7,3.5c0.7,0,1.9,1.1,2.8,2.4
-                        c1.2,1.8,2.2,2.5,4.4,2.8c2.5,0.4,3.1,0.9,4.4,3.5c0.9,1.6,1.7,4.3,2,5.8c0.4,2.6,0.6,2.9,3.7,3.7c1.8,0.5,3.8,1.5,4.5,2.3
-                        c1.1,1.2,1.1,1.6,0.2,4.8c-0.9,2.9-0.9,3.8-0.1,5.2c0.5,0.9,1.1,2.5,1.3,3.5c0.3,1.5,1.4,2.1,8,4.4c4.2,1.5,8.2,2.7,8.9,2.7
-                        c0.7,0,2.5,1.3,4,2.9l2.7,2.9l6.3,0.3c3.5,0.2,7.5,0.8,9,1.3c2.8,1.1,4.5,0.7,6.6-1.5c0.7-0.7,2-0.6,6,0.6
-                        c2.8,0.8,5.4,1.7,5.6,2.1c0.9,1.4-0.3,4-2.2,4.8c-1.1,0.5-3.7,2.7-5.8,5.1c-2.1,2.3-4.7,5.3-5.9,6.5c-1.2,1.2-3.6,3.8-5.4,5.7
-                        c-3.4,3.6-5,7.8-3.1,8.5c1.5,0.6,8.8-7.1,9.3-9.8c0.3-1.7,2.1-4.2,5.9-8.2c4.9-5.2,5.7-5.8,8.1-5.8c2.2,0,2.9,0.4,4.2,2.3
-                        c1.4,2,1.9,2.3,3.4,1.8c3.3-0.9,6.9-0.7,8.6,0.7c0.9,0.7,3.6,2.4,5.9,3.7c2.3,1.3,4.3,2.4,4.5,2.5c0.1,0.1-0.2,1-0.6,2
-                        c-1.2,2.6,0.2,6.9,3.2,9.9c2.3,2.3,5.3,7.4,5.3,8.9c0,1.2-4.8,8.5-7.3,11.1l-2.2,2.3l-2.9-3.7c-1.6-2-3.2-3.9-3.6-4.2
-                        c-0.4-0.3-1.8,0.1-3.2,0.8c-1.4,0.7-4.2,1.7-6.2,2.1c-2,0.5-6,1.8-8.9,2.8c-2.8,1.1-8.6,3.3-12.9,4.9c-4.3,1.6-9.3,3.6-11.2,4.3
-                        c-6.8,2.8-21.5,7.9-24.2,8.4c-2.3,0.4-3.6,0.1-6.8-1.4c-2.2-1.1-4.3-1.7-4.7-1.5c-0.4,0.3-0.8,1.7-0.8,3.3
-                        c-0.1,3.5-0.9,9.8-1.2,10.2C48.8,157.2,45.5,157.6,45.2,157.3z"
+                                    id="PE"
+                                    class="province province-path"
+                                    data-code="PE"
+                                    d="M799.9,751.7c-0.2-0.2-3-0.5-6.3-0.6c-3.2-0.1-7.6-0.8-9.8-1.4c-4.7-1.4-5.7-1.6-7.1-1.7
+                                c-2.9-0.2-3.2-1.2-1.4-4.9c0.9-2,2.1-3.6,2.6-3.6c0.5,0,2.4,1.4,4.1,3.1c2.6,2.5,3.4,2.9,4,2.1c0.5-0.6,2.2-0.9,4.3-0.9
+                                c1.9,0,4-0.3,4.7-0.6c2.3-1.2,8.6-2.8,8.9-2.3c0.2,0.3-0.1,1.4-0.7,2.5c-0.5,1.1-1.1,3.3-1.2,5C802.1,751,801,752.7,799.9,751.7z"
+                                ></path>
+                                <path
+                                    id="NB"
+                                    class="province province-path"
+                                    data-code="NB"
+                                    d="M749.6,783.4c-1.6-0.4-3.6-2.6-4.7-5.3c-0.5-1.1-1.5-2.1-2.4-2.3c-2.9-0.7-7.4-12.5-7.5-19.4
+                                c0-2.4-0.4-3.6-1.6-4.7c-2.8-2.6-6.5-4.5-8.8-4.5l-2.2,0l-0.3-4.4c-0.2-2.4-0.2-4.7,0-4.9c0.1-0.3,2.2-0.6,4.6-0.6
+                                c5.2-0.1,8.1-1,11-3.7c1.3-1.2,4.2-2.5,7.4-3.4c4.9-1.3,5.5-1.4,7.9-0.3c2.5,1.1,2.7,1,4-0.4c2.9-3.1,11.2-5.5,11.1-3.3
+                                c0,0.5-0.5,1.7-1,2.7c-1.5,2.6-1.4,8.6,0.3,10.7c0.7,0.9,1.6,2.7,1.8,4c0.3,1.4,1.8,3.6,3.8,5.5c3.2,3,3.5,3.1,7.6,3.1
+                                c2.4,0,4.5,0.2,4.7,0.4c0.2,0.2-1.2,2.1-3.1,4.1c-1.9,2-4.3,5.4-5.3,7.4c-2.5,5.3-11.4,14.2-14.1,14.2c-1.5,0-2.2,0.5-2.9,2
+                                C758.7,783.2,754.1,784.6,749.6,783.4z"
+                                ></path>
+                                <g
+                                    id="QC"
+                                    class="province-none"
+                                    transform="translate(561.543 477.15)"
+                                >
+                                    <path
+                                        d="M95.5,326.7c-0.6-1.1-1.3-3.1-1.4-4.4c-0.3-2.3-0.4-2.5-3.2-2.7c-2.9-0.2-6.7,1.2-10.9,4.2
+                                    c-1.4,1-3.1,1.3-7.2,1.3c-5.2,0-5.3,0-7-2.5c-0.9-1.4-2.3-2.5-3-2.5c-0.7,0-3-1-4.9-2.2c-2.5-1.5-4.8-2.3-7.5-2.5
+                                    c-6-0.5-12.6-2.7-16.7-5.5c-3-2.1-4.1-3.4-5.8-7.3c-1.3-2.9-2.3-6.6-2.6-9.3c-0.3-2.5-0.6-5.5-0.7-6.7c-0.2-1.2-0.6-5.1-1.1-8.8
+                                    c-0.4-3.7-0.9-7.8-1.1-9.2c-0.2-1.4-0.5-3.9-0.7-5.7c-0.2-1.7-1.3-11.5-2.5-21.6s-2.3-19.2-2.5-20.2c-0.3-1.6-0.1-1.9,1.8-2.3
+                                    c2-0.4,2.2-0.6,1.7-2.6c-0.4-1.7-0.1-2.8,1.5-5.1c1.1-1.6,2-3.7,1.9-4.7c0-1-1.3-4.5-2.9-7.8c-1.6-3.3-3.2-7.3-3.6-8.8
+                                    c-0.4-1.6-1.3-3.6-2-4.5c-0.8-1.2-1.2-2.8-1-5.1c0.2-3.7-1.7-7.7-4.2-9.1c-0.8-0.4-1.4-1.5-1.4-2.6c0-1.1-0.6-2.7-1.4-3.7
+                                    s-1.4-2.1-1.4-2.5c0-1.1,3.4-4.1,7.4-6.6c1.9-1.2,4.5-3.4,5.8-4.9c1.2-1.5,3.7-4.2,5.4-6.1c2.1-2.3,4-5.5,5.8-9.8
+                                    c2.4-5.7,2.6-6.9,2.5-12.3c-0.1-4.4-0.7-7.5-2.1-11.8c-1.1-3.2-2.1-6.6-2.4-7.7C27.3,99.8,21,93,16.4,90.6
+                                    c-5.5-2.9-9.7-7.1-9.9-9.9c-0.1-1.2,0.4-3.3,1-4.8c0.7-1.5,1.3-3.2,1.4-3.8c0.1-0.6,0.8-1.6,1.6-2.2c1.1-0.9,1.5-2,1.5-4.6
+                                    c0-2.4,0.4-3.8,1.4-4.9c1.3-1.4,1.3-1.7,0.4-4.4c-0.6-1.6-1.2-3.7-1.3-4.7c-0.4-2.2-2.3-5.8-4.4-8.6c-1.5-1.9-1.6-2.9-1.6-10.1
+                                    c0-5.8-0.3-8.3-1-9.2c-0.5-0.6-1.9-3.3-3-6l-2-4.8l1.8-3.7c1.7-3.5,2-3.7,5.2-4.2c5.3-0.7,9.8-0.5,12.9,0.5c4,1.4,9.7,1.9,12,1.1
+                                    c1.1-0.4,3.2-2,4.8-3.5C38.7,1.3,40.3,0,40.7,0c1.2,0,14.9,7.2,19.5,10.2c3.5,2.3,4.2,3.2,4.1,4.6c-0.1,1,0.4,2.6,1.1,3.6
+                                    c1.1,1.6,1.9,1.9,8.5,2.7c4,0.5,8.8,1.4,10.7,2l3.4,1.1l-0.5,3.9c-0.5,3.8,0.1,6.2,3.3,15.4c0.4,1.2,0.7,3,0.7,4.1
+                                    c0,1.2,0.6,2.6,1.7,3.7c1,1,2.4,3.2,3.2,5l1.4,3.2l3.5-0.4c3.4-0.4,3.6-0.3,7.2,2.8c2.1,1.8,4.6,3.4,5.7,3.7s1.9,0.8,1.9,1.1
+                                    c0,1.3,1.5,0.5,4.5-2.4c2.3-2.2,3.2-3.7,3.6-5.9c0.3-2.1,1-3.1,2.1-3.6c1-0.4,2-1.9,2.6-3.8c1.1-3.5,1-10.8-0.2-13
+                                    c-0.4-0.8-0.7-1.7-0.6-2.1c0.1-0.4,0.5-2.4,0.9-4.6c0.6-3.5,2.3-6,3.5-5.3c0.3,0.2,0.7,1.5,0.9,2.9c0.6,3.3,3.7,8.7,4.9,8.7
+                                    c0.9,0,2.9,7.1,2.5,8.8c-0.4,1.9,0.2,2.2,4.1,1.9l4.1-0.3l-0.1,4.5c-0.1,2.5-0.4,5.6-0.9,6.9c-0.5,1.5-0.5,2.8-0.1,3.6
+                                    c0.8,1.5,4.6,3.9,7.2,4.6c2.4,0.6,2.6,1.2,3.1,9.5c0.2,3.7,0.8,8.3,1.4,10.2c0.5,2,1.2,4.7,1.4,6.1c0.3,1.7,1.1,3,2.6,4.1
+                                    c2.1,1.6,5.6,7.8,5.6,10c0,0.6,0.6,1.7,1.3,2.3c0.7,0.7,1.9,2.4,2.5,3.9c1.2,2.6,1.2,2.8-0.3,6.1l-1.5,3.3l-3.7-0.4
+                                    c-2-0.2-4.7-0.6-5.9-0.9c-1.9-0.4-2.4-0.2-3.9,2.1c-1.9,2.8-3.1,3.1-5,1.4c-0.7-0.6-3.2-1.5-5.6-2c-4.7-1-5.2-0.8-6,2.6
+                                    c-0.3,1.1-1.2,2.3-2.2,2.8c-1.4,0.6-1.8,1.3-1.8,3.2c0,1.7-0.6,3-2.2,4.7c-1.9,2-2.1,2.6-1.8,5.1c0.2,1.6,0.8,3.7,1.4,4.7
+                                    c1.6,3.1,5.8,7.3,8.7,8.8c3.1,1.5,3.6,3.2,2.2,7.2c-0.8,2.2-0.7,2.5,1.2,4.1c2.1,1.8,4.5,1.9,8.6,0.6c1.4-0.4,1.5-0.2,2,3.2
+                                    c0.3,2.5,1,4.2,2.3,5.4c1.6,1.6,2.1,1.7,5.7,1.3c3.2-0.4,4.2-0.3,5.3,0.8c0.8,0.7,1.9,1.4,2.6,1.5c3.3,0.6,10.5,0.8,11.3,0.3
+                                    c0.5-0.3,1.1-2,1.2-3.7c0.4-4,0.9-8.7,1-9c0-0.1,1.4,0.5,3,1.3c2.2,1.1,3.7,1.4,5.8,1.1c3.1-0.4,14.4-4.3,26.3-8.9
+                                    c18.2-7.1,29.4-11.3,33.6-12.3c2.5-0.6,5-1.5,5.5-2c0.6-0.5,1.2-0.5,1.5-0.2c1.7,1.9,5.1,6.6,5.1,6.9c0,0.2-2,1.9-4.4,3.8
+                                    c-6.5,4.9-10.4,9.3-10.8,12.3c-0.2,1.4-1.8,5.3-3.5,8.8c-1.7,3.5-3.5,7.2-3.8,8.1c-0.8,2.2-12.2,8.3-19.5,10.5
+                                    c-2.7,0.8-8.8,2.6-13.5,3.9c-27.4,7.9-40.6,12.9-43.1,16.2c-0.7,1-1.6,3.3-2,5.2c-0.3,1.9-1.3,5.6-2.1,8.2
+                                    c-1.3,4.1-1.7,4.8-3.2,4.8c-3.4,0-10.3,7.9-12.8,14.5c-0.7,1.9-2.3,5.1-3.6,7.1c-1.2,2-2.4,4.7-2.6,6c-0.8,5.9-11.7,23.5-17.3,28
+                                    c-7.9,6.3-18.9,17.9-17.8,18.9c0.2,0.2,3-2.7,6.3-6.4c3.3-3.7,8.1-8.2,10.7-10.1c4.4-3.3,9.2-8.4,12.4-13.1
+                                    c2.9-4.2,8-14.4,8-15.9c0-0.8,0.4-2.2,0.8-3c1.3-2.5,7.8-10.5,10.5-12.9c1.4-1.2,4.1-3.7,6-5.5c1.9-1.8,5.4-4.4,7.8-5.8
+                                    c2.3-1.4,6.7-4.2,9.6-6.3c3.7-2.6,6.7-4,9.9-4.8c4.3-1.1,4.9-1.1,8.8,0.1c3.4,1.1,4.4,1.7,5.4,3.7c2.8,5.3,2.4,9-1.7,13.9
+                                    c-3.9,4.8-5.4,5.7-9.5,6.1c-8.1,0.8-14.9,2.7-17.1,4.8c-2.9,2.7-5.2,3.5-10.8,3.7c-6.7,0.3-7.1,0.7-6.5,7.8l0.5,5.8l-2.7,0.4
+                                    c-1.5,0.2-3.6,0.3-4.6,0.1c-1.4-0.3-2.2,0.1-3,1.3c-1.4,2-4.4,11.8-5,16.1c-0.2,1.7-0.7,5.2-1.1,7.8s-0.8,6-1,7.6
+                                    c-0.6,5.5-2.7,10.1-5.5,12.1c-1.4,1-3.3,2.9-4.2,4.1c-0.9,1.3-2.3,2.4-3.1,2.6c-0.8,0.2-6.7,1.4-13,2.8
+                                    c-6.3,1.4-13.2,2.5-15.2,2.5C97,328.7,96.5,328.5,95.5,326.7z"
+                                    ></path>
+                                    <path
+                                        d="M211,218.6c-1-0.2-2.6-0.8-3.5-1.5c-1-0.7-3.6-1.6-5.8-2.1c-5.1-1.1-6-2.9-2.9-5.4c1.6-1.3,3-1.7,6.6-1.8
+                                    c9.7-0.2,13.2,0.2,19.7,2.4c6.5,2.2,6.6,2.2,6.6,4.5c0,2.7-0.3,2.8-8.1,3.5C214.8,218.8,212.9,218.9,211,218.6z"
+                                    ></path>
+                                </g>
+                                <path
+                                    id="ON"
+                                    class="province province-path"
+                                    data-code="ON"
+                                    d="M551.3,877.3c0.8-1.4,1.7-2.1,3.7-2.4c1.5-0.2,3.1-0.7,3.6-1c1.3-0.9,2-5.8,0.9-6.5
+                                c-0.6-0.4-0.7-0.9-0.2-1.9c0.4-0.7,0.9-2.5,1.2-4c0.3-1.4,1.1-3,1.8-3.5c2.6-1.8,4.8-5.9,4.5-8.4c-0.1-1.3-0.3-5-0.3-8.1
+                                c-0.1-5.4,0.1-6,2.4-10.3l2.5-4.5l-1.3-2.8c-0.7-1.5-2-3.4-2.8-4.1c-1.5-1.3-2.1-3.2-1-3.2c0.3,0,2.4,1.9,4.7,4.2
+                                c3.8,3.8,7.6,6.3,11.4,7.3c3.9,1.1,6-5.4,3.1-9.6c-1.9-2.7-9.6-11.1-11.6-12.5c-0.7-0.5-3.4-1.2-6-1.5s-6.4-1-8.5-1.7
+                                c-2.7-0.8-6.9-1.1-14.3-1.1c-9.7,0-10.5-0.1-11.4-1.5c-0.6-0.8-2.7-2.3-4.8-3.4c-3-1.6-3.8-2.3-3.8-3.8c0-1-1-2.8-2.1-4
+                                c-1.7-1.8-1.9-2.2-0.9-2.6c1.6-0.6,1.5-2.1-0.3-4.6c-0.8-1.1-2.1-3.4-2.8-5.1c-1.2-2.7-1.7-3.2-4.1-3.6c-2.7-0.4-10.2-4-12.1-5.8
+                                c-0.5-0.5-1.1-2.1-1.2-3.6s-0.4-3.6-0.7-4.7l-0.5-2l-5.7,0.4c-5.3,0.3-6,0.2-9.8-1.7l-4.1-2.1l-2.9,1.8c-2.7,1.7-2.8,1.9-1.8,3
+                                c1,1,0.7,1.4-3.6,4.2c-2.6,1.7-5.9,4.3-7.3,5.8c-2.9,3.1-3.2,3.1-13.4,1.4c-2.9-0.5-7.6-0.9-10.3-1c-4.8-0.1-9.5-1.8-9.5-3.3
+                                c0-0.3-0.8-0.6-1.8-0.6c-1.1,0-2.8-1-4.4-2.5c-2.6-2.4-2.7-2.5-9.1-2.5c-4.7,0-6.8-0.3-7.5-1c-0.6-0.6-2.3-1.2-3.8-1.5
+                                c-3.9-0.7-4.3-1.2-4.8-6.2c-0.4-4-0.7-4.5-2.7-5.5c-2.2-1.1-2.3-1.3-2.2-5.3c0.1-4.5,0.9-23.5,1.3-30.3c0.1-2.3,0.5-9.3,0.7-15.5
+                                c0.6-14.1-0.7-11.9,16.2-29.4c3.6-3.7,8.5-9.1,11-11.9s4.9-5.6,5.3-6c0.4-0.4,4.5-5.2,9.2-10.7s10.1-11.7,12-13.8
+                                c9.5-10.5,13.8-15.3,15.1-16.9l1.4-1.8l2.4,1.3c2.9,1.6,7.7,6.1,7.7,7.2c0,0.4,1,1.8,2.3,3c1.7,1.7,3.4,2.5,6.6,3.1
+                                c2.9,0.6,4.9,1.4,6.4,2.8c2,1.9,3.8,2.6,7.1,2.7c0.8,0,3.2,1.6,5.3,3.5l3.9,3.4l13.3,0.4c11.6,0.4,13.6,0.6,16.2,1.9l2.9,1.5
+                                l-0.5,6.1c-0.3,3.4-0.8,6.4-1.1,6.7c-0.3,0.3,0,1.6,0.7,2.8c0.7,1.2,1.5,3.6,1.8,5.4c0.8,5.7,0.9,6.2,1.6,7.6
+                                c0.4,0.7,0.6,2.8,0.4,4.5c-0.2,2.6,0.2,3.9,1.9,6.6c2.7,4.3,11.2,14.6,12.1,14.6c1.6,0,6.1,5.8,7.4,9.6l1.4,4l4.4-0.3l4.4-0.3
+                                l0.4,3.6c0.7,5.7,1,8.3,1.4,12.5c0.2,2.1,0.5,4.7,0.7,5.7c0.2,1,0.5,3.7,0.7,6c0.2,2.3,0.5,5,0.7,6c0.3,2.3,1,8,1.5,12.4
+                                c0.2,1.9,0.5,4.6,0.7,6c1.1,8.5,1.8,14.3,2.1,17.9c0.2,2.3,1.4,6.3,2.6,8.9c1.8,4,2.8,5.2,6.2,7.6c4.6,3.2,11,5.5,17.4,6.2
+                                c2.9,0.3,5.3,1.1,7.5,2.5c1.8,1.1,3.9,2.1,4.6,2.1c0.8,0,2.2,1.2,3.3,2.7l1.9,2.7l6.1-0.3c5.3-0.3,6.7-0.7,10.6-2.8
+                                c4.5-2.5,8.1-3.6,8.2-2.6c0.1,1.1,0.5,2.9,1,4.4c0.4,1.2-0.1,2-2.2,3.8c-4.4,3.7-8.1,7.6-13.3,14.1c-2.7,3.4-5.3,6.2-5.7,6.2
+                                c-1.2,0.1-4,2.8-3.6,3.4c0.8,1.3-4.9,3.5-9.6,3.6c-8.5,0.3-20.6,5.3-23.2,9.5c-2.6,4.2-2.6,5.3,0.1,6.4c1.3,0.6,3,0.8,3.8,0.6
+                                c1-0.3,1.7,0.2,2.5,2.1c1.4,2.9,0.9,3.3-3.8,3.3c-2.9,0-10.6,2.9-12.6,4.7c-0.9,0.9-0.9,1.1,0.7,2.3l1.8,1.3l-1.9,0.5
+                                c-1.1,0.3-3.4,0.1-5.1-0.3c-6.7-1.7-8.3-0.9-16.7,7.8c-4.6,4.8-5.7,5.6-7.8,5.6c-1.4,0-3.5,0.2-4.8,0.3l-2.3,0.2L551.3,877.3z"
+                                ></path>
+                                <path
+                                    id="MB"
+                                    class="province province-path"
+                                    data-code="MB"
+                                    d="M341.5,535.7l-0.5,4.5c-0.3,2.5-0.6,5-0.7,5.5s-0.4,2.8-0.7,4.9c-0.3,2.1-0.6,4.4-0.7,4.9
+                                c-0.1,0.6-0.7,5.2-1.4,10.2c-1.2,8.6-1.2,9.3,0,11.2c1.2,2,1.2,2.1-0.8,4.6c-1.1,1.4-2.4,3.1-2.8,3.7c-0.4,0.6-1,5.3-1.3,10.3
+                                c-0.3,5.1-0.6,10.5-0.7,12c-0.1,1.6-0.4,5.7-0.7,9.2c-0.3,3.5-0.6,8.3-0.8,10.6c-0.7,9.7-1,13.7-1.4,19.1
+                                c-0.2,3.1-0.5,7.2-0.7,9.2c-0.2,1.9-0.5,6.7-0.7,10.6c-0.2,3.9-0.6,8.3-0.7,9.9c-0.1,1.6-0.4,6.2-0.7,10.2
+                                c-0.3,4.1-0.6,8.5-0.7,9.9s-0.5,6.1-0.7,10.6c-0.3,4.5-0.6,8.6-0.7,9.2c-0.4,1.9-1.3,17.9-1.4,22.6l0,4.6l4.2,0.4
+                                c6.8,0.7,13.3,1.4,15.2,1.7c1,0.1,3.5,0.4,5.7,0.7c4.1,0.5,6.5,0.7,12.7,1.5c2.1,0.3,6.9,0.7,10.6,0.9s10,0.5,13.9,0.7l7.2,0.2
+                                l0.4-3.4c0.2-1.9,0.6-7.2,0.8-11.9c0.2-4.7,0.5-10.7,0.7-13.4c0.2-2.7,0.5-9.7,0.7-15.6c0.8-20.2,1-22.3,2.7-25.1
+                                c0.9-1.4,5.9-7.2,11.2-12.8c5.3-5.6,11-11.7,12.7-13.7c1.7-1.9,3.4-3.9,3.8-4.3c6.8-7.7,10.1-11.4,13.8-15.8
+                                c2.4-2.9,6.6-7.7,9.3-10.7c2.7-3,6-6.6,7.3-8.2c1.3-1.5,4-4.5,6-6.6c2-2.1,3.6-4.2,3.6-4.6c0-0.8-3.7-2.3-6.9-2.8
+                                c-4.9-0.8-6.2-1.3-7.1-2.4c-0.7-1-1.8-1.2-5.2-1.1c-2.4,0.1-4.5,0.5-4.8,0.9c-0.6,0.9-8.8,1.9-10.4,1.3c-0.7-0.3-0.9-0.9-0.5-1.9
+                                c0.6-1.5,0.4-2.4-1.6-11.8c-1.4-6.8-1.8-8.8-2.3-12.7c-0.6-4.5-2.4-5.8-9.8-7.4c-4.7-1-6.3-1.6-7-2.8c-0.9-1.6-0.9-7.2,0-14.8
+                                l0.6-4.8l-3.8-0.1c-2.1,0-4-0.2-4.3-0.2c-0.3-0.1-2.9-0.4-5.8-0.7c-2.9-0.3-5.8-0.7-6.4-0.8c-0.6-0.1-3.3-0.4-6-0.7
+                                c-2.7-0.3-5.6-0.6-6.4-0.8c-0.8-0.1-3.4-0.4-5.7-0.7c-2.3-0.2-6.8-0.7-9.9-1.1c-3.1-0.3-7.6-0.8-9.9-1c-2.3-0.2-5.7-0.6-7.5-0.8
+                                L341.5,535.7z M361.7,657.2c2.7,0,4.6,1.3,5.9,4c0.8,1.6,1.7,3.1,2,3.3c1.3,0.9,4.6,9.5,4,10.5c-0.4,0.6,0.9,4.5,2.3,7
+                                c0.5,0.9,0.8,3.3,0.7,5.3c-0.1,3.9,2.2,12.6,4.4,16.4c0.9,1.5,1.3,4,1.5,8.9c0.2,6.6,0.2,6.7-1.5,7c-0.9,0.1-2.3,1-3,1.9
+                                c-1.5,1.9-2.8,2.2-4.3,0.7c-1.2-1.2-0.8-6.3,0.6-8.5c0.5-0.8,1.1-2.3,1.3-3.4c0.2-1.1,0.8-2.5,1.2-3.1c1.4-1.7,1.4-3.4-0.1-4.3
+                                c-1.2-0.7-1.5-0.6-2.3,0.6c-1,1.5-2.7,1.9-2.7,0.6c0-0.5,0.4-1.8,0.8-3.1c1.9-5.3-1.2-9.8-5.6-8.3c-1.8,0.6-2.3,0.5-3.5-0.8
+                                c-0.8-0.8-1.9-3-2.5-4.9c-0.6-1.8-1.9-4.4-2.9-5.7c-1.2-1.6-1.7-2.9-1.4-4.4c0.3-1.9,0-2.3-3.1-3.9c-4.6-2.4-6.5-1.7-6.6,2.5
+                                c-0.1,1.6-0.2,4.5-0.3,6.4c-0.6,9.7-0.6,9.7,2.3,12c6.2,4.9,6.7,5.6,7.7,9.9c0.5,2.3,1,5.4,1,6.8c0,1.4,0.8,4.2,1.8,6.2
+                                c2.4,4.7,2.5,8.3,0.2,8.9c-2.3,0.6-3.2,0.5-3.8-0.4c-0.5-0.8-2.4-9.8-3.8-17.5c-0.8-4.4-1.8-5.7-6.7-8.9c-3.9-2.5-5.8-4.5-5.6-5.9
+                                c0.1-0.5,0.2-1.5,0.2-2.3c0-0.7,0.5-1.8,1.1-2.3c0.6-0.6,0.9-2.6,0.9-5.7c0-4.7,0-4.7-2.7-6.2c-3-1.7-4.1-3.3-4.1-6
+                                c0-1.5,0.3-1.8,1.7-1.8c2.6,0,3.5-2.3,1.8-4.5c-0.8-1-1.4-2.1-1.4-2.6c0-0.9,3.3-2.4,5.2-2.3c1.7,0.1,5.4,3.6,5.4,5.1
+                                c0,0.6,0.7,1.9,1.6,2.7l1.6,1.5l1-2.6c1.6-4.4,4.5-8,6.8-8.5C359.8,657.3,360.8,657.2,361.7,657.2z"
+                                ></path>
+                                <path
+                                    id="SK"
+                                    class="province province-path"
+                                    data-code="SK"
+                                    d="M317.2,742.7c-0.2-0.2-2.8-0.5-6-0.8c-3.1-0.3-6.5-0.6-7.4-0.7c-1-0.1-3.8-0.5-6.4-0.7
+                                c-2.5-0.2-5.4-0.6-6.4-0.7c-1-0.1-3.8-0.5-6.4-0.7c-2.5-0.3-12.4-2.2-22-4.4c-9.5-2.1-17.8-4-18.4-4.1c-3.2-0.7-5-1.1-9.2-2.1
+                                c-2.5-0.6-5.2-1.2-6-1.3s-3.9-0.8-6.9-1.5c-4.5-1-5.4-1.5-5.1-2.4c0.3-1.1,5.9-23.9,6.4-26.3c0.1-0.6,1.2-5.2,2.4-10.2
+                                c1.2-5.1,3.4-14,4.8-19.8c1.4-5.8,4.1-17.1,6.1-25.1c1.9-8,3.7-15.1,3.8-15.9c0.2-0.8,1.2-5.4,2.4-10.2s3.6-14.9,5.4-22.3
+                                c1.8-7.4,4.3-17.9,5.6-23.3s3.6-14.7,5-20.6l2.6-10.7l3.7,0.3c2,0.2,5.2,0.5,7.1,0.8c1.9,0.3,6,0.2,9-0.1c5.2-0.6,5.7-0.5,9.8,1.3
+                                c4,1.8,5.7,1.9,5.7,0.4c0-0.8-15-8.1-18.8-9.1c-1.6-0.4-3.5-0.8-4.4-0.8c-0.9,0-2.2-0.6-3-1.4c-1.6-1.6-3.6-1.8-5.7-0.7
+                                c-1.6,0.9-1.6,0.6-0.6-4.3c0.6-2.8,1-3.5,1.9-3.3c1,0.3,6.1,1.3,10.8,2.2c0.9,0.2,2.4,0.5,3.1,0.6c2.4,0.5,31.7,6.2,33.6,6.5
+                                c1,0.2,5.6,1.1,10.3,2c4.7,0.9,9.8,1.8,11.3,2c2.7,0.3,2.8,0.4,2.7,2.7c-0.1,1.3-0.9,8.3-1.9,15.5c-1,7.2-2,14.7-2.3,16.6
+                                c-0.4,3.5-1.3,5.3-2.5,5.3c-1.1,0-5.3,4.7-6.2,6.9c-0.7,1.6-0.7,2.8-0.2,4.5c1.6,5,1.3,7.4-1.1,9.9c-1.6,1.6-2.1,2.6-1.6,3.3
+                                c0.5,0.8,1,0.6,2.9-0.9c1.2-1,2.7-1.9,3.3-1.9c1.1,0,1,2.2-0.1,16.3c-0.2,2.1-0.5,6.8-0.7,10.2c-0.2,3.5-0.5,7.8-0.7,9.5
+                                c-0.2,1.7-0.5,6.4-0.7,10.2c-0.2,3.9-0.5,8.2-0.7,9.5c-0.2,1.4-0.5,6-0.7,10.2c-0.2,4.3-0.6,8.6-0.7,9.5c-0.1,1-0.5,5.6-0.7,10.2
+                                c-0.3,4.7-0.6,9-0.7,9.5c-0.1,0.6-0.4,5-0.7,9.9c-0.3,4.9-0.6,9.3-0.7,9.9c-0.1,0.6-0.4,5-0.7,9.9c-0.3,4.9-0.6,9.4-0.8,10.1
+                                c-0.1,0.7-0.3,3.3-0.4,5.8C319.2,742.5,318.5,743.9,317.2,742.7z"
+                                ></path>
+                                <path
+                                    id="AB"
+                                    class="province province-path"
+                                    data-code="AB"
+                                    d="M203.9,720.5c-37.9-10-33.8-8.5-36.1-13.5l-1.9-4.2l1.5-7.8c1.6-8.2,1.5-10.3-0.6-14.6
+                                c-0.7-1.5-2.8-5.6-4.6-9.1c-1.8-3.6-3.9-8.5-4.8-11c-0.8-2.5-2.4-5.9-3.6-7.6c-1.1-1.7-2.3-4.3-2.5-5.7c-0.3-1.4-1.4-3.6-2.5-4.9
+                                s-2-2.7-2-3.1c0-0.4-0.7-1.7-1.5-2.8c-0.9-1.2-1.8-4.1-2.1-6.8c-0.4-3-1.3-5.7-2.4-7.2c-0.9-1.4-2-3.3-2.4-4.4
+                                c-0.4-1.1-1.8-2.6-3.2-3.5c-2.5-1.6-3.4-4.2-1.8-5.1c0.4-0.2,0.7-2.2,0.7-4.4c0-3.8,4.6-17.2,36.2-103.9l2.9-7.8l15.7,5.2
+                                c8.6,2.9,21.7,7,29.1,9.1c7.4,2.2,20.4,6,29,8.5c8.5,2.5,15.6,4.6,15.7,4.7c0.5,0.5-2.1,10.8-2.8,11.3c-0.4,0.3-1.6,0.7-2.5,1
+                                c-1.8,0.5-9.2,7.8-9.2,9.1c0,0.4,1.1,1.3,2.5,2c2.4,1.2,2.6,1.1,4.6-0.2c1.1-0.8,2.2-2.1,2.5-2.9c0.3-0.8,0.6-1.3,0.8-1.1
+                                c0.2,0.2-0.9,5.5-2.5,11.9c-3.6,15-7.5,31.3-12.9,53.6c-2.4,9.9-5.1,21.2-6,25.1c-4.7,19.6-8.9,37.1-11.2,46.7
+                                c-12,50.4-11,46.3-11.7,46.2C214.1,723.1,209.4,721.9,203.9,720.5z"
+                                ></path>
+                                <g
+                                    id="BC"
+                                    class="province province-group"
+                                    data-code="BC"
+                                    transform="translate(0 407.875)"
+                                >
+                                    <path
+                                        d="M53.8,276.2c-4.5-2.9-11.3-11.8-11.3-14.8c0-1.7-0.4-2.3-2.1-2.9c-2.1-0.8-3.7-3.5-4.6-7.9
+                                    c-0.2-1.2-1.2-3.2-2-4.6c-0.9-1.4-2.2-3.9-2.8-5.7c-0.7-1.7-2.5-5.3-4.1-8c-1.7-2.9-3.2-6.5-3.8-9.2c-0.5-2.4-1.3-5.4-1.8-6.7
+                                    c-0.9-2.2-0.9-2.4,1.2-4c1.2-0.9,2.7-1.7,3.5-1.7c1.4,0,5.6,4,12.4,11.9c2.1,2.5,4.2,4.9,4.6,5.3c0.4,0.4,1.8,2.2,3.2,3.9
+                                    c1.3,1.7,2.6,3.3,2.9,3.5c1,0.9,2.8,7.1,3.2,11.2c0.4,4,0.9,5.1,4,9.1c4.1,5.4,4.4,6.2,5.1,11.7c0.3,2.3,0.9,5.4,1.5,6.8
+                                    c0.5,1.5,0.8,2.9,0.5,3.1C62.1,278.5,56.2,277.7,53.8,276.2z"
+                                    ></path>
+                                    <path
+                                        d="M166.1,302.3c-0.6-0.2-15.2-4.7-26.6-8.2c-3.9-1.2-45.3-16.7-62.3-23.3c-2.9-1.1-6.3-2.4-7.4-2.8
+                                    c-2.7-1-3.2-1.7-3.2-5c0-1.8-0.5-3-1.5-3.9c-4.1-3.4-5.6-5.1-5.6-6.5c0-0.8-0.3-1.5-0.6-1.5c-1.7,0-4.2-3.8-4.6-7
+                                    c-0.7-5.3-3.1-9.9-7.2-14.1c-3.7-3.8-3.8-3.9-3.4-7.2c0.3-2.8,0.2-3.4-0.7-3.4c-0.6,0-1.2-0.3-1.3-0.6c-0.1-0.3-1.7-1.4-3.6-2.5
+                                    s-3.4-2.3-3.4-2.8c0-0.5-0.2-1.5-0.3-2.3c-0.4-1.9-0.4-3.2-0.3-10.7c0.1-6.3,0.2-6.6,2.2-8.3c2-1.7,2.1-2,1.4-4
+                                    c-0.4-1.2-0.8-3.5-0.8-5c0-2.1-0.7-3.8-2.9-6.9c-2.4-3.4-2.8-4.5-2.5-6.5c0.2-1.3,1.1-3,1.9-3.6c1.6-1.4,1.5-2.5-1-7.3
+                                    c-1.2-2.4-1.4-4.2-1.4-12c0-8.9,0.1-9.2,1.8-11c1-1,3.5-2.4,5.6-3.2c5.1-1.9,9.1-5.5,9.1-8.2c0-2.8,1.5-6.1,4.2-9
+                                    c2-2.2,2.2-2.9,2.2-6.8c0-3.9-0.2-4.5-2.1-6.2c-2.4-2.2-6.7-10.2-7.8-14.8c-0.7-2.7-0.5-4.2,1.1-11.1c1.7-7,1.8-8.4,1.1-11.9
+                                    c-0.4-2.2-0.9-7-1.2-10.7c-0.2-3.7-0.5-7.4-0.7-8.2c-0.2-0.8-0.5-2.7-0.7-4.2c-0.2-1.5-1.3-6.7-2.5-11.6
+                                    c-1.2-4.9-2.3-9.5-2.5-10.4c-0.2-1-1.3-2-3-2.7c-5-2.1-5.6-2-7,0.3c-0.9,1.6-2.4,2.5-5.6,3.7c-2.4,0.9-5.6,2.1-7.1,2.9
+                                    c-1.5,0.7-2.9,1.3-3,1.3c-0.1,0,0.1-1,0.5-2.3c1-3.5,0.3-12-1-14.1c-1.5-2.2-1.3-8.8,0.3-8.4c0.5,0.1,7.7,4.6,15.9,10
+                                    c22.4,14.6,46.9,29.5,58.9,35.7c5.8,3,10.9,5.8,11.3,6c1.9,1.4,23.8,12.4,31.9,16.1c5.1,2.3,16.1,6.9,24.4,10.1
+                                    c8.4,3.2,15.5,6.1,15.8,6.3c0.3,0.3,0.2,1.3-0.2,2.2c-0.4,0.9-4.1,11.1-8.2,22.6c-4.1,11.5-8.7,24.2-10.2,28.3
+                                    c-16.4,44.6-19.8,54.7-19.8,58.2c0,2.1-0.4,4.3-1.1,5.2c-1.5,2.2-0.7,5.2,2,6.9c3.3,2.1,7.6,10,8.1,15c0.3,2.7,1.1,5.1,2.4,7.2
+                                    c1.1,1.7,2,3.5,2,3.9c0,0.4,0.7,1.5,1.7,2.5c0.9,1,2.1,3.3,2.6,5.2s1.2,3.5,1.5,3.8c0.9,0.6,3.8,6.6,4.4,9.1
+                                    c0.3,1.2,2.8,6.7,5.5,12.3c2.9,5.9,5,11.1,5.1,12.4c0,1.2-0.5,5.2-1.2,8.8c-1.3,6.8-1.1,9.8,0.8,12.6
+                                    C167.4,302.1,167.4,302.7,166.1,302.3z M3.7,169.5c-2.9-6.6-3.9-14.6-3.5-25.9c0.3-6.6,0.7-10.5,1.3-11.2
+                                    c0.5-0.6,0.9-1.6,0.9-2.2c0-1.8,3.1-1.8,5.9,0.1c3.4,2.3,7.9,6.8,7.9,7.9c0,0.5-2.9,3.8-6.4,7.5c-7.4,7.7-7.5,8.1-4.6,18.7
+                                    c1,3.5,1.8,6.9,1.8,7.6C7.1,174.4,5.3,173.1,3.7,169.5z"
+                                    ></path>
+                                </g>
+                                <g
+                                    id="NU"
+                                    class="province-none"
+                                    transform="translate(228.724)"
+                                >
+                                    <path
+                                        d="M175.6,540.5c-0.2-0.2-2.8-0.5-6-0.8c-3.1-0.3-5.8-0.6-6-0.7c-0.2-0.1-2.9-0.4-6-0.7s-5.8-0.6-6-0.7
+                                    c-0.2-0.1-2.4-0.4-5-0.7c-2.5-0.3-6-0.6-7.8-0.8c-6.7-0.7-9.1-1-17-1.8c-8.2-0.8-9.5-1.1-8.9-1.9c0.2-0.3,0.5-3.5,0.8-7.2
+                                    s0.6-7.2,0.7-7.8s0.4-3.8,0.7-7.1c0.3-3.3,0.6-6.8,0.8-7.8c0.2-1,0.5-4,0.7-6.7c0.5-5.9,1-11.6,1.4-15.9c0.2-1.7,0.5-4.8,0.7-6.7
+                                    c1.2-12.7,1.4-15.7,2.2-22.6c0.3-2.3,0.5-5,0.6-5.9c0.1-1.3-0.9-2.1-5.6-4.6c-7.2-3.8-20.3-10.7-30.8-16.2c-4.5-2.4-9.4-5-11-5.8
+                                    c-2.7-1.5-4.2-3.3-9.6-12.1l-2.6-4.1l-8.1-1.7l-8.1-1.7l-3.9-5.4c-2.2-3-10.4-14.3-18.4-25.2c-8-10.9-16.3-22.3-18.6-25.4
+                                    s-4.1-5.9-4.1-6.4c0-0.7,9.1-25.9,9.6-26.4c0.9-1,7.7,5.1,10.5,9.5c1.9,2.9,7.1,7.3,10.4,8.8c1.4,0.6,2.2,0.6,3.4,0
+                                    c1.4-0.7,1.9-0.5,4.7,1.7c1.7,1.4,3.7,3.4,4.5,4.5c1.7,2.4,4.4,8.5,4.4,9.8c0,1.8-1.8,2.9-5.7,3.4s-7.1,2-7.1,3.4
+                                    c0,0.4,0.7,1.8,1.6,3c1.3,1.9,2.6,2.6,8.7,4.4c11.2,3.4,13.3,3.7,18.5,2.9c2.5-0.4,5.4-1.1,6.4-1.6c1.7-0.8,2-0.7,3,0.9
+                                    c0.6,1,3,4.2,5.4,7.3c5.5,7.2,7.3,10.8,7,13.5c-0.2,1.6-0.1,1.9,0.4,1.1c0.4-0.7,0.6-3.8,0.3-8.3l-0.4-7.2l7.5-3.7
+                                    c4.3-2.1,7.6-4.2,7.8-4.9c0.3-1.1,0.1-1.1-2.6,0c-1.6,0.7-4.6,1.7-6.6,2.2c-3.5,0.9-3.9,0.8-5.7-0.5c-4.8-3.6-0.7-10.3,6.4-10.8
+                                    c1.5-0.1,4.4-0.7,6.4-1.4c2-0.7,4.5-1.1,5.6-1c2.3,0.3,4.3,2.9,4.4,6.1c0.1,1.2,0.7,3.3,1.3,4.6c1.8,3.4,7.2,8.6,9.1,8.7
+                                    c0.9,0,1.9,0.2,2.3,0.2s1.1,0.2,1.5,0.3c0.4,0.1,2.1,2.1,3.7,4.6l2.9,4.5l4.3,0.5c2.4,0.2,6.4,0.5,9,0.5s6.9,0.6,9.6,1.4
+                                    c2.7,0.8,5,1.4,5,1.4s0.1-1.2,0.1-2.6c0.1-1.4,0.6-3.8,1.2-5.3c0.6-1.5,1.1-3.6,1.1-4.6c0-1.8,0.1-1.8,3.3-1.4
+                                    c4.1,0.6,8.4,2,13.2,4.4c2,1,3.8,2,3.9,2.1c0.2,0.2-2.4,9.8-3.8,14.3c-0.2,0.5,0.5,1.2,1.4,1.5c0.9,0.4,2.1,1.7,2.6,3l0.9,2.3
+                                    l0.5-2.1c0.3-1.4,0.1-2.9-0.6-4.2c-0.6-1.3-1.1-4.1-1.1-6.9c0-5.1,0.7-6.3,3.3-5.6c2.5,0.7,7.5-1.9,9.8-5
+                                    c1.8-2.4,2.1-3.6,2.1-6.9c0-3.1-0.3-4.3-1.4-5.3c-1.6-1.5-2-6.6-0.5-8c1.2-1.2-3.1-5.1-7.2-6.5c-2.4-0.8-3.5-1.8-5.5-4.9
+                                    c-2.1-3.3-2.5-4.5-2.5-8c0-2.3,0.4-4.7,0.8-5.5c0.6-1.1,0.3-2.4-1.2-5.8l-1.9-4.4l1.4-4c1.2-3.3,1.8-4.2,4.3-5.6
+                                    c2.7-1.5,2.9-1.8,2.2-3.3c-0.7-1.4-0.4-2.1,1.6-4.6c5.5-6.8,5-6.4,7.6-5.9c1.7,0.3,2.6,1.1,3.2,2.4c0.4,1,2,2.9,3.5,4.2
+                                    c4.8,4.2,5.5,5.7,5.8,12.6c0.2,6,0.4,6.4,3.9,12.2c4.4,7.3,4.9,11.3,1.2,9.9c-1.4-0.5-1.5-0.4-1.3,1.5c0.2,1.2-0.1,3.4-0.6,5
+                                    c-0.9,2.7-0.8,2.9,0.6,4.1c1.3,1.1,2,1.1,4.2,0.5c2.7-0.7,5.1-0.3,10.5,2c2.2,0.9,2.5,1.2,1.7,2.1c-0.5,0.5-2.4,1.2-4.2,1.4
+                                    c-5,0.7-5.4,1.9-2.1,6.6c2.6,3.8,3.2,5.7,3.4,11.4c0.1,3,1.2,0.1,1.8-4.6c0.8-7.4,1.8-9.6,4.6-10.8l2.5-1l4.8,5.2
+                                    c3.3,3.6,5,6.1,5.5,8.2c1.1,4.4,0.9,7.1-0.7,8.7c-0.8,0.8-1.4,2.3-1.4,3.4c0,2.1,1.3,6.5,2.1,7.2c0.2,0.2,1.5,2,2.8,4.1
+                                    c1.3,2,2.6,3.7,2.8,3.7c1.1,0,3.8-2.4,4.3-3.9c0.3-0.9,0.8-3.5,1-5.8s0.9-5.1,1.4-6.3c0.6-1.2,1.7-4.4,2.4-7.1
+                                    c0.8-2.7,2.4-6.4,3.6-8.1c2.5-3.7,2.7-5.3,0.7-7.5c-1.7-1.8-3.7-10.3-3-12.6c0.9-3,2.4-4,6.4-4c2.9,0,4.8,0.5,7.8,2.1
+                                    c2.2,1.2,4.6,2.1,5.4,2.1s2.4,1.1,3.7,2.4c1.2,1.3,3.7,3.1,5.3,4c3,1.5,5.6,3.9,5.6,5.2c0,0.3-0.5,1-1.1,1.5
+                                    c-1.1,0.8-1,1,0.3,2.9c0.8,1.1,1.7,3.2,1.9,4.6c0.4,2.4,0.3,2.6-1.7,3.3c-1.2,0.4-2.5,1.4-2.9,2.2c-0.4,0.8-1.4,1.5-2.2,1.5
+                                    c-1.9,0-1.7,1.3,0.4,3.8c1,1.1,2,3.1,2.2,4.4c0.3,1.6,1.2,2.9,2.7,3.9c5,3.4,5,10.5,0,19.1c-5.9,10.1-6.3,10.6-9.4,10.3
+                                    c-1.5-0.1-3.6-0.8-4.6-1.5l-1.9-1.2l1.1,2.7c1.2,2.9,0.5,4.2-2.1,3.4c-2.6-0.8-3.6-0.8-4.8,0.2c-1,0.8-1.5,0.8-3.5,0
+                                    c-1.3-0.6-2.9-1.7-3.5-2.5c-0.9-1.3-1.5-1.4-3.9-1c-1.6,0.3-3.4,0.8-4.1,1.1c-1.1,0.6-1,0.9,1.3,3.1c2.4,2.3,2.5,2.6,2.1,5.4
+                                    c-0.4,2.1-1.6,4.2-4.3,7.4c-2.1,2.5-4,5.3-4.2,6.2c-0.2,1-0.8,1.8-1.3,1.8c-0.4,0,0.1,0.7,1.2,1.6c1.7,1.4,2,2,1.8,4.4
+                                    c-0.1,1.5-0.7,3.6-1.4,4.6c-0.6,1-1.8,2.7-2.5,3.9c-0.8,1.2-2.8,4.6-4.6,7.6c-3.6,6.2-4.7,6.9-11.6,6.9c-5.1,0-6.5,1-6.9,4.9
+                                    c-0.2,2.4-0.3,2.5-3.4,2.4c-1.8,0-4.1-0.2-5.1-0.5c-2.8-0.6-3,0.5-0.4,2.4c1.3,0.9,2.4,1.7,2.6,1.8c0.7,0.6,0.8,6.2,0.1,8.3
+                                    c-0.9,2.8-3.6,4.2-8.5,4.4c-5.6,0.2-5.3,0.1-4.1,1.9c1,1.5,0.9,1.7-1.5,4.1c-3.6,3.5-7.7,8.9-9.6,12.7c-0.9,1.7-2.3,3.8-3.2,4.6
+                                    c-1.9,1.7-3.5,4.8-3.5,6.5c0,0.7-1.6,4.7-3.7,9c-3.1,6.5-3.7,8.3-3.6,11.5l0.1,3.8h-3C177.2,540.8,175.7,540.6,175.6,540.5z
+                                     M318.6,501.4c-3.8-2.3-3.6-9.2,0.3-13.5c1.6-1.7,3.4-1.6,5.6,0.4c2.3,2,1.1,10.2-1.8,12.9C320.9,502.9,320.9,502.9,318.6,501.4z
+                                     M281.9,493.5c-1.6-3.1,0.7-10,4.1-12.4c2.8-1.9,3.5-2,9-1.9c3.3,0.1,3.7,0.3,4.5,2.2c0.8,1.9,0.7,2.4-1.4,5.6
+                                    c-3,4.6-7.2,7.3-11.9,7.7C283.2,494.9,282.6,494.8,281.9,493.5z"
+                                    ></path>
+                                </g>
+                                <g
+                                    id="NT"
+                                    class="province province-group"
+                                    data-code="NT"
+                                    transform="translate(106.927 119.464)"
+                                >
+                                    <path
+                                        d="M35.5,139.4c-1.2,0-2.9,0.2-5.4,0.5c-3.8,0.5-7.3,1-7.9,1.2c-0.7,0.3-0.8,1.3-0.6,3.8c0.4,4-0.5,5-2.2,2.5
+                                    c-0.6-1-1.4-1.8-1.7-1.8c-1.2,0-11.5,18.6-13.5,24.4c-1.2,3.5-2.7,7.1-3.3,7.9c-1.6,2.5-1.2,3.2,3.4,6.4
+                                    c9.9,6.7,10.2,7.4,6.1,15.8c-1.4,2.9-2.8,6.6-2.9,8.3c-0.3,2.8-0.1,3.1,2.4,5.2c1.5,1.2,2.6,2.4,2.4,2.7
+                                    c-0.2,0.3-0.4,2.4-0.5,4.6c-0.2,4.4-1,5.8-3.9,6.5c-2,0.5-3.1,2.2-3.1,4.8c0,1-0.3,1.8-0.6,1.8c-0.3,0-0.8,0.8-1.1,1.9
+                                    c-0.3,1.4-0.1,2.3,1,3.4c1,1.1,1.5,2.5,1.5,4.7c0,1.9,0.7,4.6,1.7,6.6c1.2,2.4,1.6,4.2,1.3,5.8c-0.3,1.5,0.1,3.2,1.1,5.1
+                                    c1.4,2.7,1.4,2.9,0.2,7c-1.7,5.6-3.4,14.9-3.9,21c-0.2,2.7-0.6,5.6-0.8,6.4c-0.3,0.9,0.1,2.1,1.1,3.2c1.9,2.2,3,4.8,4.2,9.9
+                                    c1.1,4.5,2.4,7.5,4.5,9.7l1.5,1.6l-1.5,1.6c-1,1.1-1.5,2.5-1.5,4.3c0,1.5-0.3,3.3-0.8,4c-0.7,1.3-0.3,1.6,3.7,3.4
+                                    c2.5,1.1,5.7,2.9,7.2,3.9c2.2,1.5,3.2,1.8,5.1,1.4c2.9-0.5,2.7-1.3,2.7,10.2v8.7l7.8,3.1c25.3,10.2,55.1,20.3,83.9,28.5
+                                    c8.4,2.4,19.8,5.7,25.5,7.4c5.6,1.7,11.2,3.3,12.4,3.5s6.9,1.3,12.7,2.5s11.5,2.3,12.6,2.5s5.2,1,9.2,1.8s8.2,1.6,9.4,1.8
+                                    c1.2,0.2,6.6,1.3,12,2.4c11.2,2.3,15.2,2.6,15.3,1.3c0-0.5,0.2-1.5,0.3-2.2s0.5-4.1,0.7-7.4c0.3-3.3,0.6-6.9,0.7-7.9
+                                    c0.1-1,0.4-3.8,0.7-6.4c0.6-7.2,1.8-18.7,2.1-22.3c0.1-1.2,0.5-5,0.7-8.5c0.3-3.5,0.6-6.8,0.7-7.4c0.1-0.6,0.4-3.8,0.7-7.1
+                                    c0.2-3.3,0.7-8.6,1.1-11.9c0.4-3.2,0.5-6.2,0.3-6.5s-4.9-3-10.5-5.9c-11.7-6.1-23.8-12.5-32.7-17.3l-6.3-3.4l-4.4-7.1l-4.4-7.1
+                                    l-8-1.7l-8-1.7l-6.9-9.2c-3.8-5.1-9.7-13.2-13.2-18.1s-10.4-14.4-15.4-21.1c-5-6.7-9.5-13-10.1-13.9c-1-1.6-0.9-2.1,1.4-8.2
+                                    c8.7-23.1,8.7-22.9,4.3-28.7c-1.3-1.7-2.4-3.4-2.4-3.8s-0.3-0.6-0.8-0.6c-0.4,0-1.6-0.6-2.7-1.3c-1-0.7-3.2-1.5-4.7-1.7
+                                    c-2.4-0.3-3.3,0-5.8,2.1s-3.2,2.3-4.8,1.7c-2.4-0.9-2.3-1.4,0.2-3.9c1.2-1.1,1.9-2.4,1.6-2.8c-0.3-0.4-0.5-2.4-0.5-4.4
+                                    c0-6.1-1-6.1-7.1,0c-3,3-5.6,5.4-5.8,5.4c-0.5,0-2.7-2.3-2.8-3c0-0.3-0.1-4.7-0.2-9.7c-0.1-9-0.1-9.1-1.9-9.9
+                                    c-2.5-1.2-3.7-1-5.8,0.6c-1.4,1.1-2.7,1.4-5.2,1.3c-2.3-0.1-3.2-0.4-2.8-0.9c0.3-0.4,0.8-1.7,1-2.7c0.3-1.8,0-2.1-2.9-3.6
+                                    c-3.3-1.7-8.5-2-12.8-0.9c-1,0.2-5.1,0.6-9.2,0.9c-5.4,0.3-7.6,0.7-8,1.5c-0.3,0.6-1.5,1-2.7,1c-2,0-2.1-0.2-2.1-3
+                                    C38.2,140.6,38.1,139.5,35.5,139.4z M94.1,238.5c18.4,0.1,19.9,0.3,19.9,3.3c0,0.7-1.5,2.5-3.4,4.1c-2.2,1.9-3.1,3.1-2.7,3.6
+                                    c0.8,0.8,10.6,4.8,15.4,6.2c3.3,1,3.4,1.1,2.9,3.3c-0.5,2.4-1.5,4-2.5,4c-0.4,0-1.9,0.8-3.4,1.8l-2.8,1.8l-4.1-1.9
+                                    c-2.3-1-4.7-2.2-5.4-2.6c-1.8-0.9-2.8,0.2-4.3,4.9c-1.4,4.4-1.7,4.6-7.3,6.5c-2.4,0.8-4.7,1.5-5.1,1.5c-1.3,0-0.8-2,1.2-4.4
+                                    c4.1-4.9,4.1-4.8,1.7-4.8c-1.3,0-3,0.7-4.3,1.8c-3.5,2.9-6.1,3.4-9.3,1.5c-1.5-0.9-3.1-2.4-3.5-3.3c-0.8-1.7-0.5-2.1,4.2-6.5
+                                    c2.8-2.6,6.4-5.4,8.1-6.3c1.7-0.8,3.3-2.1,3.5-2.8c0.5-2-2.3-4.2-5.6-4.3c-1.5,0-4.8-0.7-7.3-1.6c-3.7-1.3-4.6-1.8-4.8-3.2
+                                    c-0.1-0.9,0.1-1.9,0.5-2.2C76.2,238.6,84.5,238.5,94.1,238.5z M118.2,329.4c0.3,0,1.6,1.5,2.9,3.2c1.3,1.8,3.5,4.3,4.8,5.5
+                                    c3.8,3.4,6.6,6.6,8.4,9.5c1.4,2.3,2.1,2.8,6.3,3.8c4.4,1.1,5,1.1,8.9,0c2.8-0.8,4.6-1.8,5.7-3.1c2.2-2.7,4.8-3.9,9.3-4.2
+                                    c3.8-0.2,3.8-0.2,3.7,1.7c-0.2,2.8-3,6-6.1,6.9c-1.5,0.4-4,2.1-5.7,3.7s-5.1,3.8-7.6,5c-2.5,1.1-5.8,2.7-7.3,3.5
+                                    c-1.6,0.8-3.5,1.3-4.5,1.1c-1.3-0.2-2.4,0.2-4,1.6c-1.2,1.1-3.5,2.5-5,3.1s-3.6,1.1-4.6,1c-13.1-1.2-14.3-1.6-20.6-7.4
+                                    c-5.6-5.2-5.6-6.6,0.3-6.6c2.2,0,4.6,0.3,5.3,0.7c1.6,0.9,3.5,0,6.5-2.7c1.6-1.5,2.5-1.8,4.8-1.6c3.3,0.2,4.9-0.8,4.9-3
+                                    c0-2.1-2.9-10.4-5.4-15.6C117.2,331.4,116.9,329.4,118.2,329.4z"
+                                    ></path>
+                                </g>
+                                <path
+                                    id="YT"
+                                    class="province province-path"
+                                    data-code="YT"
+                                    d="M134.1,475.5c-0.8-0.5-3.8-2-6.7-3.3c-4.5-2-19.8-10-45.1-23.4c-8-4.3-37.4-22.5-59.2-36.7
+                                c-7.7-5-11.2-7.7-11.2-8.6c0-1.8,2.2-5.2,4.5-7c4.1-3.2,1.7-5.3-6.3-5.6c-1.6-0.1-2.3-0.5-2.6-1.5c-0.2-0.8-0.6-1.4-1-1.3
+                                c-1.3,0.4-3.7-1-4.2-2.3c-0.3-1.1,1.3-4.1,6.6-11.8c9.7-14.3,27.8-41,41.7-61.6C61.7,296,76,274.8,95.4,246.2l8.7-12.8l2.3,0.8
+                                c4.6,1.6,6,3.2,6.5,7.7c0.3,2.3,1.2,5.6,2.1,7.4c0.9,1.8,1.9,4.5,2.1,6c0.3,2,1.2,3.4,3.3,5.2c2.6,2.3,2.8,2.6,1.8,3.7
+                                c-1.5,1.7-8.7,13.4-10.3,16.8c-0.8,1.6-2,4.6-2.7,6.7s-2,5.3-2.8,7.1c-3.1,6.2-3.3,5.7,4.2,11.4c5.2,3.9,6.8,5.5,6.8,6.7
+                                c0,0.9-1.1,3.8-2.5,6.5c-1.7,3.2-2.7,6.2-2.9,8.7c-0.4,3.8-0.3,3.9,2.2,5.9c2.8,2.1,2.6,1.5,1.9,9.7c0,0.3-1,0.7-2.1,0.9
+                                c-2.2,0.5-4.3,3-4.3,5.2c0,0.8-0.6,2.5-1.4,3.8c-1.5,2.6-1.2,5,1,6.8c0.8,0.7,1,1.7,0.8,3.7c-0.3,2.1,0,3.3,1.2,5
+                                c1.1,1.6,1.6,3.3,1.7,6.1c0.1,2.2,0.7,5,1.3,6.3c1.2,2.3,1.2,2.6-0.2,7.4c-1.8,6.4-2.7,11.4-3.3,18.2c-0.2,3-0.8,6.4-1.2,7.6
+                                c-0.7,2-0.6,2.4,1,4.1c2.4,2.5,3,3.9,4.4,9.3c0.6,2.5,2.1,6.2,3.2,8.2c1.4,2.7,1.7,3.8,1.1,4c-0.5,0.2-1.1,1.9-1.3,3.8
+                                c-0.2,1.9-0.6,4.3-0.9,5.4c-0.6,2.4,0.3,3.2,6,5.9c2.1,1,5.1,2.6,6.6,3.7s3.6,1.9,4.6,1.9h1.9l-0.2,7.4c-0.1,4.1-0.3,7.5-0.4,7.6
+                                C135.6,476.3,134.9,476,134.1,475.5z"
                                 ></path>
                             </g>
-                            <g
-                                id="NS"
-                                class="province province-group"
-                                data-code="NS"
-                                transform="translate(764.774 723.855)"
-                            >
-                                <path
-                                    d="M9,82.5c-4.1-0.9-6.2-3.2-7.8-9.1c-0.8-2.9-1-4.5-0.5-5.8c1-2.7,5.7-9.6,8.8-13c1.5-1.6,3.2-3.6,3.7-4.3
-                        c0.5-0.7,1.8-1.6,2.7-1.8c2-0.5,8.2-4.6,8.2-5.5c0-0.7-3.2,0.5-6.9,2.7c-6.5,3.8-5.6-2.4,1.6-10.5c3.2-3.6,3.9-4.1,6.1-4
-                        c6.7,0.2,14.3-1,16.8-2.7c1.5-1,3-1.5,3.7-1.2c0.6,0.3,2.6,0.5,4.4,0.6c3.7,0.1,6.7,1.8,7.9,4.4c0.8,1.7,0.5,2.1-3.7,6.3
-                        c-2.5,2.5-5,5.1-5.6,5.7c-2.5,2.7-8.7,7.4-10.2,7.8c-0.9,0.2-2.4,1.9-3.7,3.9c-1.9,3.2-2.2,3.5-4.3,3.2c-1.8-0.3-2.4,0-3,1.4
-                        c-0.4,1-0.8,2.1-0.8,2.5c0,0.4-1,3-2.1,5.8c-1.6,3.9-3.3,6.3-6.8,9.8c-2.5,2.6-4.7,4.7-4.8,4.6C12.5,83.3,10.8,82.9,9,82.5z
-                         M56.6,28.8c-0.6-0.5-2.6-2.5-4.5-4.6c-2.5-2.7-3.2-3.9-2.7-4.6c0.4-0.5,1.7-3.8,2.9-7.4C54.8,4.9,57.1,0,58,0
-                        c1.3,0,2.9,3.2,2.9,5.6c0,4,0.7,5.5,2.7,6c2.5,0.6,5.8,3.8,5.8,5.6c0,0.8-1,2.9-2.2,4.8c-1.6,2.5-2.7,3.4-3.8,3.4
-                        c-1,0-2.2,0.8-3.2,2.1C58.5,29.9,58.2,30,56.6,28.8z"
-                                ></path>
-                            </g>
-                            <path
-                                id="PE"
-                                class="province province-path"
-                                data-code="PE"
-                                d="M799.9,751.7c-0.2-0.2-3-0.5-6.3-0.6c-3.2-0.1-7.6-0.8-9.8-1.4c-4.7-1.4-5.7-1.6-7.1-1.7
-                    c-2.9-0.2-3.2-1.2-1.4-4.9c0.9-2,2.1-3.6,2.6-3.6c0.5,0,2.4,1.4,4.1,3.1c2.6,2.5,3.4,2.9,4,2.1c0.5-0.6,2.2-0.9,4.3-0.9
-                    c1.9,0,4-0.3,4.7-0.6c2.3-1.2,8.6-2.8,8.9-2.3c0.2,0.3-0.1,1.4-0.7,2.5c-0.5,1.1-1.1,3.3-1.2,5C802.1,751,801,752.7,799.9,751.7z"
-                            ></path>
-                            <path
-                                id="NB"
-                                class="province province-path"
-                                data-code="NB"
-                                d="M749.6,783.4c-1.6-0.4-3.6-2.6-4.7-5.3c-0.5-1.1-1.5-2.1-2.4-2.3c-2.9-0.7-7.4-12.5-7.5-19.4
-                    c0-2.4-0.4-3.6-1.6-4.7c-2.8-2.6-6.5-4.5-8.8-4.5l-2.2,0l-0.3-4.4c-0.2-2.4-0.2-4.7,0-4.9c0.1-0.3,2.2-0.6,4.6-0.6
-                    c5.2-0.1,8.1-1,11-3.7c1.3-1.2,4.2-2.5,7.4-3.4c4.9-1.3,5.5-1.4,7.9-0.3c2.5,1.1,2.7,1,4-0.4c2.9-3.1,11.2-5.5,11.1-3.3
-                    c0,0.5-0.5,1.7-1,2.7c-1.5,2.6-1.4,8.6,0.3,10.7c0.7,0.9,1.6,2.7,1.8,4c0.3,1.4,1.8,3.6,3.8,5.5c3.2,3,3.5,3.1,7.6,3.1
-                    c2.4,0,4.5,0.2,4.7,0.4c0.2,0.2-1.2,2.1-3.1,4.1c-1.9,2-4.3,5.4-5.3,7.4c-2.5,5.3-11.4,14.2-14.1,14.2c-1.5,0-2.2,0.5-2.9,2
-                    C758.7,783.2,754.1,784.6,749.6,783.4z"
-                            ></path>
-                            <g
-                                id="QC"
-                                class="province-none"
-                                transform="translate(561.543 477.15)"
-                            >
-                                <path
-                                    d="M95.5,326.7c-0.6-1.1-1.3-3.1-1.4-4.4c-0.3-2.3-0.4-2.5-3.2-2.7c-2.9-0.2-6.7,1.2-10.9,4.2
-                        c-1.4,1-3.1,1.3-7.2,1.3c-5.2,0-5.3,0-7-2.5c-0.9-1.4-2.3-2.5-3-2.5c-0.7,0-3-1-4.9-2.2c-2.5-1.5-4.8-2.3-7.5-2.5
-                        c-6-0.5-12.6-2.7-16.7-5.5c-3-2.1-4.1-3.4-5.8-7.3c-1.3-2.9-2.3-6.6-2.6-9.3c-0.3-2.5-0.6-5.5-0.7-6.7c-0.2-1.2-0.6-5.1-1.1-8.8
-                        c-0.4-3.7-0.9-7.8-1.1-9.2c-0.2-1.4-0.5-3.9-0.7-5.7c-0.2-1.7-1.3-11.5-2.5-21.6s-2.3-19.2-2.5-20.2c-0.3-1.6-0.1-1.9,1.8-2.3
-                        c2-0.4,2.2-0.6,1.7-2.6c-0.4-1.7-0.1-2.8,1.5-5.1c1.1-1.6,2-3.7,1.9-4.7c0-1-1.3-4.5-2.9-7.8c-1.6-3.3-3.2-7.3-3.6-8.8
-                        c-0.4-1.6-1.3-3.6-2-4.5c-0.8-1.2-1.2-2.8-1-5.1c0.2-3.7-1.7-7.7-4.2-9.1c-0.8-0.4-1.4-1.5-1.4-2.6c0-1.1-0.6-2.7-1.4-3.7
-                        s-1.4-2.1-1.4-2.5c0-1.1,3.4-4.1,7.4-6.6c1.9-1.2,4.5-3.4,5.8-4.9c1.2-1.5,3.7-4.2,5.4-6.1c2.1-2.3,4-5.5,5.8-9.8
-                        c2.4-5.7,2.6-6.9,2.5-12.3c-0.1-4.4-0.7-7.5-2.1-11.8c-1.1-3.2-2.1-6.6-2.4-7.7C27.3,99.8,21,93,16.4,90.6
-                        c-5.5-2.9-9.7-7.1-9.9-9.9c-0.1-1.2,0.4-3.3,1-4.8c0.7-1.5,1.3-3.2,1.4-3.8c0.1-0.6,0.8-1.6,1.6-2.2c1.1-0.9,1.5-2,1.5-4.6
-                        c0-2.4,0.4-3.8,1.4-4.9c1.3-1.4,1.3-1.7,0.4-4.4c-0.6-1.6-1.2-3.7-1.3-4.7c-0.4-2.2-2.3-5.8-4.4-8.6c-1.5-1.9-1.6-2.9-1.6-10.1
-                        c0-5.8-0.3-8.3-1-9.2c-0.5-0.6-1.9-3.3-3-6l-2-4.8l1.8-3.7c1.7-3.5,2-3.7,5.2-4.2c5.3-0.7,9.8-0.5,12.9,0.5c4,1.4,9.7,1.9,12,1.1
-                        c1.1-0.4,3.2-2,4.8-3.5C38.7,1.3,40.3,0,40.7,0c1.2,0,14.9,7.2,19.5,10.2c3.5,2.3,4.2,3.2,4.1,4.6c-0.1,1,0.4,2.6,1.1,3.6
-                        c1.1,1.6,1.9,1.9,8.5,2.7c4,0.5,8.8,1.4,10.7,2l3.4,1.1l-0.5,3.9c-0.5,3.8,0.1,6.2,3.3,15.4c0.4,1.2,0.7,3,0.7,4.1
-                        c0,1.2,0.6,2.6,1.7,3.7c1,1,2.4,3.2,3.2,5l1.4,3.2l3.5-0.4c3.4-0.4,3.6-0.3,7.2,2.8c2.1,1.8,4.6,3.4,5.7,3.7s1.9,0.8,1.9,1.1
-                        c0,1.3,1.5,0.5,4.5-2.4c2.3-2.2,3.2-3.7,3.6-5.9c0.3-2.1,1-3.1,2.1-3.6c1-0.4,2-1.9,2.6-3.8c1.1-3.5,1-10.8-0.2-13
-                        c-0.4-0.8-0.7-1.7-0.6-2.1c0.1-0.4,0.5-2.4,0.9-4.6c0.6-3.5,2.3-6,3.5-5.3c0.3,0.2,0.7,1.5,0.9,2.9c0.6,3.3,3.7,8.7,4.9,8.7
-                        c0.9,0,2.9,7.1,2.5,8.8c-0.4,1.9,0.2,2.2,4.1,1.9l4.1-0.3l-0.1,4.5c-0.1,2.5-0.4,5.6-0.9,6.9c-0.5,1.5-0.5,2.8-0.1,3.6
-                        c0.8,1.5,4.6,3.9,7.2,4.6c2.4,0.6,2.6,1.2,3.1,9.5c0.2,3.7,0.8,8.3,1.4,10.2c0.5,2,1.2,4.7,1.4,6.1c0.3,1.7,1.1,3,2.6,4.1
-                        c2.1,1.6,5.6,7.8,5.6,10c0,0.6,0.6,1.7,1.3,2.3c0.7,0.7,1.9,2.4,2.5,3.9c1.2,2.6,1.2,2.8-0.3,6.1l-1.5,3.3l-3.7-0.4
-                        c-2-0.2-4.7-0.6-5.9-0.9c-1.9-0.4-2.4-0.2-3.9,2.1c-1.9,2.8-3.1,3.1-5,1.4c-0.7-0.6-3.2-1.5-5.6-2c-4.7-1-5.2-0.8-6,2.6
-                        c-0.3,1.1-1.2,2.3-2.2,2.8c-1.4,0.6-1.8,1.3-1.8,3.2c0,1.7-0.6,3-2.2,4.7c-1.9,2-2.1,2.6-1.8,5.1c0.2,1.6,0.8,3.7,1.4,4.7
-                        c1.6,3.1,5.8,7.3,8.7,8.8c3.1,1.5,3.6,3.2,2.2,7.2c-0.8,2.2-0.7,2.5,1.2,4.1c2.1,1.8,4.5,1.9,8.6,0.6c1.4-0.4,1.5-0.2,2,3.2
-                        c0.3,2.5,1,4.2,2.3,5.4c1.6,1.6,2.1,1.7,5.7,1.3c3.2-0.4,4.2-0.3,5.3,0.8c0.8,0.7,1.9,1.4,2.6,1.5c3.3,0.6,10.5,0.8,11.3,0.3
-                        c0.5-0.3,1.1-2,1.2-3.7c0.4-4,0.9-8.7,1-9c0-0.1,1.4,0.5,3,1.3c2.2,1.1,3.7,1.4,5.8,1.1c3.1-0.4,14.4-4.3,26.3-8.9
-                        c18.2-7.1,29.4-11.3,33.6-12.3c2.5-0.6,5-1.5,5.5-2c0.6-0.5,1.2-0.5,1.5-0.2c1.7,1.9,5.1,6.6,5.1,6.9c0,0.2-2,1.9-4.4,3.8
-                        c-6.5,4.9-10.4,9.3-10.8,12.3c-0.2,1.4-1.8,5.3-3.5,8.8c-1.7,3.5-3.5,7.2-3.8,8.1c-0.8,2.2-12.2,8.3-19.5,10.5
-                        c-2.7,0.8-8.8,2.6-13.5,3.9c-27.4,7.9-40.6,12.9-43.1,16.2c-0.7,1-1.6,3.3-2,5.2c-0.3,1.9-1.3,5.6-2.1,8.2
-                        c-1.3,4.1-1.7,4.8-3.2,4.8c-3.4,0-10.3,7.9-12.8,14.5c-0.7,1.9-2.3,5.1-3.6,7.1c-1.2,2-2.4,4.7-2.6,6c-0.8,5.9-11.7,23.5-17.3,28
-                        c-7.9,6.3-18.9,17.9-17.8,18.9c0.2,0.2,3-2.7,6.3-6.4c3.3-3.7,8.1-8.2,10.7-10.1c4.4-3.3,9.2-8.4,12.4-13.1
-                        c2.9-4.2,8-14.4,8-15.9c0-0.8,0.4-2.2,0.8-3c1.3-2.5,7.8-10.5,10.5-12.9c1.4-1.2,4.1-3.7,6-5.5c1.9-1.8,5.4-4.4,7.8-5.8
-                        c2.3-1.4,6.7-4.2,9.6-6.3c3.7-2.6,6.7-4,9.9-4.8c4.3-1.1,4.9-1.1,8.8,0.1c3.4,1.1,4.4,1.7,5.4,3.7c2.8,5.3,2.4,9-1.7,13.9
-                        c-3.9,4.8-5.4,5.7-9.5,6.1c-8.1,0.8-14.9,2.7-17.1,4.8c-2.9,2.7-5.2,3.5-10.8,3.7c-6.7,0.3-7.1,0.7-6.5,7.8l0.5,5.8l-2.7,0.4
-                        c-1.5,0.2-3.6,0.3-4.6,0.1c-1.4-0.3-2.2,0.1-3,1.3c-1.4,2-4.4,11.8-5,16.1c-0.2,1.7-0.7,5.2-1.1,7.8s-0.8,6-1,7.6
-                        c-0.6,5.5-2.7,10.1-5.5,12.1c-1.4,1-3.3,2.9-4.2,4.1c-0.9,1.3-2.3,2.4-3.1,2.6c-0.8,0.2-6.7,1.4-13,2.8
-                        c-6.3,1.4-13.2,2.5-15.2,2.5C97,328.7,96.5,328.5,95.5,326.7z"
-                                ></path>
-                                <path
-                                    d="M211,218.6c-1-0.2-2.6-0.8-3.5-1.5c-1-0.7-3.6-1.6-5.8-2.1c-5.1-1.1-6-2.9-2.9-5.4c1.6-1.3,3-1.7,6.6-1.8
-                        c9.7-0.2,13.2,0.2,19.7,2.4c6.5,2.2,6.6,2.2,6.6,4.5c0,2.7-0.3,2.8-8.1,3.5C214.8,218.8,212.9,218.9,211,218.6z"
-                                ></path>
-                            </g>
-                            <path
-                                id="ON"
-                                class="province province-path"
-                                data-code="ON"
-                                d="M551.3,877.3c0.8-1.4,1.7-2.1,3.7-2.4c1.5-0.2,3.1-0.7,3.6-1c1.3-0.9,2-5.8,0.9-6.5
-                    c-0.6-0.4-0.7-0.9-0.2-1.9c0.4-0.7,0.9-2.5,1.2-4c0.3-1.4,1.1-3,1.8-3.5c2.6-1.8,4.8-5.9,4.5-8.4c-0.1-1.3-0.3-5-0.3-8.1
-                    c-0.1-5.4,0.1-6,2.4-10.3l2.5-4.5l-1.3-2.8c-0.7-1.5-2-3.4-2.8-4.1c-1.5-1.3-2.1-3.2-1-3.2c0.3,0,2.4,1.9,4.7,4.2
-                    c3.8,3.8,7.6,6.3,11.4,7.3c3.9,1.1,6-5.4,3.1-9.6c-1.9-2.7-9.6-11.1-11.6-12.5c-0.7-0.5-3.4-1.2-6-1.5s-6.4-1-8.5-1.7
-                    c-2.7-0.8-6.9-1.1-14.3-1.1c-9.7,0-10.5-0.1-11.4-1.5c-0.6-0.8-2.7-2.3-4.8-3.4c-3-1.6-3.8-2.3-3.8-3.8c0-1-1-2.8-2.1-4
-                    c-1.7-1.8-1.9-2.2-0.9-2.6c1.6-0.6,1.5-2.1-0.3-4.6c-0.8-1.1-2.1-3.4-2.8-5.1c-1.2-2.7-1.7-3.2-4.1-3.6c-2.7-0.4-10.2-4-12.1-5.8
-                    c-0.5-0.5-1.1-2.1-1.2-3.6s-0.4-3.6-0.7-4.7l-0.5-2l-5.7,0.4c-5.3,0.3-6,0.2-9.8-1.7l-4.1-2.1l-2.9,1.8c-2.7,1.7-2.8,1.9-1.8,3
-                    c1,1,0.7,1.4-3.6,4.2c-2.6,1.7-5.9,4.3-7.3,5.8c-2.9,3.1-3.2,3.1-13.4,1.4c-2.9-0.5-7.6-0.9-10.3-1c-4.8-0.1-9.5-1.8-9.5-3.3
-                    c0-0.3-0.8-0.6-1.8-0.6c-1.1,0-2.8-1-4.4-2.5c-2.6-2.4-2.7-2.5-9.1-2.5c-4.7,0-6.8-0.3-7.5-1c-0.6-0.6-2.3-1.2-3.8-1.5
-                    c-3.9-0.7-4.3-1.2-4.8-6.2c-0.4-4-0.7-4.5-2.7-5.5c-2.2-1.1-2.3-1.3-2.2-5.3c0.1-4.5,0.9-23.5,1.3-30.3c0.1-2.3,0.5-9.3,0.7-15.5
-                    c0.6-14.1-0.7-11.9,16.2-29.4c3.6-3.7,8.5-9.1,11-11.9s4.9-5.6,5.3-6c0.4-0.4,4.5-5.2,9.2-10.7s10.1-11.7,12-13.8
-                    c9.5-10.5,13.8-15.3,15.1-16.9l1.4-1.8l2.4,1.3c2.9,1.6,7.7,6.1,7.7,7.2c0,0.4,1,1.8,2.3,3c1.7,1.7,3.4,2.5,6.6,3.1
-                    c2.9,0.6,4.9,1.4,6.4,2.8c2,1.9,3.8,2.6,7.1,2.7c0.8,0,3.2,1.6,5.3,3.5l3.9,3.4l13.3,0.4c11.6,0.4,13.6,0.6,16.2,1.9l2.9,1.5
-                    l-0.5,6.1c-0.3,3.4-0.8,6.4-1.1,6.7c-0.3,0.3,0,1.6,0.7,2.8c0.7,1.2,1.5,3.6,1.8,5.4c0.8,5.7,0.9,6.2,1.6,7.6
-                    c0.4,0.7,0.6,2.8,0.4,4.5c-0.2,2.6,0.2,3.9,1.9,6.6c2.7,4.3,11.2,14.6,12.1,14.6c1.6,0,6.1,5.8,7.4,9.6l1.4,4l4.4-0.3l4.4-0.3
-                    l0.4,3.6c0.7,5.7,1,8.3,1.4,12.5c0.2,2.1,0.5,4.7,0.7,5.7c0.2,1,0.5,3.7,0.7,6c0.2,2.3,0.5,5,0.7,6c0.3,2.3,1,8,1.5,12.4
-                    c0.2,1.9,0.5,4.6,0.7,6c1.1,8.5,1.8,14.3,2.1,17.9c0.2,2.3,1.4,6.3,2.6,8.9c1.8,4,2.8,5.2,6.2,7.6c4.6,3.2,11,5.5,17.4,6.2
-                    c2.9,0.3,5.3,1.1,7.5,2.5c1.8,1.1,3.9,2.1,4.6,2.1c0.8,0,2.2,1.2,3.3,2.7l1.9,2.7l6.1-0.3c5.3-0.3,6.7-0.7,10.6-2.8
-                    c4.5-2.5,8.1-3.6,8.2-2.6c0.1,1.1,0.5,2.9,1,4.4c0.4,1.2-0.1,2-2.2,3.8c-4.4,3.7-8.1,7.6-13.3,14.1c-2.7,3.4-5.3,6.2-5.7,6.2
-                    c-1.2,0.1-4,2.8-3.6,3.4c0.8,1.3-4.9,3.5-9.6,3.6c-8.5,0.3-20.6,5.3-23.2,9.5c-2.6,4.2-2.6,5.3,0.1,6.4c1.3,0.6,3,0.8,3.8,0.6
-                    c1-0.3,1.7,0.2,2.5,2.1c1.4,2.9,0.9,3.3-3.8,3.3c-2.9,0-10.6,2.9-12.6,4.7c-0.9,0.9-0.9,1.1,0.7,2.3l1.8,1.3l-1.9,0.5
-                    c-1.1,0.3-3.4,0.1-5.1-0.3c-6.7-1.7-8.3-0.9-16.7,7.8c-4.6,4.8-5.7,5.6-7.8,5.6c-1.4,0-3.5,0.2-4.8,0.3l-2.3,0.2L551.3,877.3z"
-                            ></path>
-                            <path
-                                id="MB"
-                                class="province province-path"
-                                data-code="MB"
-                                d="M341.5,535.7l-0.5,4.5c-0.3,2.5-0.6,5-0.7,5.5s-0.4,2.8-0.7,4.9c-0.3,2.1-0.6,4.4-0.7,4.9
-                    c-0.1,0.6-0.7,5.2-1.4,10.2c-1.2,8.6-1.2,9.3,0,11.2c1.2,2,1.2,2.1-0.8,4.6c-1.1,1.4-2.4,3.1-2.8,3.7c-0.4,0.6-1,5.3-1.3,10.3
-                    c-0.3,5.1-0.6,10.5-0.7,12c-0.1,1.6-0.4,5.7-0.7,9.2c-0.3,3.5-0.6,8.3-0.8,10.6c-0.7,9.7-1,13.7-1.4,19.1
-                    c-0.2,3.1-0.5,7.2-0.7,9.2c-0.2,1.9-0.5,6.7-0.7,10.6c-0.2,3.9-0.6,8.3-0.7,9.9c-0.1,1.6-0.4,6.2-0.7,10.2
-                    c-0.3,4.1-0.6,8.5-0.7,9.9s-0.5,6.1-0.7,10.6c-0.3,4.5-0.6,8.6-0.7,9.2c-0.4,1.9-1.3,17.9-1.4,22.6l0,4.6l4.2,0.4
-                    c6.8,0.7,13.3,1.4,15.2,1.7c1,0.1,3.5,0.4,5.7,0.7c4.1,0.5,6.5,0.7,12.7,1.5c2.1,0.3,6.9,0.7,10.6,0.9s10,0.5,13.9,0.7l7.2,0.2
-                    l0.4-3.4c0.2-1.9,0.6-7.2,0.8-11.9c0.2-4.7,0.5-10.7,0.7-13.4c0.2-2.7,0.5-9.7,0.7-15.6c0.8-20.2,1-22.3,2.7-25.1
-                    c0.9-1.4,5.9-7.2,11.2-12.8c5.3-5.6,11-11.7,12.7-13.7c1.7-1.9,3.4-3.9,3.8-4.3c6.8-7.7,10.1-11.4,13.8-15.8
-                    c2.4-2.9,6.6-7.7,9.3-10.7c2.7-3,6-6.6,7.3-8.2c1.3-1.5,4-4.5,6-6.6c2-2.1,3.6-4.2,3.6-4.6c0-0.8-3.7-2.3-6.9-2.8
-                    c-4.9-0.8-6.2-1.3-7.1-2.4c-0.7-1-1.8-1.2-5.2-1.1c-2.4,0.1-4.5,0.5-4.8,0.9c-0.6,0.9-8.8,1.9-10.4,1.3c-0.7-0.3-0.9-0.9-0.5-1.9
-                    c0.6-1.5,0.4-2.4-1.6-11.8c-1.4-6.8-1.8-8.8-2.3-12.7c-0.6-4.5-2.4-5.8-9.8-7.4c-4.7-1-6.3-1.6-7-2.8c-0.9-1.6-0.9-7.2,0-14.8
-                    l0.6-4.8l-3.8-0.1c-2.1,0-4-0.2-4.3-0.2c-0.3-0.1-2.9-0.4-5.8-0.7c-2.9-0.3-5.8-0.7-6.4-0.8c-0.6-0.1-3.3-0.4-6-0.7
-                    c-2.7-0.3-5.6-0.6-6.4-0.8c-0.8-0.1-3.4-0.4-5.7-0.7c-2.3-0.2-6.8-0.7-9.9-1.1c-3.1-0.3-7.6-0.8-9.9-1c-2.3-0.2-5.7-0.6-7.5-0.8
-                    L341.5,535.7z M361.7,657.2c2.7,0,4.6,1.3,5.9,4c0.8,1.6,1.7,3.1,2,3.3c1.3,0.9,4.6,9.5,4,10.5c-0.4,0.6,0.9,4.5,2.3,7
-                    c0.5,0.9,0.8,3.3,0.7,5.3c-0.1,3.9,2.2,12.6,4.4,16.4c0.9,1.5,1.3,4,1.5,8.9c0.2,6.6,0.2,6.7-1.5,7c-0.9,0.1-2.3,1-3,1.9
-                    c-1.5,1.9-2.8,2.2-4.3,0.7c-1.2-1.2-0.8-6.3,0.6-8.5c0.5-0.8,1.1-2.3,1.3-3.4c0.2-1.1,0.8-2.5,1.2-3.1c1.4-1.7,1.4-3.4-0.1-4.3
-                    c-1.2-0.7-1.5-0.6-2.3,0.6c-1,1.5-2.7,1.9-2.7,0.6c0-0.5,0.4-1.8,0.8-3.1c1.9-5.3-1.2-9.8-5.6-8.3c-1.8,0.6-2.3,0.5-3.5-0.8
-                    c-0.8-0.8-1.9-3-2.5-4.9c-0.6-1.8-1.9-4.4-2.9-5.7c-1.2-1.6-1.7-2.9-1.4-4.4c0.3-1.9,0-2.3-3.1-3.9c-4.6-2.4-6.5-1.7-6.6,2.5
-                    c-0.1,1.6-0.2,4.5-0.3,6.4c-0.6,9.7-0.6,9.7,2.3,12c6.2,4.9,6.7,5.6,7.7,9.9c0.5,2.3,1,5.4,1,6.8c0,1.4,0.8,4.2,1.8,6.2
-                    c2.4,4.7,2.5,8.3,0.2,8.9c-2.3,0.6-3.2,0.5-3.8-0.4c-0.5-0.8-2.4-9.8-3.8-17.5c-0.8-4.4-1.8-5.7-6.7-8.9c-3.9-2.5-5.8-4.5-5.6-5.9
-                    c0.1-0.5,0.2-1.5,0.2-2.3c0-0.7,0.5-1.8,1.1-2.3c0.6-0.6,0.9-2.6,0.9-5.7c0-4.7,0-4.7-2.7-6.2c-3-1.7-4.1-3.3-4.1-6
-                    c0-1.5,0.3-1.8,1.7-1.8c2.6,0,3.5-2.3,1.8-4.5c-0.8-1-1.4-2.1-1.4-2.6c0-0.9,3.3-2.4,5.2-2.3c1.7,0.1,5.4,3.6,5.4,5.1
-                    c0,0.6,0.7,1.9,1.6,2.7l1.6,1.5l1-2.6c1.6-4.4,4.5-8,6.8-8.5C359.8,657.3,360.8,657.2,361.7,657.2z"
-                            ></path>
-                            <path
-                                id="SK"
-                                class="province province-path"
-                                data-code="SK"
-                                d="M317.2,742.7c-0.2-0.2-2.8-0.5-6-0.8c-3.1-0.3-6.5-0.6-7.4-0.7c-1-0.1-3.8-0.5-6.4-0.7
-                    c-2.5-0.2-5.4-0.6-6.4-0.7c-1-0.1-3.8-0.5-6.4-0.7c-2.5-0.3-12.4-2.2-22-4.4c-9.5-2.1-17.8-4-18.4-4.1c-3.2-0.7-5-1.1-9.2-2.1
-                    c-2.5-0.6-5.2-1.2-6-1.3s-3.9-0.8-6.9-1.5c-4.5-1-5.4-1.5-5.1-2.4c0.3-1.1,5.9-23.9,6.4-26.3c0.1-0.6,1.2-5.2,2.4-10.2
-                    c1.2-5.1,3.4-14,4.8-19.8c1.4-5.8,4.1-17.1,6.1-25.1c1.9-8,3.7-15.1,3.8-15.9c0.2-0.8,1.2-5.4,2.4-10.2s3.6-14.9,5.4-22.3
-                    c1.8-7.4,4.3-17.9,5.6-23.3s3.6-14.7,5-20.6l2.6-10.7l3.7,0.3c2,0.2,5.2,0.5,7.1,0.8c1.9,0.3,6,0.2,9-0.1c5.2-0.6,5.7-0.5,9.8,1.3
-                    c4,1.8,5.7,1.9,5.7,0.4c0-0.8-15-8.1-18.8-9.1c-1.6-0.4-3.5-0.8-4.4-0.8c-0.9,0-2.2-0.6-3-1.4c-1.6-1.6-3.6-1.8-5.7-0.7
-                    c-1.6,0.9-1.6,0.6-0.6-4.3c0.6-2.8,1-3.5,1.9-3.3c1,0.3,6.1,1.3,10.8,2.2c0.9,0.2,2.4,0.5,3.1,0.6c2.4,0.5,31.7,6.2,33.6,6.5
-                    c1,0.2,5.6,1.1,10.3,2c4.7,0.9,9.8,1.8,11.3,2c2.7,0.3,2.8,0.4,2.7,2.7c-0.1,1.3-0.9,8.3-1.9,15.5c-1,7.2-2,14.7-2.3,16.6
-                    c-0.4,3.5-1.3,5.3-2.5,5.3c-1.1,0-5.3,4.7-6.2,6.9c-0.7,1.6-0.7,2.8-0.2,4.5c1.6,5,1.3,7.4-1.1,9.9c-1.6,1.6-2.1,2.6-1.6,3.3
-                    c0.5,0.8,1,0.6,2.9-0.9c1.2-1,2.7-1.9,3.3-1.9c1.1,0,1,2.2-0.1,16.3c-0.2,2.1-0.5,6.8-0.7,10.2c-0.2,3.5-0.5,7.8-0.7,9.5
-                    c-0.2,1.7-0.5,6.4-0.7,10.2c-0.2,3.9-0.5,8.2-0.7,9.5c-0.2,1.4-0.5,6-0.7,10.2c-0.2,4.3-0.6,8.6-0.7,9.5c-0.1,1-0.5,5.6-0.7,10.2
-                    c-0.3,4.7-0.6,9-0.7,9.5c-0.1,0.6-0.4,5-0.7,9.9c-0.3,4.9-0.6,9.3-0.7,9.9c-0.1,0.6-0.4,5-0.7,9.9c-0.3,4.9-0.6,9.4-0.8,10.1
-                    c-0.1,0.7-0.3,3.3-0.4,5.8C319.2,742.5,318.5,743.9,317.2,742.7z"
-                            ></path>
-                            <path
-                                id="AB"
-                                class="province province-path"
-                                data-code="AB"
-                                d="M203.9,720.5c-37.9-10-33.8-8.5-36.1-13.5l-1.9-4.2l1.5-7.8c1.6-8.2,1.5-10.3-0.6-14.6
-                    c-0.7-1.5-2.8-5.6-4.6-9.1c-1.8-3.6-3.9-8.5-4.8-11c-0.8-2.5-2.4-5.9-3.6-7.6c-1.1-1.7-2.3-4.3-2.5-5.7c-0.3-1.4-1.4-3.6-2.5-4.9
-                    s-2-2.7-2-3.1c0-0.4-0.7-1.7-1.5-2.8c-0.9-1.2-1.8-4.1-2.1-6.8c-0.4-3-1.3-5.7-2.4-7.2c-0.9-1.4-2-3.3-2.4-4.4
-                    c-0.4-1.1-1.8-2.6-3.2-3.5c-2.5-1.6-3.4-4.2-1.8-5.1c0.4-0.2,0.7-2.2,0.7-4.4c0-3.8,4.6-17.2,36.2-103.9l2.9-7.8l15.7,5.2
-                    c8.6,2.9,21.7,7,29.1,9.1c7.4,2.2,20.4,6,29,8.5c8.5,2.5,15.6,4.6,15.7,4.7c0.5,0.5-2.1,10.8-2.8,11.3c-0.4,0.3-1.6,0.7-2.5,1
-                    c-1.8,0.5-9.2,7.8-9.2,9.1c0,0.4,1.1,1.3,2.5,2c2.4,1.2,2.6,1.1,4.6-0.2c1.1-0.8,2.2-2.1,2.5-2.9c0.3-0.8,0.6-1.3,0.8-1.1
-                    c0.2,0.2-0.9,5.5-2.5,11.9c-3.6,15-7.5,31.3-12.9,53.6c-2.4,9.9-5.1,21.2-6,25.1c-4.7,19.6-8.9,37.1-11.2,46.7
-                    c-12,50.4-11,46.3-11.7,46.2C214.1,723.1,209.4,721.9,203.9,720.5z"
-                            ></path>
-                            <g
-                                id="BC"
-                                class="province province-group"
-                                data-code="BC"
-                                transform="translate(0 407.875)"
-                            >
-                                <path
-                                    d="M53.8,276.2c-4.5-2.9-11.3-11.8-11.3-14.8c0-1.7-0.4-2.3-2.1-2.9c-2.1-0.8-3.7-3.5-4.6-7.9
-                        c-0.2-1.2-1.2-3.2-2-4.6c-0.9-1.4-2.2-3.9-2.8-5.7c-0.7-1.7-2.5-5.3-4.1-8c-1.7-2.9-3.2-6.5-3.8-9.2c-0.5-2.4-1.3-5.4-1.8-6.7
-                        c-0.9-2.2-0.9-2.4,1.2-4c1.2-0.9,2.7-1.7,3.5-1.7c1.4,0,5.6,4,12.4,11.9c2.1,2.5,4.2,4.9,4.6,5.3c0.4,0.4,1.8,2.2,3.2,3.9
-                        c1.3,1.7,2.6,3.3,2.9,3.5c1,0.9,2.8,7.1,3.2,11.2c0.4,4,0.9,5.1,4,9.1c4.1,5.4,4.4,6.2,5.1,11.7c0.3,2.3,0.9,5.4,1.5,6.8
-                        c0.5,1.5,0.8,2.9,0.5,3.1C62.1,278.5,56.2,277.7,53.8,276.2z"
-                                ></path>
-                                <path
-                                    d="M166.1,302.3c-0.6-0.2-15.2-4.7-26.6-8.2c-3.9-1.2-45.3-16.7-62.3-23.3c-2.9-1.1-6.3-2.4-7.4-2.8
-                        c-2.7-1-3.2-1.7-3.2-5c0-1.8-0.5-3-1.5-3.9c-4.1-3.4-5.6-5.1-5.6-6.5c0-0.8-0.3-1.5-0.6-1.5c-1.7,0-4.2-3.8-4.6-7
-                        c-0.7-5.3-3.1-9.9-7.2-14.1c-3.7-3.8-3.8-3.9-3.4-7.2c0.3-2.8,0.2-3.4-0.7-3.4c-0.6,0-1.2-0.3-1.3-0.6c-0.1-0.3-1.7-1.4-3.6-2.5
-                        s-3.4-2.3-3.4-2.8c0-0.5-0.2-1.5-0.3-2.3c-0.4-1.9-0.4-3.2-0.3-10.7c0.1-6.3,0.2-6.6,2.2-8.3c2-1.7,2.1-2,1.4-4
-                        c-0.4-1.2-0.8-3.5-0.8-5c0-2.1-0.7-3.8-2.9-6.9c-2.4-3.4-2.8-4.5-2.5-6.5c0.2-1.3,1.1-3,1.9-3.6c1.6-1.4,1.5-2.5-1-7.3
-                        c-1.2-2.4-1.4-4.2-1.4-12c0-8.9,0.1-9.2,1.8-11c1-1,3.5-2.4,5.6-3.2c5.1-1.9,9.1-5.5,9.1-8.2c0-2.8,1.5-6.1,4.2-9
-                        c2-2.2,2.2-2.9,2.2-6.8c0-3.9-0.2-4.5-2.1-6.2c-2.4-2.2-6.7-10.2-7.8-14.8c-0.7-2.7-0.5-4.2,1.1-11.1c1.7-7,1.8-8.4,1.1-11.9
-                        c-0.4-2.2-0.9-7-1.2-10.7c-0.2-3.7-0.5-7.4-0.7-8.2c-0.2-0.8-0.5-2.7-0.7-4.2c-0.2-1.5-1.3-6.7-2.5-11.6
-                        c-1.2-4.9-2.3-9.5-2.5-10.4c-0.2-1-1.3-2-3-2.7c-5-2.1-5.6-2-7,0.3c-0.9,1.6-2.4,2.5-5.6,3.7c-2.4,0.9-5.6,2.1-7.1,2.9
-                        c-1.5,0.7-2.9,1.3-3,1.3c-0.1,0,0.1-1,0.5-2.3c1-3.5,0.3-12-1-14.1c-1.5-2.2-1.3-8.8,0.3-8.4c0.5,0.1,7.7,4.6,15.9,10
-                        c22.4,14.6,46.9,29.5,58.9,35.7c5.8,3,10.9,5.8,11.3,6c1.9,1.4,23.8,12.4,31.9,16.1c5.1,2.3,16.1,6.9,24.4,10.1
-                        c8.4,3.2,15.5,6.1,15.8,6.3c0.3,0.3,0.2,1.3-0.2,2.2c-0.4,0.9-4.1,11.1-8.2,22.6c-4.1,11.5-8.7,24.2-10.2,28.3
-                        c-16.4,44.6-19.8,54.7-19.8,58.2c0,2.1-0.4,4.3-1.1,5.2c-1.5,2.2-0.7,5.2,2,6.9c3.3,2.1,7.6,10,8.1,15c0.3,2.7,1.1,5.1,2.4,7.2
-                        c1.1,1.7,2,3.5,2,3.9c0,0.4,0.7,1.5,1.7,2.5c0.9,1,2.1,3.3,2.6,5.2s1.2,3.5,1.5,3.8c0.9,0.6,3.8,6.6,4.4,9.1
-                        c0.3,1.2,2.8,6.7,5.5,12.3c2.9,5.9,5,11.1,5.1,12.4c0,1.2-0.5,5.2-1.2,8.8c-1.3,6.8-1.1,9.8,0.8,12.6
-                        C167.4,302.1,167.4,302.7,166.1,302.3z M3.7,169.5c-2.9-6.6-3.9-14.6-3.5-25.9c0.3-6.6,0.7-10.5,1.3-11.2
-                        c0.5-0.6,0.9-1.6,0.9-2.2c0-1.8,3.1-1.8,5.9,0.1c3.4,2.3,7.9,6.8,7.9,7.9c0,0.5-2.9,3.8-6.4,7.5c-7.4,7.7-7.5,8.1-4.6,18.7
-                        c1,3.5,1.8,6.9,1.8,7.6C7.1,174.4,5.3,173.1,3.7,169.5z"
-                                ></path>
-                            </g>
-                            <g
-                                id="NU"
-                                class="province-none"
-                                transform="translate(228.724)"
-                            >
-                                <path
-                                    d="M175.6,540.5c-0.2-0.2-2.8-0.5-6-0.8c-3.1-0.3-5.8-0.6-6-0.7c-0.2-0.1-2.9-0.4-6-0.7s-5.8-0.6-6-0.7
-                        c-0.2-0.1-2.4-0.4-5-0.7c-2.5-0.3-6-0.6-7.8-0.8c-6.7-0.7-9.1-1-17-1.8c-8.2-0.8-9.5-1.1-8.9-1.9c0.2-0.3,0.5-3.5,0.8-7.2
-                        s0.6-7.2,0.7-7.8s0.4-3.8,0.7-7.1c0.3-3.3,0.6-6.8,0.8-7.8c0.2-1,0.5-4,0.7-6.7c0.5-5.9,1-11.6,1.4-15.9c0.2-1.7,0.5-4.8,0.7-6.7
-                        c1.2-12.7,1.4-15.7,2.2-22.6c0.3-2.3,0.5-5,0.6-5.9c0.1-1.3-0.9-2.1-5.6-4.6c-7.2-3.8-20.3-10.7-30.8-16.2c-4.5-2.4-9.4-5-11-5.8
-                        c-2.7-1.5-4.2-3.3-9.6-12.1l-2.6-4.1l-8.1-1.7l-8.1-1.7l-3.9-5.4c-2.2-3-10.4-14.3-18.4-25.2c-8-10.9-16.3-22.3-18.6-25.4
-                        s-4.1-5.9-4.1-6.4c0-0.7,9.1-25.9,9.6-26.4c0.9-1,7.7,5.1,10.5,9.5c1.9,2.9,7.1,7.3,10.4,8.8c1.4,0.6,2.2,0.6,3.4,0
-                        c1.4-0.7,1.9-0.5,4.7,1.7c1.7,1.4,3.7,3.4,4.5,4.5c1.7,2.4,4.4,8.5,4.4,9.8c0,1.8-1.8,2.9-5.7,3.4s-7.1,2-7.1,3.4
-                        c0,0.4,0.7,1.8,1.6,3c1.3,1.9,2.6,2.6,8.7,4.4c11.2,3.4,13.3,3.7,18.5,2.9c2.5-0.4,5.4-1.1,6.4-1.6c1.7-0.8,2-0.7,3,0.9
-                        c0.6,1,3,4.2,5.4,7.3c5.5,7.2,7.3,10.8,7,13.5c-0.2,1.6-0.1,1.9,0.4,1.1c0.4-0.7,0.6-3.8,0.3-8.3l-0.4-7.2l7.5-3.7
-                        c4.3-2.1,7.6-4.2,7.8-4.9c0.3-1.1,0.1-1.1-2.6,0c-1.6,0.7-4.6,1.7-6.6,2.2c-3.5,0.9-3.9,0.8-5.7-0.5c-4.8-3.6-0.7-10.3,6.4-10.8
-                        c1.5-0.1,4.4-0.7,6.4-1.4c2-0.7,4.5-1.1,5.6-1c2.3,0.3,4.3,2.9,4.4,6.1c0.1,1.2,0.7,3.3,1.3,4.6c1.8,3.4,7.2,8.6,9.1,8.7
-                        c0.9,0,1.9,0.2,2.3,0.2s1.1,0.2,1.5,0.3c0.4,0.1,2.1,2.1,3.7,4.6l2.9,4.5l4.3,0.5c2.4,0.2,6.4,0.5,9,0.5s6.9,0.6,9.6,1.4
-                        c2.7,0.8,5,1.4,5,1.4s0.1-1.2,0.1-2.6c0.1-1.4,0.6-3.8,1.2-5.3c0.6-1.5,1.1-3.6,1.1-4.6c0-1.8,0.1-1.8,3.3-1.4
-                        c4.1,0.6,8.4,2,13.2,4.4c2,1,3.8,2,3.9,2.1c0.2,0.2-2.4,9.8-3.8,14.3c-0.2,0.5,0.5,1.2,1.4,1.5c0.9,0.4,2.1,1.7,2.6,3l0.9,2.3
-                        l0.5-2.1c0.3-1.4,0.1-2.9-0.6-4.2c-0.6-1.3-1.1-4.1-1.1-6.9c0-5.1,0.7-6.3,3.3-5.6c2.5,0.7,7.5-1.9,9.8-5
-                        c1.8-2.4,2.1-3.6,2.1-6.9c0-3.1-0.3-4.3-1.4-5.3c-1.6-1.5-2-6.6-0.5-8c1.2-1.2-3.1-5.1-7.2-6.5c-2.4-0.8-3.5-1.8-5.5-4.9
-                        c-2.1-3.3-2.5-4.5-2.5-8c0-2.3,0.4-4.7,0.8-5.5c0.6-1.1,0.3-2.4-1.2-5.8l-1.9-4.4l1.4-4c1.2-3.3,1.8-4.2,4.3-5.6
-                        c2.7-1.5,2.9-1.8,2.2-3.3c-0.7-1.4-0.4-2.1,1.6-4.6c5.5-6.8,5-6.4,7.6-5.9c1.7,0.3,2.6,1.1,3.2,2.4c0.4,1,2,2.9,3.5,4.2
-                        c4.8,4.2,5.5,5.7,5.8,12.6c0.2,6,0.4,6.4,3.9,12.2c4.4,7.3,4.9,11.3,1.2,9.9c-1.4-0.5-1.5-0.4-1.3,1.5c0.2,1.2-0.1,3.4-0.6,5
-                        c-0.9,2.7-0.8,2.9,0.6,4.1c1.3,1.1,2,1.1,4.2,0.5c2.7-0.7,5.1-0.3,10.5,2c2.2,0.9,2.5,1.2,1.7,2.1c-0.5,0.5-2.4,1.2-4.2,1.4
-                        c-5,0.7-5.4,1.9-2.1,6.6c2.6,3.8,3.2,5.7,3.4,11.4c0.1,3,1.2,0.1,1.8-4.6c0.8-7.4,1.8-9.6,4.6-10.8l2.5-1l4.8,5.2
-                        c3.3,3.6,5,6.1,5.5,8.2c1.1,4.4,0.9,7.1-0.7,8.7c-0.8,0.8-1.4,2.3-1.4,3.4c0,2.1,1.3,6.5,2.1,7.2c0.2,0.2,1.5,2,2.8,4.1
-                        c1.3,2,2.6,3.7,2.8,3.7c1.1,0,3.8-2.4,4.3-3.9c0.3-0.9,0.8-3.5,1-5.8s0.9-5.1,1.4-6.3c0.6-1.2,1.7-4.4,2.4-7.1
-                        c0.8-2.7,2.4-6.4,3.6-8.1c2.5-3.7,2.7-5.3,0.7-7.5c-1.7-1.8-3.7-10.3-3-12.6c0.9-3,2.4-4,6.4-4c2.9,0,4.8,0.5,7.8,2.1
-                        c2.2,1.2,4.6,2.1,5.4,2.1s2.4,1.1,3.7,2.4c1.2,1.3,3.7,3.1,5.3,4c3,1.5,5.6,3.9,5.6,5.2c0,0.3-0.5,1-1.1,1.5
-                        c-1.1,0.8-1,1,0.3,2.9c0.8,1.1,1.7,3.2,1.9,4.6c0.4,2.4,0.3,2.6-1.7,3.3c-1.2,0.4-2.5,1.4-2.9,2.2c-0.4,0.8-1.4,1.5-2.2,1.5
-                        c-1.9,0-1.7,1.3,0.4,3.8c1,1.1,2,3.1,2.2,4.4c0.3,1.6,1.2,2.9,2.7,3.9c5,3.4,5,10.5,0,19.1c-5.9,10.1-6.3,10.6-9.4,10.3
-                        c-1.5-0.1-3.6-0.8-4.6-1.5l-1.9-1.2l1.1,2.7c1.2,2.9,0.5,4.2-2.1,3.4c-2.6-0.8-3.6-0.8-4.8,0.2c-1,0.8-1.5,0.8-3.5,0
-                        c-1.3-0.6-2.9-1.7-3.5-2.5c-0.9-1.3-1.5-1.4-3.9-1c-1.6,0.3-3.4,0.8-4.1,1.1c-1.1,0.6-1,0.9,1.3,3.1c2.4,2.3,2.5,2.6,2.1,5.4
-                        c-0.4,2.1-1.6,4.2-4.3,7.4c-2.1,2.5-4,5.3-4.2,6.2c-0.2,1-0.8,1.8-1.3,1.8c-0.4,0,0.1,0.7,1.2,1.6c1.7,1.4,2,2,1.8,4.4
-                        c-0.1,1.5-0.7,3.6-1.4,4.6c-0.6,1-1.8,2.7-2.5,3.9c-0.8,1.2-2.8,4.6-4.6,7.6c-3.6,6.2-4.7,6.9-11.6,6.9c-5.1,0-6.5,1-6.9,4.9
-                        c-0.2,2.4-0.3,2.5-3.4,2.4c-1.8,0-4.1-0.2-5.1-0.5c-2.8-0.6-3,0.5-0.4,2.4c1.3,0.9,2.4,1.7,2.6,1.8c0.7,0.6,0.8,6.2,0.1,8.3
-                        c-0.9,2.8-3.6,4.2-8.5,4.4c-5.6,0.2-5.3,0.1-4.1,1.9c1,1.5,0.9,1.7-1.5,4.1c-3.6,3.5-7.7,8.9-9.6,12.7c-0.9,1.7-2.3,3.8-3.2,4.6
-                        c-1.9,1.7-3.5,4.8-3.5,6.5c0,0.7-1.6,4.7-3.7,9c-3.1,6.5-3.7,8.3-3.6,11.5l0.1,3.8h-3C177.2,540.8,175.7,540.6,175.6,540.5z
-                         M318.6,501.4c-3.8-2.3-3.6-9.2,0.3-13.5c1.6-1.7,3.4-1.6,5.6,0.4c2.3,2,1.1,10.2-1.8,12.9C320.9,502.9,320.9,502.9,318.6,501.4z
-                         M281.9,493.5c-1.6-3.1,0.7-10,4.1-12.4c2.8-1.9,3.5-2,9-1.9c3.3,0.1,3.7,0.3,4.5,2.2c0.8,1.9,0.7,2.4-1.4,5.6
-                        c-3,4.6-7.2,7.3-11.9,7.7C283.2,494.9,282.6,494.8,281.9,493.5z"
-                                ></path>
-                            </g>
-                            <g
-                                id="NT"
-                                class="province province-group"
-                                data-code="NT"
-                                transform="translate(106.927 119.464)"
-                            >
-                                <path
-                                    d="M35.5,139.4c-1.2,0-2.9,0.2-5.4,0.5c-3.8,0.5-7.3,1-7.9,1.2c-0.7,0.3-0.8,1.3-0.6,3.8c0.4,4-0.5,5-2.2,2.5
-                        c-0.6-1-1.4-1.8-1.7-1.8c-1.2,0-11.5,18.6-13.5,24.4c-1.2,3.5-2.7,7.1-3.3,7.9c-1.6,2.5-1.2,3.2,3.4,6.4
-                        c9.9,6.7,10.2,7.4,6.1,15.8c-1.4,2.9-2.8,6.6-2.9,8.3c-0.3,2.8-0.1,3.1,2.4,5.2c1.5,1.2,2.6,2.4,2.4,2.7
-                        c-0.2,0.3-0.4,2.4-0.5,4.6c-0.2,4.4-1,5.8-3.9,6.5c-2,0.5-3.1,2.2-3.1,4.8c0,1-0.3,1.8-0.6,1.8c-0.3,0-0.8,0.8-1.1,1.9
-                        c-0.3,1.4-0.1,2.3,1,3.4c1,1.1,1.5,2.5,1.5,4.7c0,1.9,0.7,4.6,1.7,6.6c1.2,2.4,1.6,4.2,1.3,5.8c-0.3,1.5,0.1,3.2,1.1,5.1
-                        c1.4,2.7,1.4,2.9,0.2,7c-1.7,5.6-3.4,14.9-3.9,21c-0.2,2.7-0.6,5.6-0.8,6.4c-0.3,0.9,0.1,2.1,1.1,3.2c1.9,2.2,3,4.8,4.2,9.9
-                        c1.1,4.5,2.4,7.5,4.5,9.7l1.5,1.6l-1.5,1.6c-1,1.1-1.5,2.5-1.5,4.3c0,1.5-0.3,3.3-0.8,4c-0.7,1.3-0.3,1.6,3.7,3.4
-                        c2.5,1.1,5.7,2.9,7.2,3.9c2.2,1.5,3.2,1.8,5.1,1.4c2.9-0.5,2.7-1.3,2.7,10.2v8.7l7.8,3.1c25.3,10.2,55.1,20.3,83.9,28.5
-                        c8.4,2.4,19.8,5.7,25.5,7.4c5.6,1.7,11.2,3.3,12.4,3.5s6.9,1.3,12.7,2.5s11.5,2.3,12.6,2.5s5.2,1,9.2,1.8s8.2,1.6,9.4,1.8
-                        c1.2,0.2,6.6,1.3,12,2.4c11.2,2.3,15.2,2.6,15.3,1.3c0-0.5,0.2-1.5,0.3-2.2s0.5-4.1,0.7-7.4c0.3-3.3,0.6-6.9,0.7-7.9
-                        c0.1-1,0.4-3.8,0.7-6.4c0.6-7.2,1.8-18.7,2.1-22.3c0.1-1.2,0.5-5,0.7-8.5c0.3-3.5,0.6-6.8,0.7-7.4c0.1-0.6,0.4-3.8,0.7-7.1
-                        c0.2-3.3,0.7-8.6,1.1-11.9c0.4-3.2,0.5-6.2,0.3-6.5s-4.9-3-10.5-5.9c-11.7-6.1-23.8-12.5-32.7-17.3l-6.3-3.4l-4.4-7.1l-4.4-7.1
-                        l-8-1.7l-8-1.7l-6.9-9.2c-3.8-5.1-9.7-13.2-13.2-18.1s-10.4-14.4-15.4-21.1c-5-6.7-9.5-13-10.1-13.9c-1-1.6-0.9-2.1,1.4-8.2
-                        c8.7-23.1,8.7-22.9,4.3-28.7c-1.3-1.7-2.4-3.4-2.4-3.8s-0.3-0.6-0.8-0.6c-0.4,0-1.6-0.6-2.7-1.3c-1-0.7-3.2-1.5-4.7-1.7
-                        c-2.4-0.3-3.3,0-5.8,2.1s-3.2,2.3-4.8,1.7c-2.4-0.9-2.3-1.4,0.2-3.9c1.2-1.1,1.9-2.4,1.6-2.8c-0.3-0.4-0.5-2.4-0.5-4.4
-                        c0-6.1-1-6.1-7.1,0c-3,3-5.6,5.4-5.8,5.4c-0.5,0-2.7-2.3-2.8-3c0-0.3-0.1-4.7-0.2-9.7c-0.1-9-0.1-9.1-1.9-9.9
-                        c-2.5-1.2-3.7-1-5.8,0.6c-1.4,1.1-2.7,1.4-5.2,1.3c-2.3-0.1-3.2-0.4-2.8-0.9c0.3-0.4,0.8-1.7,1-2.7c0.3-1.8,0-2.1-2.9-3.6
-                        c-3.3-1.7-8.5-2-12.8-0.9c-1,0.2-5.1,0.6-9.2,0.9c-5.4,0.3-7.6,0.7-8,1.5c-0.3,0.6-1.5,1-2.7,1c-2,0-2.1-0.2-2.1-3
-                        C38.2,140.6,38.1,139.5,35.5,139.4z M94.1,238.5c18.4,0.1,19.9,0.3,19.9,3.3c0,0.7-1.5,2.5-3.4,4.1c-2.2,1.9-3.1,3.1-2.7,3.6
-                        c0.8,0.8,10.6,4.8,15.4,6.2c3.3,1,3.4,1.1,2.9,3.3c-0.5,2.4-1.5,4-2.5,4c-0.4,0-1.9,0.8-3.4,1.8l-2.8,1.8l-4.1-1.9
-                        c-2.3-1-4.7-2.2-5.4-2.6c-1.8-0.9-2.8,0.2-4.3,4.9c-1.4,4.4-1.7,4.6-7.3,6.5c-2.4,0.8-4.7,1.5-5.1,1.5c-1.3,0-0.8-2,1.2-4.4
-                        c4.1-4.9,4.1-4.8,1.7-4.8c-1.3,0-3,0.7-4.3,1.8c-3.5,2.9-6.1,3.4-9.3,1.5c-1.5-0.9-3.1-2.4-3.5-3.3c-0.8-1.7-0.5-2.1,4.2-6.5
-                        c2.8-2.6,6.4-5.4,8.1-6.3c1.7-0.8,3.3-2.1,3.5-2.8c0.5-2-2.3-4.2-5.6-4.3c-1.5,0-4.8-0.7-7.3-1.6c-3.7-1.3-4.6-1.8-4.8-3.2
-                        c-0.1-0.9,0.1-1.9,0.5-2.2C76.2,238.6,84.5,238.5,94.1,238.5z M118.2,329.4c0.3,0,1.6,1.5,2.9,3.2c1.3,1.8,3.5,4.3,4.8,5.5
-                        c3.8,3.4,6.6,6.6,8.4,9.5c1.4,2.3,2.1,2.8,6.3,3.8c4.4,1.1,5,1.1,8.9,0c2.8-0.8,4.6-1.8,5.7-3.1c2.2-2.7,4.8-3.9,9.3-4.2
-                        c3.8-0.2,3.8-0.2,3.7,1.7c-0.2,2.8-3,6-6.1,6.9c-1.5,0.4-4,2.1-5.7,3.7s-5.1,3.8-7.6,5c-2.5,1.1-5.8,2.7-7.3,3.5
-                        c-1.6,0.8-3.5,1.3-4.5,1.1c-1.3-0.2-2.4,0.2-4,1.6c-1.2,1.1-3.5,2.5-5,3.1s-3.6,1.1-4.6,1c-13.1-1.2-14.3-1.6-20.6-7.4
-                        c-5.6-5.2-5.6-6.6,0.3-6.6c2.2,0,4.6,0.3,5.3,0.7c1.6,0.9,3.5,0,6.5-2.7c1.6-1.5,2.5-1.8,4.8-1.6c3.3,0.2,4.9-0.8,4.9-3
-                        c0-2.1-2.9-10.4-5.4-15.6C117.2,331.4,116.9,329.4,118.2,329.4z"
-                                ></path>
-                            </g>
-                            <path
-                                id="YT"
-                                class="province province-path"
-                                data-code="YT"
-                                d="M134.1,475.5c-0.8-0.5-3.8-2-6.7-3.3c-4.5-2-19.8-10-45.1-23.4c-8-4.3-37.4-22.5-59.2-36.7
-                    c-7.7-5-11.2-7.7-11.2-8.6c0-1.8,2.2-5.2,4.5-7c4.1-3.2,1.7-5.3-6.3-5.6c-1.6-0.1-2.3-0.5-2.6-1.5c-0.2-0.8-0.6-1.4-1-1.3
-                    c-1.3,0.4-3.7-1-4.2-2.3c-0.3-1.1,1.3-4.1,6.6-11.8c9.7-14.3,27.8-41,41.7-61.6C61.7,296,76,274.8,95.4,246.2l8.7-12.8l2.3,0.8
-                    c4.6,1.6,6,3.2,6.5,7.7c0.3,2.3,1.2,5.6,2.1,7.4c0.9,1.8,1.9,4.5,2.1,6c0.3,2,1.2,3.4,3.3,5.2c2.6,2.3,2.8,2.6,1.8,3.7
-                    c-1.5,1.7-8.7,13.4-10.3,16.8c-0.8,1.6-2,4.6-2.7,6.7s-2,5.3-2.8,7.1c-3.1,6.2-3.3,5.7,4.2,11.4c5.2,3.9,6.8,5.5,6.8,6.7
-                    c0,0.9-1.1,3.8-2.5,6.5c-1.7,3.2-2.7,6.2-2.9,8.7c-0.4,3.8-0.3,3.9,2.2,5.9c2.8,2.1,2.6,1.5,1.9,9.7c0,0.3-1,0.7-2.1,0.9
-                    c-2.2,0.5-4.3,3-4.3,5.2c0,0.8-0.6,2.5-1.4,3.8c-1.5,2.6-1.2,5,1,6.8c0.8,0.7,1,1.7,0.8,3.7c-0.3,2.1,0,3.3,1.2,5
-                    c1.1,1.6,1.6,3.3,1.7,6.1c0.1,2.2,0.7,5,1.3,6.3c1.2,2.3,1.2,2.6-0.2,7.4c-1.8,6.4-2.7,11.4-3.3,18.2c-0.2,3-0.8,6.4-1.2,7.6
-                    c-0.7,2-0.6,2.4,1,4.1c2.4,2.5,3,3.9,4.4,9.3c0.6,2.5,2.1,6.2,3.2,8.2c1.4,2.7,1.7,3.8,1.1,4c-0.5,0.2-1.1,1.9-1.3,3.8
-                    c-0.2,1.9-0.6,4.3-0.9,5.4c-0.6,2.4,0.3,3.2,6,5.9c2.1,1,5.1,2.6,6.6,3.7s3.6,1.9,4.6,1.9h1.9l-0.2,7.4c-0.1,4.1-0.3,7.5-0.4,7.6
-                    C135.6,476.3,134.9,476,134.1,475.5z"
-                            ></path>
                         </g>
-                    </g>
-                </svg>
+                    </svg>
+                </div>
             </div>
-        </div>
-        <style>
-            .app {
-                padding: 0 10%;
-                height: 528px;
-                margin-top: 80px;
-                background-image: url('https://www.uupt.com/images/home-bg-two.jpg');
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .app > .image-wrapper {
-                position: relative;
-                top: -28px;
-            }
-            .details > .text {
-                display: flex;
-                align-items: baseline;
-                color: #fff;
-                vertical-align: baseline;
-                margin-bottom: 20px;
-            }
-            .details > .text > h3 {
-                font-size: 36px;
-                margin-right: 20px;
-            }
-            .details > .text > span {
-                vertical-align: baseline;
-                font-size: 15px;
-            }
-            .download-links {
-                display: flex;
-                justify-content: left;
-            }
-            .download-links > a {
-                margin-right: 20px;
-            }
-        </style>
-        <div class="app">
-            <div class="image-wrapper">
-                <img src="https://www.uupt.com/images/home-phone.png" alt="" />
-            </div>
-            <div class="app-download">
-                <div class="details">
-                    <div class="text">
-                        <h3>用户版</h3>
-                        <span
-                            >适合大众用户使用，支持代买、代送、代取、代排队、代办等业务</span
-                        >
-                    </div>
-                    <div class="download-links">
-                        <a href="#">
-                            <img
-                                src="https://www.uupt.com/images/home-down-ios.png"
-                                alt=""
-                            />
-                        </a>
-                        <a href="#">
-                            <img
-                                src="https://www.uupt.com/images/home-android.png"
-                                alt=""
-                            />
-                        </a>
+
+            <div class="app">
+                <div class="image-wrapper">
+                    <img
+                        src="https://www.uupt.com/images/home-phone.png"
+                        alt=""
+                    />
+                </div>
+                <div class="app-download">
+                    <div class="details">
+                        <div class="text">
+                            <h3>用户版</h3>
+                            <span
+                                >适合大众用户使用，支持代买、代送、代取、代排队、代办等业务</span
+                            >
+                        </div>
+                        <div class="download-links">
+                            <a href="#">
+                                <img
+                                    src="https://www.uupt.com/images/home-down-ios.png"
+                                    alt=""
+                                />
+                            </a>
+                            <a href="#">
+                                <img
+                                    src="https://www.uupt.com/images/home-android.png"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer></footer>
+
+        <!-- <footer></footer> -->
+
+        <div class="mobile">
+            <div class="slide slide1">
+                <div class="top">
+                    <div class="image-wrapper">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABmCAYAAAAnFtTRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkVCRTcyQjU2NDczNjExRTc4ODE5RDAyM0VCMjZDMUU3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkVCRTcyQjU3NDczNjExRTc4ODE5RDAyM0VCMjZDMUU3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RUJFNzJCNTQ0NzM2MTFFNzg4MTlEMDIzRUIyNkMxRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RUJFNzJCNTU0NzM2MTFFNzg4MTlEMDIzRUIyNkMxRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4stNijAAAKA0lEQVR42uxd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"
+                            alt=""
+                        />
+                    </div>
+                    <ul class="text-content">
+                        <li>着急收文件，快递却迟迟不来？</li>
+                        <li>贵重物品不敢轻易发快递？</li>
+                        <li>逢年过节，却又无法及时向TA表达爱意？</li>
+                    </ul>
+                </div>
+                <div class="mid">
+                    <img
+                        src="https://www.uupt.com/mobile/template_www/images/title0.png"
+                        alt=""
+                    />
+                </div>
+                <div class="bot">
+                    <a href="#">我要下单</a>
+                    <a href="#" class="solid">下载APP</a>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAiCAYAAAAtZZsLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY0QUJCRkY0NDczNjExRTc5QUY3QzJERjBGMjlGRDNDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY0QUJCRkY1NDczNjExRTc5QUY3QzJERjBGMjlGRDNDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjRBQkJGRjI0NzM2MTFFNzlBRjdDMkRGMEYyOUZEM0MiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjRBQkJGRjM0NzM2MTFFNzlBRjdDMkRGMEYyOUZEM0MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz54+SC9AAAEJElEQVR42sSXaUhUYRSGx7XUylJbxLGFyhIrRYOKdgpp3wikH1EE9aeIooWgaLci+lMUQkEUBNGebdBGBO2l7WWlKUmbmi1a7k7viffCYZh7546jeeCB+T7m3nvuOd97zrkBLpfL0UwWC1aDSLALvGqOmwY0k4PpYAWI4LoeHARHQGNrOhhBx9K5lps1gGCun4DNoKSpDwj0w7mB4JByrhysAgtBEfdSwGEw9n9GUF5qHpgPgrh3D2yjk2JtwRIwQ113AewGVS3pYDewgdETqwVZ4CTT624jwRoKR6wYbAJ5LeHgeLAStOO6EGwEBV6uiwHrwGAloAPgqB0B2XFQhLAcTFBCOA32MYJ2j0UGWARCuJcDMr0JyJuDSWA9iOP6O9gO7jTxzCcw6t25/gl2gpu+OihvPBcsUEK4zzcuN7lXRzAZhINL4KPJ/0RAS8E0tXcO7AHVdhzsyqglc11HIZwwEYJRciaCNlw3Miq3La4ZrTqP2AdG962Vg+NYywwhFFG1ZkIQhyaBAWqvUdVXeehZptKTdQFrQZoKxn5wzBCQ4aCkZRkfZghBbrwX1Jjc3AlmMrViv5mqSu7HcF/SdtGiN8vLzGGBNzrQI7AVlImDffFjCx8o9gPsALcsbjiCNc6IVD44T+ccVKp0mFR1nbS9yxbK78cUxysBZYqDWarwPqTn30xuEsnoxKuadp3XuUxUO5UZMtqhlKjPFgKSTE7hukIczGCNkrwftzjUSVSpIYQycMrGINAeTAe91Bm9Ae5aPGsMWCwt1E6hbsMiPUjtScSuMYK2OhYYyqEhSAkwG/zyp1A72fA7cf2HQnjnx1ArRySa6yoOEXlNKdTDwSglhAKlUrNCnUqBPAVfTP7nSUC54ArLjFcHIxk1ox01UAgPTM6MpK8P6M/fDpXCl7zek/WnGMK4FmGecReQu4O+CqEtIxFjMlFXMDpmhboDBdRTBeMG50uXdjCUQkhWF8u0cdVT2NV5SlHTSSWvqaXT0Uq1ry26kUR9GAUUqEa5bKPMyBA6200I5917orIg1s3uak9a2nOVTnloXxZfI+2l4LGngUC98CwQpQUpDs5Xhfc9Pa+0KNRpqlfXUhBmhbcT/x+u/i9OfrUQ0ARm5l+bFAeHsEbd8yKE3iBRRaSM56vaS2kJZsTj1V4hBWQ2USdygs+3U6g9CSGP/deXD5o4nnEtoBx/C3UsbxqqJpYcDhRNsTCmPEoJ6BWPlk8OBnHG6+EmhBc+tDertucuoBKezRq7hVoLoY5C+ORoXovi0TEEVEMnS6wcNIQQqKp7rq8f2z5YCAXkNBOQ4aAnIbzhUOBytLw5OS1pAT0yCnVnpjRUFcgcfmL+TwtnkLSAnomDo9R3RTE7Qr2jdSyQAkqggBrEQSfVWtgCQvBHQKKF0r8CDADldmlzlRyukAAAAABJRU5ErkJggg=="
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="slide slide1">
+                <div class="top">
+                    <div class="image-wrapper">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABmCAYAAAAnFtTRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkVCRTcyQjU2NDczNjExRTc4ODE5RDAyM0VCMjZDMUU3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkVCRTcyQjU3NDczNjExRTc4ODE5RDAyM0VCMjZDMUU3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RUJFNzJCNTQ0NzM2MTFFNzg4MTlEMDIzRUIyNkMxRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RUJFNzJCNTU0NzM2MTFFNzg4MTlEMDIzRUIyNkMxRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4stNijAAAKA0lEQVR42uxd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"
+                            alt=""
+                        />
+                    </div>
+                    <ul class="text-content">
+                        <li>着急收文件，快递却迟迟不来？</li>
+                        <li>贵重物品不敢轻易发快递？</li>
+                        <li>逢年过节，却又无法及时向TA表达爱意？</li>
+                    </ul>
+                </div>
+                <div class="mid">
+                    <img
+                        src="https://www.uupt.com/mobile/template_www/images/title0.png"
+                        alt=""
+                    />
+                </div>
+                <div class="bot">
+                    <a href="#">我要下单</a>
+                    <a href="#" class="solid">下载APP</a>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAiCAYAAAAtZZsLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY0QUJCRkY0NDczNjExRTc5QUY3QzJERjBGMjlGRDNDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY0QUJCRkY1NDczNjExRTc5QUY3QzJERjBGMjlGRDNDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjRBQkJGRjI0NzM2MTFFNzlBRjdDMkRGMEYyOUZEM0MiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjRBQkJGRjM0NzM2MTFFNzlBRjdDMkRGMEYyOUZEM0MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz54+SC9AAAEJElEQVR42sSXaUhUYRSGx7XUylJbxLGFyhIrRYOKdgpp3wikH1EE9aeIooWgaLci+lMUQkEUBNGebdBGBO2l7WWlKUmbmi1a7k7viffCYZh7546jeeCB+T7m3nvuOd97zrkBLpfL0UwWC1aDSLALvGqOmwY0k4PpYAWI4LoeHARHQGNrOhhBx9K5lps1gGCun4DNoKSpDwj0w7mB4JByrhysAgtBEfdSwGEw9n9GUF5qHpgPgrh3D2yjk2JtwRIwQ113AewGVS3pYDewgdETqwVZ4CTT624jwRoKR6wYbAJ5LeHgeLAStOO6EGwEBV6uiwHrwGAloAPgqB0B2XFQhLAcTFBCOA32MYJ2j0UGWARCuJcDMr0JyJuDSWA9iOP6O9gO7jTxzCcw6t25/gl2gpu+OihvPBcsUEK4zzcuN7lXRzAZhINL4KPJ/0RAS8E0tXcO7AHVdhzsyqglc11HIZwwEYJRciaCNlw3Miq3La4ZrTqP2AdG962Vg+NYywwhFFG1ZkIQhyaBAWqvUdVXeehZptKTdQFrQZoKxn5wzBCQ4aCkZRkfZghBbrwX1Jjc3AlmMrViv5mqSu7HcF/SdtGiN8vLzGGBNzrQI7AVlImDffFjCx8o9gPsALcsbjiCNc6IVD44T+ccVKp0mFR1nbS9yxbK78cUxysBZYqDWarwPqTn30xuEsnoxKuadp3XuUxUO5UZMtqhlKjPFgKSTE7hukIczGCNkrwftzjUSVSpIYQycMrGINAeTAe91Bm9Ae5aPGsMWCwt1E6hbsMiPUjtScSuMYK2OhYYyqEhSAkwG/zyp1A72fA7cf2HQnjnx1ArRySa6yoOEXlNKdTDwSglhAKlUrNCnUqBPAVfTP7nSUC54ArLjFcHIxk1ox01UAgPTM6MpK8P6M/fDpXCl7zek/WnGMK4FmGecReQu4O+CqEtIxFjMlFXMDpmhboDBdRTBeMG50uXdjCUQkhWF8u0cdVT2NV5SlHTSSWvqaXT0Uq1ry26kUR9GAUUqEa5bKPMyBA6200I5917orIg1s3uak9a2nOVTnloXxZfI+2l4LGngUC98CwQpQUpDs5Xhfc9Pa+0KNRpqlfXUhBmhbcT/x+u/i9OfrUQ0ARm5l+bFAeHsEbd8yKE3iBRRaSM56vaS2kJZsTj1V4hBWQ2USdygs+3U6g9CSGP/deXD5o4nnEtoBx/C3UsbxqqJpYcDhRNsTCmPEoJ6BWPlk8OBnHG6+EmhBc+tDertucuoBKezRq7hVoLoY5C+ORoXovi0TEEVEMnS6wcNIQQqKp7rq8f2z5YCAXkNBOQ4aAnIbzhUOBytLw5OS1pAT0yCnVnpjRUFcgcfmL+TwtnkLSAnomDo9R3RTE7Qr2jdSyQAkqggBrEQSfVWtgCQvBHQKKF0r8CDADldmlzlRyukAAAAABJRU5ErkJggg=="
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="slide slide1">
+                <div class="top">
+                    <div class="image-wrapper">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABmCAYAAAAnFtTRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkVCRTcyQjU2NDczNjExRTc4ODE5RDAyM0VCMjZDMUU3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkVCRTcyQjU3NDczNjExRTc4ODE5RDAyM0VCMjZDMUU3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RUJFNzJCNTQ0NzM2MTFFNzg4MTlEMDIzRUIyNkMxRTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RUJFNzJCNTU0NzM2MTFFNzg4MTlEMDIzRUIyNkMxRTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4stNijAAAKA0lEQVR42uxd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"
+                            alt=""
+                        />
+                    </div>
+                    <ul class="text-content">
+                        <li>着急收文件，快递却迟迟不来？</li>
+                        <li>贵重物品不敢轻易发快递？</li>
+                        <li>逢年过节，却又无法及时向TA表达爱意？</li>
+                    </ul>
+                </div>
+                <div class="mid">
+                    <img
+                        src="https://www.uupt.com/mobile/template_www/images/title0.png"
+                        alt=""
+                    />
+                </div>
+                <div class="bot">
+                    <a href="#">我要下单</a>
+                    <a href="#" class="solid">下载APP</a>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAiCAYAAAAtZZsLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY0QUJCRkY0NDczNjExRTc5QUY3QzJERjBGMjlGRDNDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY0QUJCRkY1NDczNjExRTc5QUY3QzJERjBGMjlGRDNDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjRBQkJGRjI0NzM2MTFFNzlBRjdDMkRGMEYyOUZEM0MiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjRBQkJGRjM0NzM2MTFFNzlBRjdDMkRGMEYyOUZEM0MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz54+SC9AAAEJElEQVR42sSXaUhUYRSGx7XUylJbxLGFyhIrRYOKdgpp3wikH1EE9aeIooWgaLci+lMUQkEUBNGebdBGBO2l7WWlKUmbmi1a7k7viffCYZh7546jeeCB+T7m3nvuOd97zrkBLpfL0UwWC1aDSLALvGqOmwY0k4PpYAWI4LoeHARHQGNrOhhBx9K5lps1gGCun4DNoKSpDwj0w7mB4JByrhysAgtBEfdSwGEw9n9GUF5qHpgPgrh3D2yjk2JtwRIwQ113AewGVS3pYDewgdETqwVZ4CTT624jwRoKR6wYbAJ5LeHgeLAStOO6EGwEBV6uiwHrwGAloAPgqB0B2XFQhLAcTFBCOA32MYJ2j0UGWARCuJcDMr0JyJuDSWA9iOP6O9gO7jTxzCcw6t25/gl2gpu+OihvPBcsUEK4zzcuN7lXRzAZhINL4KPJ/0RAS8E0tXcO7AHVdhzsyqglc11HIZwwEYJRciaCNlw3Miq3La4ZrTqP2AdG962Vg+NYywwhFFG1ZkIQhyaBAWqvUdVXeehZptKTdQFrQZoKxn5wzBCQ4aCkZRkfZghBbrwX1Jjc3AlmMrViv5mqSu7HcF/SdtGiN8vLzGGBNzrQI7AVlImDffFjCx8o9gPsALcsbjiCNc6IVD44T+ccVKp0mFR1nbS9yxbK78cUxysBZYqDWarwPqTn30xuEsnoxKuadp3XuUxUO5UZMtqhlKjPFgKSTE7hukIczGCNkrwftzjUSVSpIYQycMrGINAeTAe91Bm9Ae5aPGsMWCwt1E6hbsMiPUjtScSuMYK2OhYYyqEhSAkwG/zyp1A72fA7cf2HQnjnx1ArRySa6yoOEXlNKdTDwSglhAKlUrNCnUqBPAVfTP7nSUC54ArLjFcHIxk1ox01UAgPTM6MpK8P6M/fDpXCl7zek/WnGMK4FmGecReQu4O+CqEtIxFjMlFXMDpmhboDBdRTBeMG50uXdjCUQkhWF8u0cdVT2NV5SlHTSSWvqaXT0Uq1ry26kUR9GAUUqEa5bKPMyBA6200I5917orIg1s3uak9a2nOVTnloXxZfI+2l4LGngUC98CwQpQUpDs5Xhfc9Pa+0KNRpqlfXUhBmhbcT/x+u/i9OfrUQ0ARm5l+bFAeHsEbd8yKE3iBRRaSM56vaS2kJZsTj1V4hBWQ2USdygs+3U6g9CSGP/deXD5o4nnEtoBx/C3UsbxqqJpYcDhRNsTCmPEoJ6BWPlk8OBnHG6+EmhBc+tDertucuoBKezRq7hVoLoY5C+ORoXovi0TEEVEMnS6wcNIQQqKp7rq8f2z5YCAXkNBOQ4aAnIbzhUOBytLw5OS1pAT0yCnVnpjRUFcgcfmL+TwtnkLSAnomDo9R3RTE7Qr2jdSyQAkqggBrEQSfVWtgCQvBHQKKF0r8CDADldmlzlRyukAAAAABJRU5ErkJggg=="
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
     </body>
     <style>
+        .arrow {
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 10px);
+            width: 20px;
+        }
+        .arrow > img {
+            width: 100%;
+        }
+        .bot {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .bot > a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 30px;
+            margin: 10px 16px 50px;
+            border: 1px solid #fff;
+            border-radius: 24px;
+        }
+        .top {
+            margin: 0px 20px 20px;
+            padding: 35px 0 20px;
+            border-bottom: 1px solid #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+        .mid {
+            margin: 30% auto 0;
+            width: 100%;
+        }
+        .mid > img {
+            width: 100%;
+        }
+        ul.text-content {
+            list-style: none;
+            text-align: right;
+        }
+        ul.text-content > li {
+            color: #fff;
+            font-size: 12px;
+            margin-bottom: 3px;
+        }
+        .top > .image-wrapper {
+            max-width: 58px;
+        }
+        .top > .image-wrapper > img {
+            width: 100%;
+        }
+        .slide {
+            position: relative;
+            height: 100vh;
+        }
+        .slide1 {
+            background-size: 100% 100%;
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-image: url('https://www.uupt.com/mobile/template_www/images/bg.jpg');
+        }
+        .bot {
+            position: absolute;
+            bottom: 2%;
+        }
         footer {
             height: 100px;
             background: #000;
         }
-        .province-none,
-        .province {
-            fill: #fac07e80;
+        a.solid {
+            color: #000;
+            background-color: #fff;
         }
-        .province:hover,
-        .province-none:hover {
-            fill: #ff8b03;
+        @media screen and (min-width: 780px) {
+            .mobile {
+                display: none;
+            }
         }
     </style>
+
     <script>
-        // var allProvince = document.querySelectorAll('province')
-        // allProvince.forEach(e => {})
+        // This is for desktop:
         var allSolutions = document.querySelectorAll('.solution')
         var allSolutionDetails = document.querySelectorAll('.solution-detail')
         var preActiveDetail = allSolutionDetails[0]
@@ -837,12 +806,56 @@
                 var activeDetail = e.currentTarget.dataset.index
                 allSolutionDetails[activeDetail].classList.add('active')
             })
-            // el.addEventListener('mouseleave', e => {
-            //     var deactiveDetail = e.currentTarget.dataset.index
-            //     allSolutionDetails[deactiveDetail].classList.remove('active')
-            //     preActiveDetail = e.currentTarget
-            //     preActiveDetail.classList.add('active')
-            // })
         })
+
+        var isMobileDevice = window.innerWidth > 560 ? false : true
+        var moveDistance = 0
+        var currentPosition = 0
+        const deviceHeight = window.innerHeight
+        if (isMobileDevice) {
+            console.log(deviceHeight)
+            window.addEventListener(
+                'touchmove',
+                e => {
+                    e.preventDefault()
+                },
+                { passive: false }
+            )
+            window.addEventListener('touchstart', function(e) {
+                console.log(e.touches[0].clientY)
+                moveDistance = e.touches[0].clientY
+            })
+            window.addEventListener('touchend', function(e) {
+                console.log(e.changedTouches[0].clientY)
+                moveDistance -= e.changedTouches[0].clientY
+                console.log(moveDistance)
+                if (moveDistance > 10) {
+                    moveMobilePage(true)
+                } else if (moveDistance < -10) {
+                    moveMobilePage(false)
+                }
+            })
+        }
+        function moveMobilePage(direction) {
+            if (direction) {
+                window.scrollTo({
+                    top:
+                        currentPosition > 2 * deviceHeight
+                            ? currentPosition
+                            : (currentPosition += deviceHeight),
+                    left: 0,
+                    behavior: 'smooth'
+                })
+            } else {
+                window.scrollTo({
+                    top:
+                        currentPosition < 0
+                            ? 0
+                            : (currentPosition -= deviceHeight),
+                    left: 0,
+                    behavior: 'smooth'
+                })
+            }
+        }
     </script>
 </html>

@@ -1,0 +1,219 @@
+.solutions {
+    height: 690px;
+    background-image: url('https://www.uupt.com/images/home-bg-two.jpg');
+    display: flex;
+    justify-content: space-between;
+}
+.solutions > .solution-list {
+    width: 396px;
+    margin-left: 10%;
+    height: 110%;
+    position: relative;
+    top: -11%;
+}
+.solution {
+    overflow: hidden;
+    position: relative;
+}
+.solution:hover > img {
+    transform: scale(1.15);
+}
+.solution > img {
+    transition: transform 0.3s ease-in-out;
+}
+.solution:hover .solution-title {
+    background-color: transparent;
+}
+.solution-title {
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(2, 4, 3, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.solution-title > h3 {
+    width: 60%;
+    text-align: center;
+    color: #e3e3e3;
+}
+.solution:hover > .solution-title > h3 {
+    background-color: #000;
+    padding: 10px 0;
+    color: #ff8b03;
+}
+.solution-details {
+    box-sizing: border-box;
+    padding: 30px 48px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.solution-detail {
+    height: 100%;
+    width: 100%;
+    color: #e3e3e3;
+    display: none;
+}
+.solution-detail.active {
+    display: block;
+}
+.services {
+    background-image: url('https://www.uupt.com/images/home-bg-one.jpg');
+    height: 756px;
+}
+.services > .services-container {
+    top: -40px;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.service {
+    margin-bottom: 30px;
+    width: 45%;
+    display: flex;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.08);
+}
+.service > .text-wrapper {
+    background-color: #fff;
+    flex: 1;
+}
+.service > .text-wrapper > h3,
+.service > .text-wrapper > p {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.service > .image-wrapper {
+    overflow: hidden;
+    font-size: 0;
+}
+.service > .image-wrapper > img {
+    transition: all 0.4s ease-in-out;
+}
+
+.service > .image-wrapper:hover > img {
+    transform: scale(1.15);
+}
+.service > .text-wrapper > h2 > span {
+    color: #ffffff;
+    background-color: #111;
+    padding: 0px 20px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+}
+.app {
+    padding: 0 10%;
+    height: 528px;
+    margin-top: 80px;
+    background-image: url('https://www.uupt.com/images/home-bg-two.jpg');
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.app > .image-wrapper {
+    position: relative;
+    top: -28px;
+}
+.details > .text {
+    display: flex;
+    align-items: baseline;
+    color: #fff;
+    vertical-align: baseline;
+    margin-bottom: 20px;
+}
+.details > .text > h3 {
+    font-size: 36px;
+    margin-right: 20px;
+}
+.details > .text > span {
+    vertical-align: baseline;
+    font-size: 15px;
+}
+.download-links {
+    display: flex;
+    justify-content: left;
+}
+.download-links > a {
+    margin-right: 20px;
+}
+.province-none,
+.province {
+    fill: #fac07e80;
+}
+.province:hover,
+.province-none:hover {
+    fill: #ff8b03;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.padding {
+    padding: 40px;
+}
+.partnership {
+    height: 756px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url('https://www.uupt.com/images/home-bg-one.jpg');
+}
+.partnership > .contact {
+    position: relative;
+    height: 105%;
+    top: -5%;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-left: 10%;
+    padding: 92px 48px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.08);
+}
+.partnership > .contact > * {
+    padding-bottom: 20px;
+}
+.partnership > .map {
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+}
+svg {
+    height: 100%;
+    width: 90%;
+}
+.centered-title {
+    width: 100%;
+    text-align: center;
+    padding: 80px 0 100px;
+    margin-bottom: 60px;
+}
+.centered-title > h2 {
+    font-size: 36px;
+}
+.centered-title > p {
+    font-size: 20px;
+    color: #e3e3e3;
+}
+@media screen and (max-width: 1200px) {
+    .partnership {
+        height: 456px;
+    }
+    .partnership > .contact {
+        padding: 20px 40px;
+    }
+    .partnership > .contact > .image-wrapper {
+        display: none;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .desktop {
+        display: none;
+    }
+}
