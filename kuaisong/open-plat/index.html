@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .tab-wrapper {
+                background-color: #d7d7d8;
+            }
+            .tab {
+                display: flex;
+                width: 1200px;
+                margin: 0 auto;
+            }
+            .tab > *:hover {
+                cursor: pointer;
+            }
+            .tab > * {
+                position: relative;
+                flex: 1;
+                padding: 40px 100px;
+                background-color: #e2e2e2;
+            }
+            .tab > *.active::before {
+                position: absolute;
+                bottom: 0%;
+                display: block;
+                content: '';
+                width: 0;
+                height: 0;
+                border: 20px solid transparent;
+                border-bottom: 20px solid #ffffff;
+                left: calc(50% - 10px);
+            }
+            .tab > *.active > h2 {
+                color: #009fe8;
+            }
+            .tab > *.active {
+                background-color: #ececec;
+            }
+            .individual {
+                background-image: url('http://open.uupt.com/images/newicon/icon_sh.png');
+                background-position: center right;
+                background-repeat: no-repeat;
+            }
+            .plat {
+                background-image: url('http://open.uupt.com/images/newicon/icon_pt.png');
+                background-position: center right;
+                background-repeat: no-repeat;
+            }
+            .heading {
+                position: relative;
+            }
+        </style>
+        <div class="tab-wrapper">
+            <div class="tab">
+                <div class="tab-el individual active">
+                    <h2>
+                        商家类用户
+                    </h2>
+                    <p>自身作为一个商家，直接面对用户销售</p>
+                </div>
+                <div class="tab-el plat">
+                    <h2>
+                        平台类用户
+                    </h2>
+                    <p>
+                        自身作为平台，拥有多个商家入驻并在此进行销售
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="heading">
+            <h2>接入开放平台流程</h2>
+            <p>ACCESS TO THE API PROCESS</p>
+        </div>
+        <div class="tab-detail">
+            <style>
+                /* https://www.uupt.com/images/intro-arrow.png */
+                .step {
+                    box-sizing: border-box;
+                    padding-top: 30px;
+                    height: 106px;
+                    width: 126px;
+                    background-image: url('http://open.uupt.com/images/newicon/icon_p1.png');
+                    position: relative;
+                }
+                .num {
+                    position: absolute;
+                    left: 12px;
+                    top: 8px;
+                    font-weight: bold;
+                }
+                .step > p {
+                    font-size: 14px;
+                    width: 55%;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                .detail {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .arrow {
+                    width: 20px;
+                    margin: 10px;
+                }
+                .arrow>img {
+                    width: 100%;
+                }
+                .detail {
+                    min-width: 1200px;
+                    display: none;
+                }
+                .detail.active {
+                    display: flex;
+                }
+            </style>
+            <div class="detail detail1 active">
+                <div class="step">
+                    <div class="num">
+                        1
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        1
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        1
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        1
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        1
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+            </div>
+            <div class="detail detail2">
+                <div class="step">
+                    <div class="num">
+                        1
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        2
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        3
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        4
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        5
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        6
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+                <div class="arrow">
+                    <img
+                        src="https://www.uupt.com/images/intro-arrow.png"
+                        alt=""
+                    />
+                </div>
+                <div class="step">
+                    <div class="num">
+                        7
+                    </div>
+                    <p>
+                        注册开放平台账号
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const tabTitles = document.querySelectorAll('.tab-el')
+            const details = document.querySelectorAll('.detail')
+            const tabs = document.querySelectorAll('.tab>*')
+            tabs.forEach((el, i) => {
+                el.addEventListener('click', e => {
+                    tabTitles.forEach(e=>{
+                        e.classList.remove('active')
+                    })
+                    details.forEach(e => {
+                        e.classList.remove('active')
+                    })
+                    document
+                        .querySelector('.detail' + (i - 0 + 1))
+                        .classList.add('active')
+                        tabTitles[i]
+                        .classList.add('active')
+                })
+            })
+        </script>
+    </body>
+</html>
