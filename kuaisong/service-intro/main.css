@@ -1,0 +1,271 @@
+.masthead {
+    height: 600px;
+    background-image: url('https://www.uupt.com/images/intro-bg.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.upper {
+    font-size: 18px;
+    color: #707170;
+}
+.upper > span {
+    padding: 2px 10px;
+    background-color: #717171;
+    color: #1a1a1a;
+    margin-right: 14px;
+}
+.lower {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.lower-left {
+    line-height: 1.5;
+    font-size: 25px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-right: 10px;
+    letter-spacing: 4px;
+}
+.lower-right {
+    color: #ff8b03;
+    font-size: 75px;
+    font-weight: 800;
+}
+.app-download {
+    width: 280px;
+    position: absolute;
+    right: 80px;
+    bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.download-link:hover {
+    animation: shake 0.75s;
+}
+@keyframes shake {
+    10% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+        -moz-transform: translateX(3px) rotate(2deg);
+        -o-transform: translateX(3px) rotate(2deg);
+    }
+
+    20% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+        -moz-transform: translateX(-3px) rotate(-2deg);
+        -o-transform: translateX(-3px) rotate(-2deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(3px) rotate(2deg);
+        transform: translateX(3px) rotate(2deg);
+        -moz-transform: translateX(3px) rotate(2deg);
+        -o-transform: translateX(3px) rotate(2deg);
+    }
+
+    40% {
+        -webkit-transform: translateX(-3px) rotate(-2deg);
+        transform: translateX(-3px) rotate(-2deg);
+        -moz-transform: translateX(-3px) rotate(-2deg);
+        -o-transform: translateX(-3px) rotate(-2deg);
+    }
+
+    50% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+        -moz-transform: translateX(2px) rotate(1deg);
+        -o-transform: translateX(2px) rotate(1deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+        -moz-transform: translateX(-2px) rotate(-1deg);
+        -o-transform: translateX(-2px) rotate(-1deg);
+    }
+
+    70% {
+        -webkit-transform: translateX(2px) rotate(1deg);
+        transform: translateX(2px) rotate(1deg);
+        -moz-transform: translateX(2px) rotate(1deg);
+        -o-transform: translateX(2px) rotate(1deg);
+    }
+
+    80% {
+        -webkit-transform: translateX(-2px) rotate(-1deg);
+        transform: translateX(-2px) rotate(-1deg);
+        -moz-transform: translateX(-2px) rotate(-1deg);
+        -o-transform: translateX(-2px) rotate(-1deg);
+    }
+
+    90% {
+        -webkit-transform: translateX(1px) rotate(0);
+        transform: translateX(1px) rotate(0);
+        -moz-transform: translateX(1px) rotate(0);
+        -o-transform: translateX(1px) rotate(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(-1px) rotate(0);
+        transform: translateX(-1px) rotate(0);
+        -moz-transform: translateX(-1px) rotate(0);
+        -o-transform: translateX(-1px) rotate(0);
+    }
+}
+
+.work-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.flow-card {
+    border-bottom: 1px solid #e3e3ee;
+    height: 276px;
+    width: 176px;
+    background-image: url('https://www.uupt.com/images/intro-first1.png');
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    transition: transform 0.4s ease-out;
+    position: relative;
+}
+.flow-card > .step {
+    margin-top: 110px;
+    text-align: center;
+}
+.flow-card:hover {
+    cursor: pointer;
+    transform: translateY(-30px);
+}
+.flow-card > .detail {
+    position: absolute;
+    bottom: 20px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #666666;
+}
+.flow-arrow {
+    margin: 0 20px;
+}
+.heading {
+    padding: 40px;
+    text-align: center;
+}
+.heading > h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.heading > p {
+    font-size: 20px;
+    color: #888;
+}
+.business-presentation {
+    background-image: url('https://www.uupt.com/images/intro-business-bg.png');
+    height: 458px;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+.business-card .image-wrapper {
+    width: 84px;
+    margin: 10px auto;
+}
+.business-card {
+    transition: transform 0.3s ease-out;
+    width: 216px;
+    margin: 0 3%;
+}
+.business-card:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+}
+.business-card h3 {
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+    margin: 26px 0;
+}
+.examples {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    list-style: none;
+    padding: 40px 60px;
+}
+.examples > li {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.quality-blocks {
+    /* background-image: url('https://www.uupt.com/images/intro-peo1.png'); */
+    width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.block > .desc {
+    color: #fff;
+    line-height: 105px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    height: 105px;
+    position: absolute;
+    font-style: italic;
+    bottom: 0;
+    background-image: url('https://www.uupt.com/images/introMarkBg.png');
+}
+.block {
+    margin-bottom: 20px;
+    position: relative;
+    width: 590px;
+    overflow: hidden;
+}
+.block > img {
+    transition: 0.3s transform ease-out;
+}
+.block:hover > img {
+    transform: scale(1.1);
+}
+.categories {
+    width: 724px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.category {
+    padding: 24px 0 19px;
+    width: 178px;
+    transition: all 0.3s ease-in;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+.category > p {
+    font-size: 14px;
+}
+.category.active,
+.category:hover {
+    background-color: #1a1a1a;
+    color: #ff8b03;
+}
+
+.category > .image-wrapper {
+    width: 30px;
+    margin: 10px auto;
+}
+.bottom-banner {
+    font-size: 0;
+}
+.bottom-banner > img {
+    width: 100%;
+}
