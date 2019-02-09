@@ -46,12 +46,24 @@
     padding: 10px 0;
     color: #ff8b03;
 }
+.text-wrapper > h2 {
+    font-size: 24px;
+    height: auto;
+    line-height: initial;
+}
+.text-wrapper > h2 > span{
+    font-size: 24px;
+}
+.text-wrapper > h3{
+    font-size: 18px
+}
 .solution-details {
     box-sizing: border-box;
     padding: 30px 48px;
     display: flex;
     justify-items: center;
     align-items: center;
+    flex: 1;
 }
 .solution-detail {
     height: 100%;
