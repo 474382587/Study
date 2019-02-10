@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <style>
+            .hero {
+                height: 100vh;
+                background-image: url('http://xlmexpress.com/wp-content/uploads/2019/02/delivery-service.png');
+                position: relative;
+            }
+            h1.title {
+                text-align: center;
+                font-size: 63px;
+                color: #fff;
+                font-weight: 800;
+                line-height: 63px;
+                cursor: pointer;
+                padding-top: 30vh;
+            }
+            .methods {
+                display: flex;
+                justify-content: space-evenly;
+                padding: 10px;
+                background-color: #fff;
+            }
+            .method,
+            .btn {
+                cursor: pointer;
+                padding: 10px 40px;
+            }
+            .btn {
+                
+                flex: 1;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                background-color: #ff8b03;
+                font-size: 20px;
+                font-weight: bold;
+                color: #fff;
+            }
+            .method {
+                font-size: 18px;
+                background-color: #fff;
+                border-radius: 36px;
+                font-weight: bold;
+            }
+            .method.active {
+                background-color: #000;
+                color: #fff;
+            }
+            .start-now {
+                border-radius: 15px;
+                overflow: hidden;
+                width: 820px;
+                margin: 6vh auto 0;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+        <div class="hero">
+            <h1 class="title">
+                YY跑腿 送的更快 做的更多
+            </h1>
+            <div class="start-now">
+                <div class="methods">
+                    <div class="method active">帮我买</div>
+                    <div class="method">帮我送</div>
+                    <div class="method">帮我取</div>
+                    <div class="method">代排队</div>
+                </div>
+                <div class="btn">立即下单</div>
+            </div>
+        </div>
+        <script>
+            var allMethods = document.querySelectorAll('.method')
+            allMethods.forEach(e => {
+                e.addEventListener('click', e => {
+                    allMethods.forEach(el => {
+                        el.classList.remove('active')
+                    })
+                    e.target.classList.add('active')
+                })
+            })
+        </script>
+    </body>
+</html>
