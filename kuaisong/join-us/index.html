@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    </head>
+    <body>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .heading {
+                box-sizing: border-box;
+                width: 100%;
+                /* min-width: 1200px; */
+                padding: 40px;
+                text-align: center;
+            }
+            .heading > h2 {
+                font-size: 36px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            .heading > p {
+                font-size: 20px;
+                color: #888;
+            }
+
+            .masthead {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 600px;
+                background-image: url('https://www.uupt.com/images/add-banner.png');
+            }
+            .title > p {
+                left: 0;
+                position: absolute;
+                top: 110%;
+                width: 100%;
+                text-align: center;
+                color: #636363;
+                font-size: 22px;
+            }
+
+            .masthead > .title {
+                padding: 60px 40px;
+                border: 5px solid rgba(255, 255, 255, 0.2);
+                border-top: none;
+                position: relative;
+            }
+            .slogan {
+                text-align: center;
+                position: relative;
+                color: #fff;
+                font-size: 30px;
+                width: 784px;
+                margin: auto;
+                font-weight: 800;
+            }
+            .border {
+                height: 5px;
+                width: 30%;
+                background-color: rgba(255, 255, 255, 0.2);
+                position: absolute;
+                top: 0;
+            }
+            .left-border {
+                left: 0;
+            }
+            .right-border {
+                right: 0;
+            }
+            .title-text {
+                position: absolute;
+                width: 356px;
+                font-size: 68px;
+                color: #ff8b03;
+                top: -60px;
+                font-weight: 800;
+                text-align: center;
+                width: 100%;
+                left: 0;
+            }
+        </style>
+        <div class="masthead">
+            <div class="title">
+                <div class="border left-border"></div>
+                <div class="border right-border"></div>
+                <div class="title-text">
+                    合作 共赢
+                </div>
+                <div class="slogan">
+                    我们诚邀您加入 UU跑腿城市合伙人计划
+                </div>
+                <p>- 官方指定唯一加盟渠道 -</p>
+            </div>
+        </div>
+        <div class="heading">
+            <h2>城市合伙人加盟流程</h2>
+            <p>City Partner Joining Process</p>
+        </div>
+        <style>
+            .join-flow {
+                display: flex;
+                /* align-items: center; */
+                justify-content: center;
+            }
+            .arrow {
+                margin: 0 40px;
+                padding-top: 40px;
+            }
+            .step-card > .image-wrapper {
+                width: 96px;
+                position: relative;
+                font-size: 0;
+                margin-bottom: 40px;
+            }
+            .step-card > .image-wrapper > img {
+                z-index: 4;
+                position: relative;
+                transition: all 0.3s ease-out;
+            }
+            .step-card .image-wrapper::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                height: 100%;
+                width: 100%;
+                display: block;
+                border: 2px solid transparent;
+                box-sizing: border-box;
+                border-radius: 50%;
+            }
+            .step-card .image-wrapper::after {
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                content: '';
+                height: 60%;
+                width: 60%;
+                display: block;
+                border: 2px solid transparent;
+                box-sizing: border-box;
+                border-radius: 50%;
+                z-index: 0;
+            }
+            .step-card .image-wrapper:hover::before {
+                animation: zoom 1s linear infinite;
+                border-color: #ff8b03;
+            }
+            .step-card .image-wrapper:hover::after {
+                animation: zoom1 1s linear infinite;
+                border-color: #ff8b03;
+                z-index: 0;
+            }
+            @keyframes zoom {
+                0% {
+                    transform: scale(0.9);
+                }
+                25% {
+                    transform: scale(1.05);
+                }
+                75% {
+                    transform: scale(1.15);
+                }
+                99% {
+                    transform: scale(1.25);
+                }
+                100% {
+                    border-color: transparent;
+                }
+            }
+            @keyframes zoom1 {
+                0% {
+                    transform: scale(1.1);
+                }
+                25% {
+                    transform: scale(1.22);
+                }
+                75% {
+                    transform: scale(1.4);
+                }
+                99% {
+                    transform: scale(1.55);
+                }
+                100% {
+                    border-color: transparent;
+                }
+            }
+            .step-card > .image-wrapper:hover > img {
+                transform: scale(0.7);
+            }
+        </style>
+        <div class="join-flow">
+            <div class="step-card">
+                <div class="image-wrapper">
+                    <img src="https://www.uupt.com/images/ltel-1.png" alt="" />
+                </div>
+                <h3>1. 电话咨询</h3>
+            </div>
+            <div class="arrow">
+                <img src="https://www.uupt.com/images/intro-arrow.png" alt="" />
+            </div>
+            <div class="step-card">
+                <div class="image-wrapper">
+                    <img src="https://www.uupt.com/images/ltel-1.png" alt="" />
+                </div>
+                <h3>1. 电话咨询</h3>
+            </div>
+            <div class="arrow">
+                <img src="https://www.uupt.com/images/intro-arrow.png" alt="" />
+            </div>
+            <div class="step-card">
+                <div class="image-wrapper">
+                    <img src="https://www.uupt.com/images/ltel-1.png" alt="" />
+                </div>
+                <h3>1. 电话咨询</h3>
+            </div>
+            <div class="arrow">
+                <img src="https://www.uupt.com/images/intro-arrow.png" alt="" />
+            </div>
+            <div class="step-card">
+                <div class="image-wrapper">
+                    <img src="https://www.uupt.com/images/ltel-1.png" alt="" />
+                </div>
+                <h3>1. 电话咨询</h3>
+            </div>
+        </div>
+        <div class="heading">
+            <h2>城市合伙人要求</h2>
+            <p>City Partner Requirements</p>
+        </div>
+        <style>
+            .image-wrapper > img {
+                width: 100%;
+            }
+            .requirements {
+                padding: 40px 0;
+                height: 414px;
+                background-image: url('https://www.uupt.com/images/add-cop.png');
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .requirements::before {
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 0;
+                width: 478px;
+                height: 411px;
+                border-left: 2px solid #fff;
+                border-top: 2px solid #fff;
+                border-radius: 6px;
+                -moz-border-radius: 6px;
+                -o-border-radius: 6px;
+                -webkit-border-radius: 6px;
+                z-index: 1;
+                clip: rect(0 5px 0 0);
+            }
+            .requirements:hover::before {
+                animation: lineAniShow 0.5s ease-out forwards;
+            }
+            .requirements::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 477px;
+                height: 411px;
+                border-right: 3px solid #fff;
+                border-bottom: 3px solid #fff;
+                border-radius: 6px;
+                -moz-border-radius: 6px;
+                -o-border-radius: 6px;
+                -webkit-border-radius: 6px;
+                z-index: 1;
+                clip: rect(406px 477px 411px 477px);
+            }
+            @keyframes lineAniAfterHide {
+                0% {
+                    clip: rect(0 5px 0 0);
+                }
+                100% {
+                    clip: rect(0 477px 411px 0);
+                }
+            }
+            .requirement {
+                margin: 0 24px;
+                text-align: center;
+                background-color: rgba(153, 153, 153, 0.15);
+                width: 477px;
+                height: 411px;
+                border-radius: 6px;
+                box-sizing: border-box;
+                border: 2px solid transparent;
+                transition: all 0.3s ease-in-out;
+            }
+            .requirement:hover {
+                border: 2px solid #fff;
+            }
+            .requirement > .desc > h3 {
+                font-size: 24px;
+                color: #ff8b03;
+                margin: 14px;
+            }
+            .requirement > .desc > p {
+                color: #ffffff;
+            }
+        </style>
+        <div class="requirements">
+            <div class="requirement">
+                <div class="image-wrapper">
+                    <img
+                        src="https://www.uupt.com/images/group1-1.png"
+                        alt=""
+                    />
+                </div>
+                <div class="desc">
+                    <h3>经济基础</h3>
+                    <p>同城跑腿服务启动资金</p>
+                </div>
+            </div>
+            <div class="requirement">
+                <div class="image-wrapper">
+                    <img
+                        src="https://www.uupt.com/images/group1-1.png"
+                        alt=""
+                    />
+                </div>
+                <div class="desc">
+                    <h3>经济基础</h3>
+                    <p>同城跑腿服务启动资金</p>
+                </div>
+            </div>
+            <div class="requirement">
+                <div class="image-wrapper">
+                    <img
+                        src="https://www.uupt.com/images/group1-1.png"
+                        alt=""
+                    />
+                </div>
+                <div class="desc">
+                    <h3>经济基础</h3>
+                    <p>同城跑腿服务启动资金</p>
+                </div>
+            </div>
+        </div>
+        <div class="heading">
+            <h2>城市合伙人总部支持</h2>
+            <p>City Partner Headquarters Support</p>
+        </div>
+        <style>
+            .support {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                height: 441px;
+                padding: 82px 0;
+                background-image: url('https://www.uupt.com/images/add-suport.png');
+            }
+            .sup-card {
+                display: flex;
+                background-color: rgba(255, 255, 255, 0.9);
+                height: 97px;
+                width: 26%;
+                margin: 10px;
+                padding: 50px 30px;
+                border-radius: 10px;
+                transition: all 0.3s ease-out;
+            }
+            .leftside {
+                margin-right: 20px;
+            }
+            .rightside > h2 {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+            .rightside > p {
+                font-size: 18px;
+                color: #999999;
+            }
+            .sup-card:hover {
+                box-shadow: 0 5px 9px 3px rgba(0, 0, 0, 0.1);
+                transform: translateY(-20px);
+            }
+        </style>
+        <div class="support">
+            <div class="sup-card">
+                <div class="leftside">
+                    <img src="https://www.uupt.com/images/icon-7.png" alt="" />
+                </div>
+                <div class="rightside">
+                    <h2>独家授权</h2>
+                    <p>
+                        【YY跑腿】地级市唯一授权以及相关独家经营权
+                    </p>
+                </div>
+            </div>
+            <div class="sup-card">
+                <div class="leftside">
+                    <img src="https://www.uupt.com/images/icon-7.png" alt="" />
+                </div>
+                <div class="rightside">
+                    <h2>独家授权</h2>
+                    <p>
+                        【YY跑腿】地级市唯一授权以及相关独家经营权
+                    </p>
+                </div>
+            </div>
+            <div class="sup-card">
+                <div class="leftside">
+                    <img src="https://www.uupt.com/images/icon-7.png" alt="" />
+                </div>
+                <div class="rightside">
+                    <h2>独家授权</h2>
+                    <p>
+                        【YY跑腿】地级市唯一授权以及相关独家经营权
+                    </p>
+                </div>
+            </div>
+            <div class="sup-card">
+                <div class="leftside">
+                    <img src="https://www.uupt.com/images/icon-7.png" alt="" />
+                </div>
+                <div class="rightside">
+                    <h2>独家授权</h2>
+                    <p>
+                        【YY跑腿】地级市唯一授权以及相关独家经营权
+                    </p>
+                </div>
+            </div>
+            <div class="sup-card">
+                <div class="leftside">
+                    <img src="https://www.uupt.com/images/icon-7.png" alt="" />
+                </div>
+                <div class="rightside">
+                    <h2>独家授权</h2>
+                    <p>
+                        【YY跑腿】地级市唯一授权以及相关独家经营权
+                    </p>
+                </div>
+            </div>
+            <div class="sup-card">
+                <div class="leftside">
+                    <img src="https://www.uupt.com/images/icon-7.png" alt="" />
+                </div>
+                <div class="rightside">
+                    <h2>独家授权</h2>
+                    <p>
+                        【YY跑腿】地级市唯一授权以及相关独家经营权
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
