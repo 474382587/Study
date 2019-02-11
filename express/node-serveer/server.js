@@ -29,6 +29,11 @@ app.get('/about', (req, res) => {
         pageTitle: 'Hello HBS Users!'
     })
 })
+app.get('/portfolio', (req,res) => {
+    res.render('portfolio.hbs', {
+        pageTitle:'Joseph\'s Portfolio Page'
+    })
+})
 
 app.listen(port, () => {
     console.log('start at port ' + port)
