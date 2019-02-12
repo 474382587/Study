@@ -1,4 +1,15 @@
-<p>
+<div>
   servers works!
   <app-server></app-server>
-</p>
+  <button
+    (click)="onCreateServer()"
+    [disabled]="!allowNewServers"
+    class="btn btn-primary col-sm-2"
+  >
+    Add more Server
+  </button>
+  <p>serverCreationStatus: {{ serverCreationStatus }}</p>
+
+  <input type="text" (input)="onUpdateInput($event)" [(ngModel)]="inputValue" />
+  <p>{{ inputValue }}</p>
+</div>
