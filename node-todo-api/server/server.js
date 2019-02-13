@@ -1,36 +1,60 @@
-var mongoose = require('mongoose');
+var express = require('express');
+var { ObjectID } = require('mongodb');
+var bodyParser = require('body-parser');
+var { mongoose } = require('./db/mongoose');
+var { Todo } = require('./models/todo');
+var { User } = require('./models/user');
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/TodoApp');
+var app = express();
+var port = process.env.PORT || 3000;
+app.use(bodyParser.json());
 
-var Todo = mongoose.model('Todo', {
-    text: {
-        type: String,
-        required: true,
-        minlength: 1,
-        trim: true
-    },
-    complete: {
-        type: Boolean,
-        default: false
-    },
-    completeAt: {
-        type: Number,
-        default: null
-    }
+app.post('/todos', (req, res) => {
+    var todo = new Todo({
+        text: req.body.text
+    });
+
+    todo.save().then(
+        doc => {
+            res.send(doc);
+        },
+        err => {
+            res.status(400).send(err);
+        }
+    );
 });
 
-var newTodo = new Todo({
-    text: '   Cook lunch 2  ',
-    complete: false,
-    completeAt: new Date().getTime()
+app.get('/todos', (req, res) => {
+    Todo.find().then(
+        todos => {
+            res.send({ todos });
+        },
+        err => {
+            res.status(400).send(err);
+        }
+    );
 });
 
-newTodo.save().then(
-    doc => {
-        console.log('success: ', doc);
-    },
-    e => {
-        console.log(e);
+app.get('/todos/:id', (req, res) => {
+    var id = req.params.id;
+    if (!ObjectID.isValid(id)) {
+        return res.status(404).send('<h1>Page Not Found</h1>');
     }
-);
+    Todo.findById(id)
+        .then(todo => {
+            if (!todo) {
+                return res.status(404).send('<h1>Page Not Found</h1>');
+            }
+            res.send({ todo });
+        })
+        .catch(e => {
+            res.status(400).send(e);
+        });
+    // res.send(JSON.stringify(req.params, undefined, 2));
+});
+
+app.listen(port, () => {
+    console.log('Started on port ' + port);
+});
+
+module.exports = { app };
