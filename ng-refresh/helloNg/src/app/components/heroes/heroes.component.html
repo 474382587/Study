@@ -14,6 +14,16 @@
     </a>
   </li>
 </ul>
+<div>
+  <label
+    >Hero name:
+    <input #heroName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(heroName.value); heroName.value = ''">
+    add
+  </button>
+</div>
 
 <!-- <ng-container *ngIf="selectedHero">
   <app-hero-detail [hero]="selectedHero"></app-hero-detail>
