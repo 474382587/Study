@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>春节十二响</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+        <!-- <script src="main.js"></script> -->
+    </head>
+    <body>
+        <!-- 0 265 530 -->
+        <!-- 0 -242 -484 -726 -->
+        <style id="style">
+            #icon {
+                height: 240px;
+                width: 240px;
+                background-image: url('./12生肖.jpg');
+                background-position: 0 0;
+            }
+            
+            .boom {
+                transform: scale(2);
+            }
+            
+        </style>
+        <!-- <img src="./12生肖.jpg" alt=""> -->
+        <div id="icon"></div>
+        <script>
+            var zodiac = [
+                '鼠',
+                '牛',
+                '虎',
+                '兔',
+                '龙',
+                '蛇',
+                '马',
+                '羊',
+                '猴',
+                '鸡',
+                '狗',
+                '猪'
+            ];
+            var time = 2000
+            for (var i = 0; i < 12; i++) {
+                (function(a) {
+                    setTimeout(() => {
+                        // document.write(zodiac[i])
+                        console.log(a);
+                    },  1000);
+                })(i);
+            }
+
+            function getBgImagePosition(index) {
+                switch (index) {
+                    case 0:
+                        return 
+                        break;
+                
+                    default:
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
