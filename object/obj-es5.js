@@ -24,3 +24,20 @@ var paidUserFunctions = {
 };
 
 Object.setPrototypeOf(paidUserFunctions, userFunctions);
+
+function userCreator2(name) {
+    this.name = name;
+}
+
+userCreator2.prototype.sayHello = function() {
+    console.log('Hello');
+};
+
+function paidUserCreator(name, balance) {
+    userCreator2.call(this, name);
+    this.balance = balance;
+}
+paidUserCreator.prototype = Object.create(userCreator2.prototype);
+paidUserCreator.prototype.getBalance = function() {
+    console.log(this.balance);
+};
