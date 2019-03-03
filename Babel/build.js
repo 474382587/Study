@@ -1,4 +1,4 @@
-const babel = require('@babel/core')
+const babel = require('@babel/core');
 
 const code = `
 const sayHi = () => {
@@ -6,13 +6,10 @@ const sayHi = () => {
 }
 
 sayHi()
-`
+`;
 
+const options0bj = {};
 
-const options0bj = {
+const result = babel.transform(code, options0bj);
 
-}
-
-const result = babel.transform(code, options0bj)
-
-console.log(result)
+console.log(result);
