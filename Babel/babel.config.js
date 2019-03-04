@@ -12,6 +12,6 @@ const presets = [
             useBuiltIns: 'usage'
         }
     ]
-]
+];
 
-module.exports = { presets }
+module.exports = { presets };
