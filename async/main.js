@@ -1,6 +1,6 @@
 // import { resolve } from 'dns'
 
-var axios = axios
+var axios = axios;
 
 // console.log(axios)
 
@@ -41,36 +41,39 @@ var axios = axios
 //     asyncCall()
 // }
 
-var $ = $
+var $ = $;
 
-var dfd = $.Deferred()
-console.log(dfd)
+var dfd = $.Deferred();
+console.log(dfd);
 
-var arr = []
+var arr = [];
 
-dfd.promise()
+dfd.promise();
 
-console.log(dfd)
+console.log(dfd);
 
 // recursive function
 function getList(index) {
-    console.log('end Now ', index)
-    console.log(index)
-    if(index === 100) {
-        console.log('end Now')
-        console.table(arr)
-        dfd.resolve(arr)
-        return
+    console.log('end Now ', index);
+    console.log(index);
+    if (index === 100) {
+        console.log('end Now');
+        console.table(arr);
+        dfd.resolve(arr);
+        return;
     }
-    console.log(index)
-    axios.get('https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1&format=html').then(res => {
-        arr.push(res.data)
-        console.log('time is: ', new Date().getTime())
-        getList(index + 1)
-    })
+    console.log(index);
+    axios
+        .get(
+            'https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1&format=html'
+        )
+        .then(res => {
+            arr.push(res.data);
+            console.log('time is: ', new Date().getTime());
+            getList(index + 1);
+        });
 }
 
 dfd.then(function(e) {
-
-    console.log(e)
-})
+    console.log(e);
+});
