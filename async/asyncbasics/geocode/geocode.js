@@ -1,6 +1,6 @@
-const request = require('request')
+const request = require('request');
 var geocodeAddress = (address, callback) => {
-    var address = encodeURI(address)
+    var address = encodeURI(address);
     request(
         {
             url:
@@ -10,24 +10,22 @@ var geocodeAddress = (address, callback) => {
         },
         (err, res, body) => {
             if (err) {
-                callback(err)
+                callback(err);
                 // console.log(err)
             } else if (body.info.statuscode === 400) {
-                callback('unable to find address')
+                callback('unable to find address');
                 // console.log('unable to find address')
             } else if (body.info.statuscode === 0) {
-                callback('', body.results)
+                callback('', body.results);
                 // console.log(JSON.stringify(body.results, null, 4))
             } else {
-                callback('unexpected error occured!')
+                callback('unexpected error occured!');
                 // console.log('unexpected error occured!')
             }
         }
-    )
-}
+    );
+};
 
 module.exports = {
     geocodeAddress
-}
-
-
+};
