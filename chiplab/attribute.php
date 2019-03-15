@@ -53,7 +53,7 @@ if ( $nm_theme_options['shop_filters_custom_controls'] ) {
 
             $color = ( isset( $nm_globals['pa_colors'][$id] ) ) ? $nm_globals['pa_colors'][$id] : '#c0c0c0';
             $color_html = '<i style="background:' . esc_attr( $color ) . ';" class="nm-pa-color nm-pa-color-' . esc_attr( strtolower( $term->slug ) ) . '"></i>';
-            
+             
             // Code from "layered_nav_list()" function in "../plugins/woocommerce/includes/widgets/class-wc-widget-layered-nav.php" file
             if ( $count > 0 ) {
                 $term_html = '<a rel="nofollow" href="' . $link . '">' . $color_html . esc_html( $term->name ) . '666</a>';
