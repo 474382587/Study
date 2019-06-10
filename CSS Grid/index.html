@@ -1,169 +1,147 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>WECHAT_EMPTY_TITLE</title>
-    <meta name="description" content="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="/Public/Home/assets/css/common.css" />
-    <link rel="stylesheet" href="/Public/Home/assets/css/class.css" />
-    <style id="__WXWORK_INNER_SCROLLBAR_CSS">
-      ::-webkit-scrollbar {
-        width: 12px !important;
-        height: 12px !important;
-      }
-      ::-webkit-scrollbar-track:vertical {
-      }
-      ::-webkit-scrollbar-thumb:vertical {
-        background-color: rgba(136, 141, 152, 0.5) !important;
-        border-radius: 10px !important;
-        background-clip: content-box !important;
-        border: 2px solid transparent !important;
-      }
-      ::-webkit-scrollbar-track:horizontal {
-      }
-      ::-webkit-scrollbar-thumb:horizontal {
-        background-color: rgba(136, 141, 152, 0.5) !important;
-        border-radius: 10px !important;
-        background-clip: content-box !important;
-        border: 2px solid transparent !important;
-      }
-      ::-webkit-resizer {
-        display: none !important;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <p class="back-wrap" onclick="javascript:history.back();">
-        <i class="backarrow-icon"></i>
-        <span>返回</span>
-      </p>
-      <h1 class="title">培训课程</h1>
-      <!-- <i class="search"></i> -->
-    </header>
-    <!-- 主图区 -->
-    <div class="main-bg"></div>
-    <!-- content -->
-    <div class="container">
-      <nav class="con-nav-wrap">
-        <ul class="con-nav">
-          <div class="con-nav-ITem">
-            <li class="video-active yes">艺术</li>
-            <li class="nav-item-word no">艺术</li>
-          </div>
-          <div class="con-nav-ITem">
-            <li class="video-active ">社会</li>
-            <li class="nav-item-word ">社会</li>
-          </div>
-          <div class="con-nav-ITem">
-            <li class="video-active ">科学</li>
-            <li class="nav-item-word ">科学</li>
-          </div>
-          <div class="con-nav-ITem">
-            <li class="video-active ">健康</li>
-            <li class="nav-item-word ">健康</li>
-          </div>
-        </ul>
-      </nav>
-      <div class="content-children">
-        <section class="tab-active">
-          <a href="/index.php/ChildCourse/detail/4" class="section-item ">
-            <div class="video-wrap">
-              <img
-                class="screenshot"
-                src="/./Upload/image/ChildCourseCover/2019-05-27/5ceb5a0fd3be8.jpg"
-                alt="视频截图"
-              />
-              <div class="video-res">
-                <p class="video-name">将来的我们，用什么来养老</p>
-                <p class="video-classify">艺术</p>
-                <p class="video-time">时长：11:31</p>
-              </div>
-            </div>
-            <span class="play-icon"></span>
-          </a>
-        </section>
-        <section>
-          <a href="/index.php/ChildCourse/detail/3" class="section-item ">
-            <div class="video-wrap">
-              <img
-                class="screenshot"
-                src="/./Upload/image/ChildCourseCover/2019-05-21/5ce3cc68c8642.jpg"
-                alt="视频截图"
-              />
-              <div class="video-res">
-                <p class="video-name">推迟退休好，自己来养老</p>
-                <p class="video-classify">社会</p>
-                <p class="video-time">时长：</p>
-              </div>
-            </div>
-            <span class="play-icon"></span>
-          </a>
-        </section>
-        <section>
-          <a href="/index.php/ChildCourse/detail/2" class="section-item ">
-            <div class="video-wrap">
-              <img
-                class="screenshot"
-                src="/./Upload/image/ChildCourseCover/2019-05-21/5ce3cc3e32ffa.jpg"
-                alt="视频截图"
-              />
-              <div class="video-res">
-                <p class="video-name">养老不能全靠政府</p>
-                <p class="video-classify">科学</p>
-                <p class="video-time">时长：</p>
-              </div>
-            </div>
-            <span class="play-icon"></span>
-          </a>
-        </section>
-        <section>
-          <a href="/index.php/ChildCourse/detail/1" class="section-item ">
-            <div class="video-wrap">
-              <img
-                class="screenshot"
-                src="/./Upload/image/ChildCourseCover/2019-05-21/5ce3c963d2a41.jpg"
-                alt="视频截图"
-              />
-              <div class="video-res">
-                <p class="video-name">计划生育好</p>
-                <p class="video-classify">健康</p>
-                <p class="video-time">时长：13:10</p>
-              </div>
-            </div>
-            <span class="play-icon"></span>
-          </a>
-        </section>
+    <style>
+      .icon-box-with-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .icon-wrapper {
+        height: 100px;
+        width: 100px;
+        background-color: #1db58f;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .icon-wrapper:hover {
+        box-shadow: 0 0 20px 0 #665;
+      }
+      .icon {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        background-size: cover;
+      }
+      .tech {
+        background-image: url('http://gm-trading.emonster.ca/wp-content/uploads/2014/09/tech.png');
+      }
+      .rating {
+        background-image: url('http://gm-trading.emonster.ca/wp-content/uploads/2014/09/rating.svg');
+      }
+      .low-price {
+        background-image: url('http://gm-trading.emonster.ca/wp-content/uploads/2014/09/low-price.png');
+      }
+      .clock {
+        background-image: url('http://gm-trading.emonster.ca/wp-content/uploads/2014/09/rating.svg');
+      }
+      .energy {
+        background-image: url('http://gm-trading.emonster.ca/wp-content/uploads/2014/09/energy.png');
+      }
+      .drink {
+        background-image: url('http://gm-trading.emonster.ca/wp-content/uploads/2014/09/drink.png');
+      }
+      .meter {
+        background-image: url('http://gm-trading.emonster.ca/wp-content/uploads/2014/09/meter.svg');
+      }
+      .thumbs {
+        background-image: url('http://gm-trading.emonster.ca/wp-content/uploads/2014/09/thumbs.svg');
+      }
+    </style>
+
+    <div class="icon-box-with-text">
+      <div class="icon-wrapper2">
+        <div class="icon thumbs"></div>
       </div>
+      <h3>Superior than tradition</h3>
+    </div>
+    <div class="icon-box-with-text">
+      <div class="icon-wrapper2">
+        <div class="icon drink"></div>
+      </div>
+      <h3>Superior than tradition</h3>
+    </div>
+    <div class="icon-box-with-text">
+      <div class="icon-wrapper2">
+        <div class="icon meter"></div>
+      </div>
+      <h3>Superior than tradition</h3>
+    </div>
+    <div class="icon-box-with-text">
+      <div class="icon-wrapper2">
+        <div class="icon energy"></div>
+      </div>
+      <h3>Superior than tradition</h3>
     </div>
 
-    <script
-      type="text/javascript"
-      src="/Public/Home/assets/js/jquery.min.js"
-    ></script>
-    <script>
-      //分类tab
-      $('.con-nav-ITem').click(function() {
-        $('.con-nav-ITem .video-active').hide();
-        $('.con-nav-ITem .nav-item-word').show();
-        let index = $(this).index();
-        $('.content-children section')
-          .eq(index)
-          .addClass('tab-active')
-          .siblings()
-          .removeClass('tab-active');
-        $(this)
-          .children('.nav-item-word')
-          .hide();
-        $(this)
-          .children('.video-active')
-          .show();
-      });
-    </script>
+    <div class="icon-box-with-text">
+      <div class="icon-wrapper">
+        <div class="icon tech"></div>
+      </div>
+      <h3>Superior than tradition</h3>
+    </div>
+    <div class="icon-box-with-text">
+      <div class="icon-wrapper">
+        <div class="icon rating"></div>
+      </div>
+      <h3>Technology driven</h3>
+    </div>
+    <div class="icon-box-with-text">
+      <div class="icon-wrapper">
+        <div class="icon low-price"></div>
+      </div>
+      <h3>Lower cost</h3>
+    </div>
+    <div class="icon-box-with-text">
+      <div class="icon-wrapper">
+        <div class="icon clock"></div>
+      </div>
+      <h3>Higher efficiency</h3>
+    </div>
   </body>
 </html>
+<script>
+  'use strict';
+  let obj = {
+    fn1: function(params) {
+      console.log(this);
+    },
+    fn2: () => {
+      console.log(this);
+    },
+    fn3: function(params) {
+      return () => {
+        console.log(this);
+      };
+    }
+  };
+
+  console.log('1');
+  obj.fn1();
+  console.log('2');
+  obj.fn2();
+  console.log('3');
+  obj.fn3()();
+</script>
+
+<script>
+    document.addEventListener('resize', function() {
+        console.log('resize')
+    })
+  window.onresize = function() {
+    var height = document.getElementById('about').offsetHeight;
+    var image = document.querySelector('#demo > figure > div > img')
+        
+    image.style.height = height + 30 + 'px'
+    image.style.width = 'auto'
+  };
+</script>
