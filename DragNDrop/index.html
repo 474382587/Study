@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag and Drop</title>
+</head>
+
+<body>
+
+    <div id="dropzone" class="container">
+
+        <h1>
+            Upload Your File Here
+        </h1>
+
+
+    </div>
+
+    <script>
+
+        const dropzone = document.getElementById('dropzone')
+
+
+        /*
+        
+        
+        */
+        var dragDropEvents = ['dragenter', 'dragover', 'dragleave', 'drop']
+        dragDropEvents.forEach(eventName => {
+            //dropzone.addEventListener(eventName, preventDefaults, false)
+            document.addEventListener(eventName, preventDefaults, false)
+        })
+        function preventDefaults(e) {
+            e.preventDefault()
+            e.stopPropagation()
+        }
+
+        dropzone.addEventListener('drop', (event) => {
+            let fileList = event.dataTransfer.files; //get FileList Object
+            if (fileList.length === 0) {
+                return false
+            }
+            ;
+            console.log(fileList[0])
+            console.log(URL.createObjectURL(fileList[0]))
+            var reader = new FileReader();
+            reader.onload = function(evt) {
+                console.log(evt.target.result);
+            };
+            reader.readAsDataURL(fileList[0]);
+
+
+
+            let formData = new FormData()
+            formData.append('file', fileList[0])
+            console.log(formData.get('file'))
+        })
+
+
+
+    </script>
+
+
+    <style>
+        h1 {}
+
+        .container {
+            text-align: center;
+            width: 50%;
+            margin: 10vh auto;
+            border: 1px dashed #e3e3e3;
+        }
+    </style>
+</body>
+
+</html>
