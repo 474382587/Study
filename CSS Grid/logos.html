@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+        
+      .logos {
+        display: flex;
+      }
+      .logo-container {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo-container > img {
+        width: 70%;
+      }
+      @media screen and (max-width:768px) {
+          .logos {
+              flex-direction: column;
+              align-items: center;
+          }
+          .logo-container {
+              width: 80%;
+              margin-bottom: 20px;
+          }
+      }
+    </style>
+    <div class="logos">
+      <div class="logo-container">
+        <img
+          src="http://checkpay.emonster.ca/wp-content/uploads/2019/05/Alipay-300x80.png"
+          alt=""
+        />
+      </div>
+      <div class="logo-container">
+        <img
+          src="http://checkpay.emonster.ca/wp-content/uploads/2019/05/trusted3.png"
+          alt=""
+        />
+      </div>
+      <div class="logo-container">
+        <img
+          src="http://checkpay.emonster.ca/wp-content/uploads/2019/05/firstdata.png"
+          alt=""
+        />
+      </div>
+      <div class="logo-container">
+        <img
+          src="http://checkpay.emonster.ca/wp-content/uploads/2019/05/ezgif-4-56a9b4aaf872.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
