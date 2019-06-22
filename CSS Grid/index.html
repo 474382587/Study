@@ -134,14 +134,14 @@
 </script>
 
 <script>
-    document.addEventListener('resize', function() {
-        console.log('resize')
-    })
+  document.addEventListener('resize', function() {
+    console.log('resize');
+  });
   window.onresize = function() {
     var height = document.getElementById('about').offsetHeight;
-    var image = document.querySelector('#demo > figure > div > img')
-        
-    image.style.height = height + 30 + 'px'
-    image.style.width = 'auto'
+    var image = document.querySelector('#demo > figure > div > img');
+
+    image.style.height = height + 30 + 'px';
+    image.style.width = 'auto';
   };
 </script>
