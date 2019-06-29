@@ -70,7 +70,7 @@ app.post('/login', (req, res) => {
     console.log('username ', username, ' password ', password)
 
     connection.query({
-        sql: 'SELECT * FROM `customers` WHERE `name` = ?',
+        sql: 'SELECT * FROM `users` WHERE `username` = ?',
         timeout: 40000, // 40s
     },
         [username],
@@ -119,13 +119,18 @@ app.post('/login', (req, res) => {
 
 })
 
+app.get('/create-table', (req, res) => {
+    console.log('+++++++++++++++++')
+    // TEXT
+    // var sql = "CREATE TABLE users (username VARCHAR(255), password VARCHAR(255), todo TEXT)";
+    // connection.query(sql, function(err, result) {
+    //     if (err) throw err;
+    //     console.log("Table created");
+    // });
 
-
-app.get('/todo', (req, res) => {
-
-    let queryString = 'INSERT INTO customers SET ?'
-
-    // let query = connection.query(queryString, { name: "Joseph", address: "9269 University Crescent" }, (err, results, fields) => {
+    // Create user
+    // let queryStringCreateUser = 'INSERT INTO users SET ?'
+    // let query = connection.query(queryStringCreateUser, { username: "Joseph", password: "9269 University Crescent", todo: "" }, (err, results, fields) => {
     //     if (err) {
     //         console.log(err)
     //     }
@@ -135,8 +140,14 @@ app.get('/todo', (req, res) => {
     // })
 
 
+
+    connection.query("UPDATE users SET username = 'joseph' WHERE password = 'joseph1234'", (err) => {
+        if (err) {
+            console.log('err', err)
+        }
+    })
     connection.query({
-        sql: 'SELECT * FROM `customers` WHERE `name` = ?',
+        sql: 'SELECT * FROM `users` WHERE `username` = ?',
         timeout: 40000, // 40s
     },
         ['Joseph'],
@@ -152,9 +163,110 @@ app.get('/todo', (req, res) => {
         }
     );
 
+})
 
+app.get('/todos', (req, res) => {
+
+    console.log(req.query.userId)
+    connection.query({
+        sql: 'SELECT todo FROM `users` WHERE `username` = ?',
+        timeout: 40000, // 40s
+    },
+        ['Joseph'],
+        function(error, results, fields) {
+            // error will be an Error if one occurred during the query
+            // results will contain the results of the query
+            // fields will contain information about the returned results fields (if any)
+            res.send({
+                results: results[0],
+                status: 200,
+                message: 'Successful'
+            })
+        }
+    );
+})
+
+
+app.post('/todos', (req, res) => {
+
+    // console.log(JSON.stringify(req, null, 2))
+    const username = req.body.username
+    const todo = req.body.todo
+
+    console.log('username ', username, ' todo ', todo)
+
+    let queryString = `UPDATE users SET todo = '${todo}' WHERE username = '${username}'`
+
+    connection.query(queryString, (err) => {
+        if (err) {
+            console.log('err', err)
+            res.send({
+                results: err,
+                status: 200,
+                message: 'Successful'
+            })
+        }
+        else {
+            console.log('Todo updated!')
+            res.send({
+                results: {
+                    todo: todo
+                },
+                status: 200,
+                message: 'Successful'
+            })
+        }
+    })
 
 })
+
+
+
+// app.get('/todo', (req, res) => {
+
+//     // let queryString = 'INSERT INTO customers SET ?'
+//     // let deleteQueryString = "DELETE FROM customers WHERE name = 'Joseph'"
+
+
+//     // connection.query(deleteQueryString, (err, results, fields) => {
+//     //     if (err) {
+//     //         console.log(err)
+//     //     }
+//     //     // console.log('query: ', JSON.stringify(query, null, 2))
+//     //     console.log('results: ', JSON.stringify(results, null, 2))
+//     //     console.log('fields: ', JSON.stringify(fields, null, 2))
+//     // })
+
+//     // let query = connection.query(queryString, { name: "Joseph", address: "9269 University Crescent" }, (err, results, fields) => {
+//     //     if (err) {
+//     //         console.log(err)
+//     //     }
+//     //     // console.log('query: ', JSON.stringify(query, null, 2))
+//     //     console.log('results: ', JSON.stringify(results, null, 2))
+//     //     console.log('fields: ', JSON.stringify(fields, null, 2))
+//     // })
+
+
+//     connection.query({
+//         sql: 'SELECT * FROM `customers` WHERE `name` = ?',
+//         timeout: 40000, // 40s
+//     },
+//         ['Joseph'],
+//         function(error, results, fields) {
+//             // error will be an Error if one occurred during the query
+//             // results will contain the results of the query
+//             // fields will contain information about the returned results fields (if any)
+//             res.send({
+//                 results: results,
+//                 status: 200,
+//                 message: 'Successful'
+//             })
+//         }
+//     );
+
+
+
+// })
 
 app.listen(port, () => {
     console.log('server started at port 3001')
