@@ -119,51 +119,51 @@ app.post('/login', (req, res) => {
 
 })
 
-app.get('/create-table', (req, res) => {
-    console.log('+++++++++++++++++')
-    // TEXT
-    // var sql = "CREATE TABLE users (username VARCHAR(255), password VARCHAR(255), todo TEXT)";
-    // connection.query(sql, function(err, result) {
-    //     if (err) throw err;
-    //     console.log("Table created");
-    // });
+// app.get('/create-table', (req, res) => {
+//     console.log('+++++++++++++++++')
+//     // TEXT
+//     // var sql = "CREATE TABLE users (username VARCHAR(255), password VARCHAR(255), todo TEXT)";
+//     // connection.query(sql, function(err, result) {
+//     //     if (err) throw err;
+//     //     console.log("Table created");
+//     // });
 
-    // Create user
-    // let queryStringCreateUser = 'INSERT INTO users SET ?'
-    // let query = connection.query(queryStringCreateUser, { username: "Joseph", password: "9269 University Crescent", todo: "" }, (err, results, fields) => {
-    //     if (err) {
-    //         console.log(err)
-    //     }
-    //     // console.log('query: ', JSON.stringify(query, null, 2))
-    //     console.log('results: ', JSON.stringify(results, null, 2))
-    //     console.log('fields: ', JSON.stringify(fields, null, 2))
-    // })
+//     // Create user
+//     // let queryStringCreateUser = 'INSERT INTO users SET ?'
+//     // let query = connection.query(queryStringCreateUser, { username: "Joseph", password: "9269 University Crescent", todo: "" }, (err, results, fields) => {
+//     //     if (err) {
+//     //         console.log(err)
+//     //     }
+//     //     // console.log('query: ', JSON.stringify(query, null, 2))
+//     //     console.log('results: ', JSON.stringify(results, null, 2))
+//     //     console.log('fields: ', JSON.stringify(fields, null, 2))
+//     // })
 
 
 
-    connection.query("UPDATE users SET username = 'joseph' WHERE password = 'joseph1234'", (err) => {
-        if (err) {
-            console.log('err', err)
-        }
-    })
-    connection.query({
-        sql: 'SELECT * FROM `users` WHERE `username` = ?',
-        timeout: 40000, // 40s
-    },
-        ['Joseph'],
-        function(error, results, fields) {
-            // error will be an Error if one occurred during the query
-            // results will contain the results of the query
-            // fields will contain information about the returned results fields (if any)
-            res.send({
-                results: results,
-                status: 200,
-                message: 'Successful'
-            })
-        }
-    );
+//     connection.query("UPDATE users SET username = 'joseph' WHERE password = 'joseph1234'", (err) => {
+//         if (err) {
+//             console.log('err', err)
+//         }
+//     })
+//     connection.query({
+//         sql: 'SELECT * FROM `users` WHERE `username` = ?',
+//         timeout: 40000, // 40s
+//     },
+//         ['Joseph'],
+//         function(error, results, fields) {
+//             // error will be an Error if one occurred during the query
+//             // results will contain the results of the query
+//             // fields will contain information about the returned results fields (if any)
+//             res.send({
+//                 results: results,
+//                 status: 200,
+//                 message: 'Successful'
+//             })
+//         }
+//     );
 
-})
+// })
 
 app.get('/todos', (req, res) => {
 
