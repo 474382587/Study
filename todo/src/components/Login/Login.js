@@ -38,7 +38,6 @@ function handleLogin(username, password, props) {
 
 function Login(props) {
 
-    // const [pageTitle, setPageTitle] = useState(checkSessionId())
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
