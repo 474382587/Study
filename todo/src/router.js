@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Login from './components/Login/Login'
+import TodoList from './components/TodoList/TodoList'
+
 function Index() {
   return <h2>Home</h2>;
 }
@@ -20,10 +22,10 @@ function AppRouter() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Login</Link>
             </li>
             <li>
-              <Link to="/about/">About</Link>
+              <Link to="/about/">TodoList</Link>
             </li>
             <li>
               <Link to="/users/">Users</Link>
@@ -32,7 +34,7 @@ function AppRouter() {
         </nav>
 
         <Route path="/" exact component={Login} />
-        <Route path="/about/" component={About} />
+        <Route path="/about/" component={TodoList} />
         <Route path="/users/" component={Users} />
       </div>
     </Router>
