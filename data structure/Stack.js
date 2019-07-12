@@ -9,7 +9,7 @@ class Stack {
         this.array = array
     }
 
-    add(item) {
+    push(item) {
         this.array.push(item)
     }
 
@@ -19,6 +19,5 @@ class Stack {
 
     print() {
         console.log(this.array)
-        
     }
 }
