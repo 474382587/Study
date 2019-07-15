@@ -48,14 +48,7 @@ app.get('/todo', (req, res) => {
 
     let queryString = 'INSERT INTO customers SET ?'
 
-    // let query = connection.query(queryString, { name: "Joseph", address: "9269 University Crescent" }, (err, results, fields) => {
-    //     if (err) {
-    //         console.log(err)
-    //     }
-    //     // console.log('query: ', JSON.stringify(query, null, 2))
-    //     console.log('results: ', JSON.stringify(results, null, 2))
-    //     console.log('fields: ', JSON.stringify(fields, null, 2))
-    // })
+
 
 
     connection.query({
