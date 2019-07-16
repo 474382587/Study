@@ -1,5 +1,12 @@
 /**
  * Stack Class
+ * @params take an array
+ * @method push - push one item to the top
+ * @method pop - pop one item from the top
+ * @method peek - get one item from the top
+ * @method empty - check if this stack is empty
+ * @method size - get the size of this stack
+ * @method print - console.log this stack
  */
 
 // Implement a stack
