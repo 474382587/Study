@@ -14,10 +14,13 @@ body {
 .left-align {
   text-align: left;
 }
+.center-align {
+    text-align: center;
+}
 
 /* blocks */
 .App {
-  padding: 15%;
+  padding: 20vh 0;
   text-align: center;
 }
 
