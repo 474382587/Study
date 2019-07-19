@@ -1,0 +1,40 @@
+@import '~antd/dist/antd.css';
+body {
+  background-color: #eaeaea;
+}
+
+/* common */
+.special-content {
+  font-size: 28px;
+  font-weight: 700;
+}
+.full-width {
+  width: 100%;
+}
+.left-align {
+  text-align: left;
+}
+
+/* blocks */
+.App {
+  padding: 15%;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 30px 40px;
+  width: 40%;
+  min-width: 400px;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px 5px #ccc;
+}
+
+ul.details > li {
+  margin-top: 6px;
+}
+ul.details span{
+  font-size: 16px;
+  font-weight: bold;
+}
