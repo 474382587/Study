@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Then,, you can run:
 
 ### `yarn start` -- Windows
-### `yarn start-mac` -- M
+### `yarn start-mac` -- Mac
 
 
 Runs the app in the development mode.<br>
