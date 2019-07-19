@@ -23,8 +23,8 @@ You will also see any lint errors in the console.
 4. [React](https://reactjs.org/)
 
 ## Structure
---> src
--->--> index.js
--->--> App.js 
--->--> router
--->--> components
+--> src    
+-->--> index.js    
+-->--> App.js     
+-->--> router    
+-->--> components    
