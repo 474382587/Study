@@ -5,9 +5,16 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 // Utils
 import { ERROR, openNotification } from '../../utils/notification';
+
+// This is my custom Select Component
+// import CustomSelect from '../CustomSelect/CustomSelect';
+
 // UI Components
 import { Spin, Divider, Card, Select } from 'antd';
 const { Option } = Select;
+
+
+
 
 class Account extends Component {
   constructor(props) {
@@ -54,53 +61,57 @@ class Account extends Component {
         <Spin size="large" />
       </div>
     ) : (
-      <div className="container">
-        <h2>Please select an account:</h2>
-        <Select
-          showSearch
-          className="full-width"
-          placeholder="Select a person"
-          optionFilterProp="children"
-          filterOption={(input, option) =>
-            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
-            0
-          }
-        >
-          {this.state.accountsArray.map(account => {
-            return (
-              <Option
-                onClick={this.handleSelectAccount}
-                key={account.id}
-                value={account.id}
-              >
-                {account.name}
-              </Option>
-            );
-          })}
-        </Select>
+        <div className="container">
+          <h2>Please select an account:</h2>
 
-        {this.state.selectedAccount ? (
-          <div>
-            <Divider />
-            <Card
-              title="Account"
-              extra={
-                <Link to={`account/${this.state.selectedAccount.id}`}>
-                  More Detail
+          {/* This is the Select Component that I wrote */}
+          {/* <CustomSelect onChange={this.handleCustomSelectChange} accounts={this.state.accountsArray.length > 0 ? this.state.accountsArray : []} /> */}
+          {/* End */}
+          <Select
+            showSearch
+            className="full-width"
+            placeholder="Select a person"
+            optionFilterProp="children"
+            filterOption={(input, option) =>
+              option.props.children.toLowerCase().indexOf(input.toLowerCase()) >=
+              0
+            }
+          >
+            {this.state.accountsArray.map(account => {
+              return (
+                <Option
+                  onClick={this.handleSelectAccount}
+                  key={account.id}
+                  value={account.id}
+                >
+                  {account.name}
+                </Option>
+              );
+            })}
+          </Select>
+
+          {this.state.selectedAccount ? (
+            <div>
+              <Divider />
+              <Card
+                title="Account"
+                extra={
+                  <Link to={`account/${this.state.selectedAccount.id}`}>
+                    More Detail
                 </Link>
-              }
-              className="full-width"
-            >
-              <span className="special-content">
-                {this.state.selectedAccount.name}
-              </span>
-            </Card>
-          </div>
-        ) : (
-          ''
-        )}
-      </div>
-    );
+                }
+                className="full-width"
+              >
+                <span className="special-content">
+                  {this.state.selectedAccount.name}
+                </span>
+              </Card>
+            </div>
+          ) : (
+              ''
+            )}
+        </div>
+      );
   }
 }
 
