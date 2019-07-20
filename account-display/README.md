@@ -1,12 +1,13 @@
+## Please Note: I have implemented my own Select component, you can simply uncomment line 68 and line 10 in `Account.js` to view it.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## First, install the dependencies by `yarn install`
 
-## Then,, you can run:
+## Then, you can run:
 
 ### `yarn start` -- Windows
-### `yarn start-mac` -- Mac
-
+### `sudo yarn start-mac` -- Mac
 
 Runs the app in the development mode.<br>
 Open [http://localhost/index.html](http://localhost/index.html) to view it in the browser.
