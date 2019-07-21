@@ -1,4 +1,12 @@
-
+/**
+ * Stack Class
+ * @params take an array
+ * @method push - push one item to the rear
+ * @method pop - pop one item from the front
+ * @method peek - get one item from the front
+ * @method empty - check if this queue is empty
+ * @method size - get the size of this queue
+ */
 
 
 class Queue {
