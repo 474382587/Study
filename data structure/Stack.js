@@ -25,7 +25,7 @@ class Stack {
     }
 
     pop() {
-        return this.array.splice(this.array.length - 1, 1)
+        return this.array.pop()
     }
 
     peek() {
