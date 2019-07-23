@@ -33,7 +33,7 @@ class Stack {
     }
 
     empty() {
-        return this.array.length > 0
+        return this.array.length < 1
     }
 
     size() {

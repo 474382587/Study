@@ -28,7 +28,7 @@ class Queue {
         return this.array[0]
     }
     isEmpty() {
-        return this.array.length > 0
+        return this.array.length < 1
     }
     getLength() {
         return this.array.length
