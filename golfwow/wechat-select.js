@@ -21,4 +21,4 @@ var paymentDetail = document.querySelector('#wechatAliForm div[type="type_paypal
 
 var currentDate = (new Date()).toString()
 
-var summary_for_payment = '-- 姓名：' + name + ' \n\n-- 金额：' + totalPayment + ' \n\n-- 日期：' + currentDate + ' \n\n-- 详情：' + paymentDetail
+var summary_for_payment = '-- 姓名：' + name + ' ++++++++++++ -- 金额：' + totalPayment + ' ++++++++++++ -- 日期：' + currentDate + ' ++++++++++++ -- 详情：' + paymentDetail
