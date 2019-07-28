@@ -40,7 +40,7 @@ class LinkedList {
         let result = null;
 
         if (this.size === 0) {
-            return result
+            return result;
         } else if (this.size === 1) {
             result = this.head.value;
         } else {
@@ -81,5 +81,27 @@ class LinkedList {
         }
         console.log(!outputStr ? 'This list is empty' : outputStr);
     }
-    find(value) {}
+
+    size() {
+        return this.size;
+    }
+
+    isEmpty() {
+        return !!this.size;
+    }
+
+    find(value) {
+        let result;
+        let index = 0;
+        let pointer = this.head;
+        while (pointer !== null) {
+            if (pointer.value === value) {
+                result = index
+                break;
+            }
+            pointer = pointer.next;
+            index++
+        }
+        return result;
+    }
 }
