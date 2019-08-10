@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "8b611ee7-4b74-4c4f-b66f-fb684b47b16a",
+		"name": "checkpay-shares",
+		"description": "CheckPay股权查询系统",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\":\"1234567890\",\n\t\"shares\":\"123123\",\n\t\"owner\":\"Test Lee\"\n}"
+				},
+				"url": {
+					"raw": "https://shares.checkpay.ca/check",
+					"protocol": "https",
+					"host": [
+						"shares",
+						"checkpay",
+						"ca"
+					],
+					"path": [
+						"check"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Check",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"number\":\"1234567890\",\n\t\"shares\":\"123123\",\n\t\"owner\":\"Test Lee\"\n}"
+						},
+						"url": {
+							"raw": "https://shares.checkpay.ca/check",
+							"protocol": "https",
+							"host": [
+								"shares",
+								"checkpay",
+								"ca"
+							],
+							"path": [
+								"check"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2019 00:20:47 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"number\": \"1234567890\",\n    \"valid\": true,\n    \"counter\": 4\n}"
+				}
+			]
+		},
+		{
+			"name": "Get certificates image",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6f0569de-45bd-4117-ae5b-bcbb63823583",
+						"exec": [
+							"pm.environment.set(\"certificate_id\", \"1234567890\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://shares.checkpay.ca/certificates/{{certificate_id}}",
+					"protocol": "https",
+					"host": [
+						"shares",
+						"checkpay",
+						"ca"
+					],
+					"path": [
+						"certificates",
+						"{{certificate_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
