@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
-    <script src="./index.js"></script>
-    
-    
-    
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            .input-wrapper {
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                margin: 5rem auto;
+            }
+            .help-message {
+                width: 80%;
+                margin: 20px auto;
+                display: none;
+            }
+        </style>
+
+        <div class="input-wrapper">
+            <input
+                id="certificate_number"
+                placeholder="Certificate no."
+                type="text"
+            />
+            <input
+                id="number_of_shares"
+                placeholder="No. of Shares"
+                type="text"
+            />
+            <input id="owner_name" placeholder="Owner's name" type="text" />
+        </div>
+        <div class="help-message">
+            Please enter valid search information.
+        </div>
+        <button id="submit-button">Submit</button>
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+        <script src="./index.js"></script>
+    </body>
 </html>
