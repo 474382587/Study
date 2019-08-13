@@ -11,13 +11,65 @@
             .input-wrapper {
                 display: flex;
                 justify-content: space-between;
+                max-width: 1170px;
                 width: 80%;
                 margin: 5rem auto;
+            }
+            .input-wrapper > input {
+                font-size: 18px;
+                padding: 5px 12px;
+                width: 28%;
             }
             .help-message {
                 width: 80%;
                 margin: 20px auto;
                 display: none;
+            }
+            .button-wrapper {
+                text-align: center;
+                max-width: 1170px;
+                width: 80%;
+                margin: 5rem auto 2rem;
+            }
+            .button-wrapper > button {
+                border-radius: 4px;
+                font-size: 18px;
+                background: #e51f30;
+                border: none;
+                color: #fff;
+                text-align: center;
+                padding: 6px 50px;
+            }
+            .content-wrapper {
+                display: none;
+                text-align: center;
+                max-width: 1170px;
+                width: 80%;
+                margin: 2rem auto 2rem;
+            }
+            .image-wrapper {
+                display: none;
+                text-align: center;
+                max-width: 1170px;
+                width: 80%;
+                padding: 20px;
+                margin: 2rem auto;
+            }
+            .image-wrapper > img {
+                width: 100%;
+            }
+            @media screen and (max-width: 767px) {
+                .input-wrapper {
+                    flex-wrap: wrap;
+                    margin-bottom: 20px;
+                }
+                .button-wrapper {
+                    margin: 20px auto;
+                }
+                .input-wrapper > input {
+                    margin: 10px 0;
+                    width: 100% ;
+                }
             }
         </style>
 
@@ -37,8 +89,15 @@
         <div class="help-message">
             Please enter valid search information.
         </div>
-        <button id="submit-button">Submit</button>
-        <img src="https://shares.checkpay.ca/certificates/1234567890.jpg" alt="">
+        <div class="button-wrapper">
+            <button id="submit-button">Submit</button>
+        </div>
+        <div class="content-wrapper" id="content-wrapper">
+            Number of verifications: <span id="number-of-verification"></span>
+        </div>
+        <div class="image-wrapper">
+            <img src="" alt="Certificate" />
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
         <script src="./index.js"></script>
