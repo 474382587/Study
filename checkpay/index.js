@@ -26,11 +26,14 @@ submitBtn.addEventListener('click', function() {
         axios({
             method: 'post',
             url:
-                'https://cors-anywhere.herokuapp.com/https://shares.checkpay.ca/check',
+                'https://shares.checkpay.ca/check',
             data: {
                 number: certificate_number,
                 shares: number_of_shares,
                 owner: owner_name
+            },
+            headers: {
+                
             }
         }).then(res => {
             console.log(res);
