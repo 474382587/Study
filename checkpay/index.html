@@ -90,7 +90,7 @@
             Please enter valid search information.
         </div>
         <div class="button-wrapper">
-            <button id="submit-button">Submit</button>
+            <button id="submit-button" style="float: none;">Submit</button>
         </div>
         <div class="content-wrapper" id="content-wrapper">
             Number of verifications: <span id="number-of-verification"></span>
@@ -130,6 +130,13 @@
         var errorMsg = document.querySelector('.help-message');
         imageWrapper.style.display = 'none';
         errorMsg.style.display = 'none';
+        
+        imageWrapper.style.display = 'none';
+                    certificateImage.setAttribute(
+                        'src',
+                        ''
+                    );
+        
         if (certificate_number && number_of_shares && owner_name) {
             console.log('none empty string found');
             axios({
