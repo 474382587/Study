@@ -1,0 +1,23 @@
+# HTML 
+- Data Binding `curly braces: {property}`
+- Event Handling `onchange={handleInputChange}`
+- Use Getters _**why**?_ **-- It's illegal to compute a value in the HTML template. NO EXPRESSION**
+- Render Lists `for:each={array} for:index="index" for:item="currentItem"`
+- Conditional Rendering `if:true|false={property}`
+
+# CSS
+- Scope `CSS encapsulation`
+- SLDS `Bootstrap?`
+
+# Component
+- Parent and Child
+- Call a Method on a Child Component
+- Query Selector
+
+# Reactive Properties
+- private
+- @track - private
+- @api - public
+- getter / setter
+
+
