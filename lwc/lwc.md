@@ -20,4 +20,22 @@
 - @api - public
 - getter / setter
 
+# Events
+- Syntax `oneventtype`
+- Custom Events 
+- Event Propagation `bubbles` and `composed`
+```` 
+this.template.querySelector('div')
+    .dispatchEvent( new CustomEvent('notify', { bubbles: true } )
+);
+````
+
+# Lifecycle
+- constructor()
+- connectedCallback()
+- disconnectedCallback()
+- render()
+- renderedCallback()
+- errorCallback()
+
 
