@@ -33,12 +33,12 @@ this.template.querySelector('div')
 ````
 
 # Lifecycle
-- constructor()
-- connectedCallback()
-- disconnectedCallback()
-- render()
-- renderedCallback()
-- errorCallback()
+- `constructor()`
+- `connectedCallback()`
+- `disconnectedCallback()`
+- `render()`
+- `renderedCallback()`
+- `errorCallback()`
 
 # Share JavaScript Code
 
