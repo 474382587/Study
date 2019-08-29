@@ -15,6 +15,7 @@
 - Parent and Child
 - Call a Method on a Child Component
 - Query Selector
+- Slot/ Named Slot
 
 # Reactive Properties
 - private
