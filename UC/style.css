@@ -1,0 +1,359 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+        helvetica neue, Arial, microsoft yahei, sans-serif;
+    background-color: #f8f8f8;
+    color: #555;
+}
+.topnav {
+    width: 100%;
+    background: #fff;
+}
+.topnav .navbar {
+    background: #fff;
+}
+.wave-line {
+    width: 100%;
+    position: relative;
+    z-index: 6;
+}
+.mainbanner {
+    overflow: hidden;
+    margin-top: 3.625rem;
+}
+.spiner {
+    width: 406px;
+    height: 406px;
+    background: url(http://www.foodhwy.com/iconfont/img/spiner.svg) center center no-repeat;
+    position: absolute;
+    bottom: -17.625rem;
+    left: 0;
+    animation: 9.5s linear 0s normal none infinite rotate;
+}
+.carbox {
+    position: absolute;
+    left: 10rem;
+    bottom: -0.625rem;
+    transform: rotate(-8deg);
+}
+.mb-nbox {
+    background: #ffc400;
+    padding-top: 2rem;
+}
+.mb-nbox .container {
+    background: url(http://www.foodhwy.com/iconfont/img/stars.svg) center bottom no-repeat;
+    background-size: cover;
+}
+.topmaintext {
+    margin-bottom: 9rem;
+    margin-top: 5.25rem;
+    color: #5d2400;
+    text-align: center;
+}
+.topmaintext h2 {
+    font-size: 2.625rem;
+}
+.topmaintext small {
+    font-size: 1.125rem;
+}
+.mid-3box {
+    padding: 3rem 0;
+}
+.mid-3box .item-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+.mid-3box .item-box img {
+    margin-bottom: 1.25rem;
+}
+.mid-3box .item-box .tt-box h3 {
+    font-size: 2rem;
+}
+.mid-3box .item-box .tt-box small {
+    font-size: 1rem;
+    color: #999;
+}
+.mid-3box .item-box .btbtns a {
+    display: inline-block;
+    background: #ffc400;
+    padding: 0.325rem 1.625rem;
+    color: #5d2400;
+    font-size: 1rem;
+    border-radius: 2rem;
+}
+.mid-3box .item-box .btbtns {
+    margin-top: 2rem;
+}
+.mid-3box .item-box .btbtns a:hover {
+    background: #da0;
+}
+.totalbox {
+    background: #ffc400;
+    padding: 4rem 0;
+    color: #5d2400;
+    text-align: center;
+}
+.totalbox strong {
+    font-size: 3rem;
+    display: block;
+    margin-top: 1rem;
+}
+.totalbox small {
+    font-size: 1rem;
+    display: block;
+}
+.restaurants {
+    margin-top: 6rem;
+}
+.titlebox {
+    text-align: center;
+}
+.titlebox span {
+    display: inline-block;
+    border-bottom: 4px solid #ffc400;
+    padding-bottom: 1rem;
+    font-size: 2.25rem;
+    color: #555;
+}
+.restaurants .rest-item {
+    margin-top: 2rem;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+.restaurants .rest-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.restaurants .rest-item a {
+    text-decoration: none;
+}
+.restaurants .rest-item .imgbox img {
+    width: 100%;
+    display: block;
+}
+.restaurants .rest-item .textbox {
+    padding: 0.875rem;
+}
+.restaurants .rest-item .textbox h4 {
+    font-size: 1rem;
+    color: #333;
+}
+.restaurants .rest-item .textbox small,
+.restaurants .rest-item .textbox p {
+    margin-bottom: 0;
+    font-size: 0.75rem;
+    color: #999;
+}
+.articlebox {
+    margin-top: 6rem;
+}
+.articlebox .articlebox-item {
+    margin-top: 2rem;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+.articlebox .articlebox-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.articlebox-item h4 {
+    font-size: 1rem;
+    color: #333;
+}
+.articlebox-item p {
+    margin-bottom: 0;
+    font-size: 0.75rem;
+    color: #999;
+}
+.articlebox-item .more {
+    text-align: center;
+    margin-top: 0.625rem;
+}
+.articlebox-item .more a {
+    border-radius: 3rem;
+    border: 1px solid #ffb100;
+    color: #ffb100;
+    display: inline-block;
+    padding: 0.25rem 2rem;
+    font-size: 0.75rem;
+}
+.articlebox-item .imgbox img {
+    width: 100%;
+    display: block;
+}
+.articlebox-item .textbox {
+    padding: 0.875rem;
+}
+.aboutbox {
+    background: #ffc400;
+    color: #5d2400;
+    padding: 3rem 0;
+    margin-top: 5rem;
+}
+.aboutbox .about-text {
+    padding-top: 3.625rem;
+}
+.aboutbox h3 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+.contact-box {
+    background: #000 url(../images/ft-banner.jpg) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 4rem 0;
+}
+.contact-inbox dl.c-item {
+    display: block;
+    clear: both;
+}
+.contact-inbox dl.c-item dt {
+    float: left;
+}
+.contact-inbox dl.c-item dt i {
+    font-size: 2.625rem;
+    color: #777;
+    line-height: 1.875rem;
+    vertical-align: middle;
+    margin-top: 0.25rem;
+    display: inline-block;
+}
+.contact-inbox dl.c-item dd {
+    margin-left: 4rem;
+}
+.contact-inbox dl.c-item dd small {
+    color: #777;
+    display: block;
+}
+.contact-inbox dl.c-item dd span {
+    font-size: 1rem;
+}
+.contact-box .btns a {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    color: #fff;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+.contact-box .btns a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.copyrightbox {
+    background: #000;
+    text-align: center;
+    padding: 0.625rem 0;
+    color: #999;
+    font-size: 0.75rem;
+}
+.downloadbox {
+    text-align: center;
+}
+.downloadbox img {
+    display: inline-block;
+}
+.downloadbox .btn {
+    display: block;
+    clear: both;
+}
+.downloadbox a {
+    display: inline-block;
+    background: #ffc400;
+    padding: 0.325rem 1.625rem;
+    color: #5d2400;
+    font-size: 1rem;
+    border-radius: 2rem;
+}
+.downloadbox .bttextbox {
+    text-align: center;
+    clear: both;
+    padding-bottom: 1rem;
+}
+.downloadbox .bttextbox .wechat {
+    background: #ffc400;
+    padding: 0.325rem 1.625rem;
+    color: #5d2400;
+    font-size: 1rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    display: inline-block;
+}
+.downloadbox .btbtns {
+    margin-top: 1rem;
+}
+.downloadbox .btbtns .boxn {
+    display: inline-block;
+}
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@media (max-width: 575.98px) {
+    .topmaintext {
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
+    .topmaintext h2 {
+        font-size: 1.625rem;
+    }
+    .topmaintext small {
+        font-size: 1rem;
+    }
+    .navbar-nav {
+        text-align: center;
+        background: #f8f8f8;
+        margin-top: 0.625rem;
+    }
+    .spiner {
+        width: 300px;
+        height: 300px;
+        left: 2.625rem;
+        bottom: -8.625rem;
+    }
+    .carbox {
+        left: 9.625rem;
+        bottom: 0;
+    }
+    .wave-line {
+        display: none;
+    }
+    .mid-3box .item-box {
+        margin-bottom: 1rem;
+    }
+    .totalbox {
+        padding: 2rem 0;
+    }
+    .totalbox img {
+        height: 30px;
+    }
+    .totalbox strong {
+        font-size: 1rem;
+    }
+    .totalbox small {
+        font-size: 0.75rem;
+    }
+    .aboutbox .a-img img {
+        width: 100%;
+    }
+    .restaurants,
+    .articlebox {
+        margin-top: 3rem;
+    }
+}
+@media (max-width: 767.98px) {
+}
+@media (max-width: 991.98px) {
+}
+@media (max-width: 1199.98px) {
+}

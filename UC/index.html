@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>UC</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <!-- Header Nav -->
+        <div class="topnav fixed-top" style="">
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg navbar-light w-100">
+                        <a
+                            class="navbar-brand"
+                            href="http://www.foodhwy.com"
+                            title="小红车外卖"
+                            ><img
+                                src="iconfont/img/nav-logo.svg"
+                                height="30"
+                                alt="小红车外卖"
+                        /></a>
+                        <button
+                            class="navbar-toggler collapsed"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNavDropdown"
+                            aria-controls="navbarNavDropdown"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div
+                            class="navbar-collapse collapse"
+                            id="navbarNavDropdown"
+                        >
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#top">首页</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#download"
+                                        >平台</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#res">推荐餐馆</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#article"
+                                        >美食推广</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about"
+                                        >关于我们</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact"
+                                        >联系我们</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="mainbanner">
+            <div class="mb-nbox">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-7">
+                            <div class="topmaintext">
+                                <h2>小红车 · 订外卖 · 更便宜</h2>
+                                <small>多种订餐方式 满足您所有需求</small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-lg-5">
+                            <div class="spiner"></div>
+                            <div class="carbox" style="display:none;">
+                                <img src="iconfont/img/car.svg" width="80" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wave-line">
+                    <img src="iconfont/img/bline3.svg" width="100%" />
+                </div>
+                <!-- mb-nbox end -->
+            </div>
+        </div>
+        <div class="mid-3box" id="download" name="download">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-3">
+                        <div class="item-box">
+                            <img
+                                src="iconfont/img/mid-icon-clientapp.svg"
+                                width="160"
+                            />
+                            <div class="tt-box">
+                                <h3>客户端APP</h3>
+                                <small>快捷方便 体验超凡</small>
+                            </div>
+                            <div class="btbtns">
+                                <a
+                                    href="#"
+                                    data-toggle="modal"
+                                    data-target="#client-download-ios"
+                                    >IOS版</a
+                                >
+                                <a
+                                    href="#"
+                                    data-toggle="modal"
+                                    data-target="#client-download-android"
+                                    >安卓版</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-3">
+                        <div class="item-box">
+                            <img
+                                src="iconfont/img/mid-icon-wechat.svg"
+                                width="160"
+                            />
+                            <div class="tt-box">
+                                <h3>微信平台</h3>
+                                <small>关注公众号 即可订餐</small>
+                            </div>
+                            <div class="btbtns">
+                                <a
+                                    href="#"
+                                    data-toggle="modal"
+                                    data-target="#wechat-qr"
+                                    >关注微信公众号</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-3">
+                        <div class="item-box">
+                            <img
+                                src="iconfont/img/mid-icon-website.svg"
+                                width="160"
+                            />
+                            <div class="tt-box">
+                                <h3>智能平台</h3>
+                                <small>司机端APP / 商家端APP</small>
+                            </div>
+                            <div class="btbtns">
+                                <a
+                                    href="#"
+                                    data-toggle="modal"
+                                    data-target="#driver-download"
+                                    >司机端</a
+                                >
+                                <a
+                                    href="#"
+                                    data-toggle="modal"
+                                    data-target="#res-download"
+                                    >商家端</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-3">
+                        <div class="item-box">
+                            <img
+                                src="iconfont/img/mid-icon-driver.svg"
+                                width="160"
+                            />
+                            <div class="tt-box">
+                                <h3>成为司机</h3>
+                                <small>在线注册成为司机</small>
+                            </div>
+                            <div class="btbtns">
+                                <a
+                                    href="http://wechat.foodhwy.com/driver_register/register"
+                                    target="_blank"
+                                    >立即注册</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="totalbox">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="total-nbox">
+                            <img
+                                src="iconfont/img/total-user.svg"
+                                height="60"
+                            />
+                            <strong>5000+</strong>
+                            <small>活跃用户</small>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="total-nbox">
+                            <img
+                                src="iconfont/img/total-order.svg"
+                                height="60"
+                            />
+                            <strong>2000+</strong>
+                            <small>日订单量</small>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="total-nbox">
+                            <img
+                                src="iconfont/img/total-client.svg"
+                                height="60"
+                            />
+                            <strong>500+</strong>
+                            <small>入驻商家</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="restaurants" id="res" name="res">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="titlebox">
+                            <span>精选餐馆</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="rest-item">
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#article-download"
+                            >
+                                <div class="imgbox">
+                                    <img
+                                        src="http://www.foodhwy.com/images/foodieNorth.jpg"
+                                        alt="title"
+                                    />
+                                </div>
+                                <div class="textbox">
+                                    <h4>北食客（Missisauga）</h4>
+                                    <small>烤鸭/北方菜</small>
+                                    <p>
+                                        325 Central Pkwy W #2-4, Mississauga, ON
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="rest-item">
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#article-download"
+                            >
+                                <div class="imgbox">
+                                    <img
+                                        src="http://www.foodhwy.com/images/sugarM.jpg"
+                                        alt="title"
+                                    />
+                                </div>
+                                <div class="textbox">
+                                    <h4>糖记（London）</h4>
+                                    <small>甜品/轻食</small>
+                                    <p>
+                                        735 Wonderland RD N Unit14, London, ON
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="rest-item">
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#article-download"
+                            >
+                                <div class="imgbox">
+                                    <img
+                                        src="http://www.foodhwy.com/images/honghaijiao.jpg"
+                                        alt="title"
+                                    />
+                                </div>
+                                <div class="textbox">
+                                    <h4>红海椒（Hamilton）</h4>
+                                    <small>川菜/北方菜</small>
+                                    <p>60 James St N, Hamilton, ON</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="rest-item">
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#article-download"
+                            >
+                                <div class="imgbox">
+                                    <img
+                                        src="http://www.foodhwy.com/images/coco.jpg"
+                                        alt="title"
+                                    />
+                                </div>
+                                <div class="textbox">
+                                    <h4>
+                                        CoCo Fresh Tea &amp; Juice（Waterloo）
+                                    </h4>
+                                    <small>珍珠奶茶</small>
+                                    <p>203 Lester St #3, Waterloo, ON</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="rest-item">
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#article-download"
+                            >
+                                <div class="imgbox">
+                                    <img
+                                        src="http://www.foodhwy.com/images/dagu.jpg"
+                                        alt="title"
+                                    />
+                                </div>
+                                <div class="textbox">
+                                    <h4>大鼓米线（Downtown Toronto）</h4>
+                                    <small>米线/冰沙</small>
+                                    <p>111 Dundas St. W, Toronto, ON</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="rest-item">
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#article-download"
+                            >
+                                <div class="imgbox">
+                                    <img
+                                        src="http://www.foodhwy.com/images/green.jpg"
+                                        alt="title"
+                                    />
+                                </div>
+                                <div class="textbox">
+                                    <h4>绿的小窝（Downtown Toronto）</h4>
+                                    <small>奶茶/台式小吃</small>
+                                    <p>832 Bay Street, Toronto, ON</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="rest-item">
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#article-download"
+                            >
+                                <div class="imgbox">
+                                    <img
+                                        src="http://www.foodhwy.com/images/simmer.jpg"
+                                        alt="title"
+                                    />
+                                </div>
+                                <div class="textbox">
+                                    <h4>黄记煌（Richmond Hill）</h4>
+                                    <small>三汁焖锅/甜品</small>
+                                    <p>505 Hwy 7 #98, Thornhill, ON</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="rest-item">
+                            <a
+                                href="#"
+                                data-toggle="modal"
+                                data-target="#article-download"
+                            >
+                                <div class="imgbox">
+                                    <img
+                                        src="http://www.foodhwy.com/images/yunshang.jpg"
+                                        alt="title"
+                                    />
+                                </div>
+                                <div class="textbox">
+                                    <h4>云尚米线（Downtown）</h4>
+                                    <small>米线/奶茶</small>
+                                    <p>414 Dundas St W, Toronto, ON</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- restaurants end -->
+        </div>
+        <div class="articlebox" id="article" name="article">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="titlebox">
+                            <span>美食资讯</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="articlebox-item">
+                            <div class="imgbox">
+                                <img src="images/halloween.jpg" alt="title" />
+                            </div>
+                            <div class="textbox">
+                                <h4>【万圣节】暗黑破“胃”神来袭</h4>
+                                <p>
+                                    黑暗料理，厨房噩梦，看着食欲能顿减。FoodHWY陪你看看料理如何黑暗，陪你压压惊
+                                </p>
+                                <div class="more">
+                                    <a
+                                        href="https://mp.weixin.qq.com/s?__biz=MzAxNDE5NjczNQ==&amp;mid=2649941856&amp;idx=1&amp;sn=45d4929de798656642e2410f6023b04f&amp;chksm=83914df0b4e6c4e6a160d573c1a62d4bbf5dfa97347ed09f1e3125821c2517428a0451696938#rd"
+                                        target="_blank"
+                                        >点击查看</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="articlebox-item">
+                            <div class="imgbox">
+                                <img src="images/winds.jpg" alt="title" />
+                            </div>
+                            <div class="textbox">
+                                <h4>29分钟饥饿，TA不能陪你，我们能！</h4>
+                                <p>
+                                    在你最需要的时刻，我们将陪伴着你。让你半小时内就能吃到美味。
+                                </p>
+                                <div class="more">
+                                    <a
+                                        href="https://mp.weixin.qq.com/s?__biz=MzAxNDE5NjczNQ==&amp;mid=2649941856&amp;idx=4&amp;sn=47c7c72388cdbd31590032f34c00eac5&amp;chksm=83914df0b4e6c4e6ba3c69c824bcdbe7cbf56725f762ae23e05d0829f6bb4100ad92a22e1852&amp;token=1673238860&amp;lang=zh_CN#rd"
+                                        target="_blank"
+                                        >点击查看</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="articlebox-item">
+                            <div class="imgbox">
+                                <img src="images/banner.jpg" alt="title" />
+                            </div>
+                            <div class="textbox">
+                                <h4>
+                                    有完没完了！？小龙虾、起司蛋糕都开始送了
+                                </h4>
+                                <p>
+                                    FoodHWY不仅仅Downtown免基础运费，其他地区还推出各种减免福利，让你吃的更好！
+                                </p>
+                                <div class="more">
+                                    <a
+                                        href="https://mp.weixin.qq.com/s?__biz=MzAxNDE5NjczNQ==&amp;mid=2649941808&amp;idx=1&amp;sn=2ca3eafcfefb301b3d5d868e6ebf1255&amp;chksm=83914da0b4e6c4b6a16d9000737813f7d627906e6b6f367324003cb33b981f9c94406b7e17f0#rd"
+                                        target="_blank"
+                                        >点击查看</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- article end -->
+        </div>
+
+        <div class="aboutbox" id="about" name="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="a-img">
+                            <img src="images/bt-img@2x.png" width="440" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="about-text">
+                            <h3>关于小红车外卖</h3>
+                            <p>
+                                "小红车外卖"是由一群有梦想的留学生开发运营的外卖送餐平台。作为安省最大的中文在线订餐平台，现已覆盖：Downtown、Ottawa、North
+                                York
+                                、Scarborough、Hamilton、Waterloo、St.Catharines、
+                                Windsor 、London、Mississauga、Richmond
+                                Hill、Markham 等12个城市！
+                            </p>
+                            <p>
+                                一周七天，美食外卖，尽享便利。多种订餐方式，满足您所有需求！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-box" id="contact" name="contact">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-sm-12 col-lg-5">
+                        <div class="contact-inbox">
+                            <dl class="c-item">
+                                <dt><i class="iconfont icon-shijian"></i></dt>
+                                <dd>
+                                    <small>订餐时间</small>
+                                    <span
+                                        >11:00-22:00（普通）/
+                                        22:00~24:00（夜宵）</span
+                                    >
+                                </dd>
+                            </dl>
+
+                            <dl class="c-item">
+                                <dt><i class="iconfont icon-dianhua"></i></dt>
+                                <dd>
+                                    <small>联系电话</small>
+                                    <span>647-646-3098</span>
+                                </dd>
+                            </dl>
+
+                            <dl class="c-item">
+                                <dt><i class="iconfont icon-zhaiyao"></i></dt>
+                                <dd>
+                                    <small>订餐查询 / 信息更改</small>
+                                    <span>647-624-7211</span>
+                                </dd>
+                            </dl>
+
+                            <dl class="c-item">
+                                <dt><i class="iconfont icon-rongna"></i></dt>
+                                <dd>
+                                    <small>意见 / 加盟 / 人才应聘</small>
+                                    <span>foodhwycanada@gmail.com</span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-2">
+                        <div class="btns">
+                            <a href="#download" class="nav-link">司机端APP</a>
+                            <a href="#download" class="nav-link">商家端APP</a>
+                            <a href="#download" class="nav-link">客户端APP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyrightbox">
+            2019 © 小红车外卖 版权所有
+        </div>
+    </body>
+</html>
