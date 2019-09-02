@@ -15,7 +15,7 @@
     </head>
     <body>
         <!-- Header Nav -->
-        <div class="topnav fixed-top" style="">
+        <div class="navigation fixed-top" style="">
             <div class="container">
                 <div class="row">
                     <nav class="navbar navbar-expand-lg navbar-light w-100">
@@ -24,7 +24,7 @@
                             href="http://www.foodhwy.com"
                             title="小红车外卖"
                             ><img
-                                src="iconfont/img/nav-logo.svg"
+                                src="http://www.foodhwy.com/iconfont/img/nav-logo.svg"
                                 height="30"
                                 alt="小红车外卖"
                         /></a>
@@ -60,10 +60,37 @@
                                         >美食推广</a
                                     >
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#about"
-                                        >关于我们</a
+                                <li class="nav-item" style="position: relative;">
+                                    <!-- <a class="nav-link" href="#about"
+                                        ></a
+                                    > -->
+                                    <a
+                                        class="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
                                     >
+                                        关于我们
+                                    </a>
+                                    <div
+                                        class="dropdown-menu"
+                                        aria-labelledby="navbarDropdown"
+                                    >
+                                        <a class="dropdown-item" href="#about"
+                                            >公司简介</a
+                                        >
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" target="_blank" href="#"
+                                            >广告合作</a
+                                        >
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" target="_blank" href="#"
+                                            >团队活动</a
+                                        >
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#contact"
@@ -76,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <div class="mainbanner">
+        <div class="banner">
             <div class="mb-nbox">
                 <div class="container">
                     <div class="row">
@@ -90,14 +117,20 @@
                         <div class="col-sm-12 col-lg-5">
                             <div class="spiner"></div>
                             <div class="carbox" style="display:none;">
-                                <img src="iconfont/img/car.svg" width="80" />
+                                <img
+                                    src="http://www.foodhwy.com/iconfont/img/car.svg"
+                                    width="80"
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="wave-line">
-                    <img src="iconfont/img/bline3.svg" width="100%" />
+                <div class="wave">
+                    <img
+                        src="http://www.foodhwy.com/iconfont/img/bline3.svg"
+                        width="100%"
+                    />
                 </div>
                 <!-- mb-nbox end -->
             </div>
@@ -108,34 +141,7 @@
                     <div class="col-sm-12 col-lg-3">
                         <div class="item-box">
                             <img
-                                src="iconfont/img/mid-icon-clientapp.svg"
-                                width="160"
-                            />
-                            <div class="tt-box">
-                                <h3>客户端APP</h3>
-                                <small>快捷方便 体验超凡</small>
-                            </div>
-                            <div class="btbtns">
-                                <a
-                                    href="#"
-                                    data-toggle="modal"
-                                    data-target="#client-download-ios"
-                                    >IOS版</a
-                                >
-                                <a
-                                    href="#"
-                                    data-toggle="modal"
-                                    data-target="#client-download-android"
-                                    >安卓版</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 col-lg-3">
-                        <div class="item-box">
-                            <img
-                                src="iconfont/img/mid-icon-wechat.svg"
+                                src="http://www.foodhwy.com/iconfont/img/mid-icon-wechat.svg"
                                 width="160"
                             />
                             <div class="tt-box">
@@ -156,7 +162,7 @@
                     <div class="col-sm-12 col-lg-3">
                         <div class="item-box">
                             <img
-                                src="iconfont/img/mid-icon-website.svg"
+                                src="http://www.foodhwy.com/iconfont/img/mid-icon-website.svg"
                                 width="160"
                             />
                             <div class="tt-box">
@@ -183,7 +189,7 @@
                     <div class="col-sm-12 col-lg-3">
                         <div class="item-box">
                             <img
-                                src="iconfont/img/mid-icon-driver.svg"
+                                src="http://www.foodhwy.com/iconfont/img/mid-icon-driver.svg"
                                 width="160"
                             />
                             <div class="tt-box">
@@ -199,6 +205,27 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-sm-12 col-lg-3">
+                        <div class="item-box">
+                            <img
+                                src="http://www.foodhwy.com/iconfont/img/mid-icon-clientapp.svg"
+                                width="160"
+                            />
+                            <div class="tt-box">
+                                <h3>加入我们</h3>
+                                <small>招聘客服，市场部人员</small>
+                            </div>
+                            <div class="btbtns">
+                                <a
+                                    href="#"
+                                    data-toggle="modal"
+                                    data-target="#client-download-ios"
+                                    >立即加入</a
+                                >
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -208,7 +235,7 @@
                     <div class="col">
                         <div class="total-nbox">
                             <img
-                                src="iconfont/img/total-user.svg"
+                                src="http://www.foodhwy.com/iconfont/img/total-user.svg"
                                 height="60"
                             />
                             <strong>5000+</strong>
@@ -219,7 +246,7 @@
                     <div class="col">
                         <div class="total-nbox">
                             <img
-                                src="iconfont/img/total-order.svg"
+                                src="http://www.foodhwy.com/iconfont/img/total-order.svg"
                                 height="60"
                             />
                             <strong>2000+</strong>
@@ -230,7 +257,7 @@
                     <div class="col">
                         <div class="total-nbox">
                             <img
-                                src="iconfont/img/total-client.svg"
+                                src="http://www.foodhwy.com/iconfont/img/total-client.svg"
                                 height="60"
                             />
                             <strong>500+</strong>
@@ -442,7 +469,7 @@
                     <div class="col-sm-6 col-lg-4">
                         <div class="articlebox-item">
                             <div class="imgbox">
-                                <img src="images/halloween.jpg" alt="title" />
+                                <img src="http://www.foodhwy.com/images/halloween.jpg" alt="title" />
                             </div>
                             <div class="textbox">
                                 <h4>【万圣节】暗黑破“胃”神来袭</h4>
@@ -463,7 +490,7 @@
                     <div class="col-sm-6 col-lg-4">
                         <div class="articlebox-item">
                             <div class="imgbox">
-                                <img src="images/winds.jpg" alt="title" />
+                                <img src="http://www.foodhwy.com/images/winds.jpg" alt="title" />
                             </div>
                             <div class="textbox">
                                 <h4>29分钟饥饿，TA不能陪你，我们能！</h4>
@@ -484,7 +511,7 @@
                     <div class="col-sm-6 col-lg-4">
                         <div class="articlebox-item">
                             <div class="imgbox">
-                                <img src="images/banner.jpg" alt="title" />
+                                <img src="http://www.foodhwy.com/images/banner.jpg" alt="title" />
                             </div>
                             <div class="textbox">
                                 <h4>
@@ -513,7 +540,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-6">
                         <div class="a-img">
-                            <img src="images/bt-img@2x.png" width="440" />
+                            <img src="http://www.foodhwy.com/images/bt-img@2x.png" width="440" />
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-6">
@@ -540,7 +567,11 @@
                     <div class="col-sm-12 col-lg-5">
                         <div class="contact-inbox">
                             <dl class="c-item">
-                                <dt><i class="iconfont icon-shijian"></i></dt>
+                                <dt>
+                                    <i
+                                        class="http://www.foodhwy.com/iconfont icon-shijian"
+                                    ></i>
+                                </dt>
                                 <dd>
                                     <small>订餐时间</small>
                                     <span
@@ -551,7 +582,11 @@
                             </dl>
 
                             <dl class="c-item">
-                                <dt><i class="iconfont icon-dianhua"></i></dt>
+                                <dt>
+                                    <i
+                                        class="http://www.foodhwy.com/iconfont icon-dianhua"
+                                    ></i>
+                                </dt>
                                 <dd>
                                     <small>联系电话</small>
                                     <span>647-646-3098</span>
@@ -559,7 +594,11 @@
                             </dl>
 
                             <dl class="c-item">
-                                <dt><i class="iconfont icon-zhaiyao"></i></dt>
+                                <dt>
+                                    <i
+                                        class="http://www.foodhwy.com/iconfont icon-zhaiyao"
+                                    ></i>
+                                </dt>
                                 <dd>
                                     <small>订餐查询 / 信息更改</small>
                                     <span>647-624-7211</span>
@@ -567,7 +606,11 @@
                             </dl>
 
                             <dl class="c-item">
-                                <dt><i class="iconfont icon-rongna"></i></dt>
+                                <dt>
+                                    <i
+                                        class="http://www.foodhwy.com/iconfont icon-rongna"
+                                    ></i>
+                                </dt>
                                 <dd>
                                     <small>意见 / 加盟 / 人才应聘</small>
                                     <span>foodhwycanada@gmail.com</span>
@@ -588,5 +631,328 @@
         <div class="copyrightbox">
             2019 © 小红车外卖 版权所有
         </div>
+
+        <div
+            class="modal fade"
+            id="client-download-ios"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="client-download-iosTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="client-download-iosTitle">
+                            客户端APP IOS版
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="downloadbox">
+                            <img src="http://www.foodhwy.com/images/qr_client_ios.jpg" />
+                            <span class="btn"
+                                ><a
+                                    href="https://appsto.re/ca/-ugA_.i"
+                                    target="_blank"
+                                    >下载IOS版</a
+                                ></span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="client-download-android"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="client-download-androidTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5
+                            class="modal-title"
+                            id="client-download-androidTitle"
+                        >
+                            客户端APP Android版
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="downloadbox">
+                            <img src="http://www.foodhwy.com/images/qr_client_android.png" />
+                            <span class="btn"
+                                ><a
+                                    href="https://play.google.com/store/apps/details?id=com.foodhwy.foodhwy"
+                                    target="_blank"
+                                    >下载安卓版</a
+                                ></span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="wechat-qr"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="wechat-qrTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="wechat-qrTitle">
+                            关注微信公众号
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="downloadbox">
+                            <img src="http://www.foodhwy.com/images/qr-wechat.png" />
+                            <div class="bttextbox">
+                                <span class="wechat"
+                                    >微信号: foodhwycanada</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="driver-download"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="driver-downloadTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="driver-downloadTitle">
+                            司机端APP下载
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="downloadbox row">
+                            <div class="subbox col-6">
+                                <img
+                                    src="http://www.foodhwy.com/images/qr-driver-ios.png"
+                                    width="120"
+                                />
+                                <span class="btn"
+                                    ><a
+                                        href="https://itunes.apple.com/cn/app/fh%E9%85%8D%E9%80%81%E7%B3%BB%E7%BB%9F/id1245246300?mt=8"
+                                        target="_blank"
+                                        >下载IOS版</a
+                                    ></span
+                                >
+                            </div>
+                            <div class="subbox col-6">
+                                <img
+                                    src="http://www.foodhwy.com/images/qr-driver-android.png"
+                                    width="120"
+                                />
+                                <span class="btn"
+                                    ><a
+                                        href="https://play.google.com/store/apps/details?id=com.foodhwy.delivery"
+                                        target="_blank"
+                                        >下载安卓版</a
+                                    ></span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="res-download"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="res-downloadTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="res-downloadTitle">
+                            商家端APP下载
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="downloadbox row">
+                            <div class="subbox col-6">
+                                <img src="http://www.foodhwy.com/images/qr-shop-ios.png" width="120" />
+                                <span class="btn"
+                                    ><a
+                                        href="https://itunes.apple.com/cn/app/fh%E5%95%86%E6%88%B7%E7%B3%BB%E7%BB%9F/id1315148723"
+                                        target="_blank"
+                                        >下载IOS版</a
+                                    ></span
+                                >
+                            </div>
+                            <div class="subbox col-6">
+                                <img
+                                    src="http://www.foodhwy.com/images/qr-shop-android.png"
+                                    width="120"
+                                />
+                                <span class="btn"
+                                    ><a
+                                        href="https://play.google.com/store/apps/details?id=com.foodhwy_shop"
+                                        target="_blank"
+                                        >下载安卓版</a
+                                    ></span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="article-download"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="article-downloadTitle"
+            style="display: none;"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="article-downloadTitle">
+                            客户端APP下载
+                        </h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="downloadbox row">
+                            <div class="subbox col">
+                                <img
+                                    src="http://www.foodhwy.com/iconfont/img/mid-icon-clientapp.svg"
+                                    width="160"
+                                />
+                                <div class="tt-box">
+                                    <h3>客户端APP</h3>
+                                    <small>浏览美食尽在Foodhwy App</small>
+                                </div>
+                                <div class="btbtns">
+                                    <div class="boxn box1">
+                                        <img src="http://www.foodhwy.com/images/qr_client_ios.jpg" />
+                                        <span class="btn"
+                                            ><a
+                                                href="https://appsto.re/ca/-ugA_.i"
+                                                target="_blank"
+                                                >下载IOS版</a
+                                            ></span
+                                        >
+                                    </div>
+                                    <div class="boxn box2">
+                                        <img
+                                            src="http://www.foodhwy.com/images/qr_client_android.png"
+                                        />
+                                        <span class="btn"
+                                            ><a
+                                                href="https://play.google.com/store/apps/details?id=com.foodhwy.foodhwy"
+                                                target="_blank"
+                                                >下载安卓版</a
+                                            ></span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('a.nav-link').click(function() {
+                    $('html, body').animate(
+                        {
+                            scrollTop:
+                                $($(this).attr('href')).offset().top + 'px'
+                        },
+                        {
+                            duration: 500,
+                            easing: 'swing'
+                        }
+                    );
+                    return false;
+                });
+            });
+        </script>
     </body>
 </html>

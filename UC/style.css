@@ -4,26 +4,27 @@ body {
     background-color: #f8f8f8;
     color: #555;
 }
-.topnav {
+.navigation {
     width: 100%;
     background: #fff;
 }
-.topnav .navbar {
+.navigation .navbar {
     background: #fff;
 }
-.wave-line {
+.wave {
     width: 100%;
     position: relative;
     z-index: 6;
 }
-.mainbanner {
+.banner {
     overflow: hidden;
     margin-top: 3.625rem;
 }
 .spiner {
     width: 406px;
     height: 406px;
-    background: url(http://www.foodhwy.com/iconfont/img/spiner.svg) center center no-repeat;
+    background: url(http://www.foodhwy.com/iconfont/img/spiner.svg) center
+        center no-repeat;
     position: absolute;
     bottom: -17.625rem;
     left: 0;
@@ -40,7 +41,8 @@ body {
     padding-top: 2rem;
 }
 .mb-nbox .container {
-    background: url(http://www.foodhwy.com/iconfont/img/stars.svg) center bottom no-repeat;
+    background: url(http://www.foodhwy.com/iconfont/img/stars.svg) center bottom
+        no-repeat;
     background-size: cover;
 }
 .topmaintext {
@@ -325,7 +327,7 @@ body {
         left: 9.625rem;
         bottom: 0;
     }
-    .wave-line {
+    .wave {
         display: none;
     }
     .mid-3box .item-box {
@@ -356,4 +358,7 @@ body {
 @media (max-width: 991.98px) {
 }
 @media (max-width: 1199.98px) {
+}
+.navbar-nav li:hover > .dropdown-menu {
+    display: block;
 }
