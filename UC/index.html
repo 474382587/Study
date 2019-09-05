@@ -997,6 +997,15 @@ get_footer();?> -->
                     return false;
                 });
             });
+            
+            var modalSwitches = Array.prototype.slice.call(document.querySelectorAll('.modal-switch'))
+            modalSwitches.forEach(e => {
+                e.addEventListener('click', event => {
+                    var modal = event.target.dataset.name
+                    document.querySelector('.' + modal).classList.add('active')
+                })
+            })
+            
         </script>
     </body>
 </html>
