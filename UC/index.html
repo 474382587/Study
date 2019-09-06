@@ -1,17 +1,18 @@
 <!-- <?php  /*Template Name: One Page Template*/
 get_header();?>
 	<!-- ** Primary Section ** -->
-	<section id="primary" class="content-full-width">
-		<?php if( have_posts() ):
+<section id="primary" class="content-full-width">
+    <?php if( have_posts() ):
 				while( have_posts() ):
 					the_post();
 					get_template_part('functions/loops/content', 'page');
 				endwhile;
 		endif;?>
-	</section><!-- ** Primary Section Ends ** -->
+</section>
+<!-- ** Primary Section Ends ** -->
 <?php
-get_footer();?> -->
-
+get_footer();?>
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -997,15 +998,88 @@ get_footer();?> -->
                     return false;
                 });
             });
-            
-            var modalSwitches = Array.prototype.slice.call(document.querySelectorAll('.modal-switch'))
+
+            var modalSwitches = Array.prototype.slice.call(
+                document.querySelectorAll('.modal-switch')
+            );
             modalSwitches.forEach(e => {
                 e.addEventListener('click', event => {
-                    var modal = event.target.dataset.name
-                    document.querySelector('.' + modal).classList.add('active')
-                })
-            })
-            
+                    var modal = event.target.dataset.name;
+                    document.querySelector('.' + modal).classList.add('active');
+                });
+            });
+        </script>
+
+        <script>
+            var modalSwitches = Array.prototype.slice.call(
+                document.querySelectorAll('.modal-switch')
+            );
+            modalSwitches.forEach(e => {
+                e.addEventListener('click', event => {
+                    event.preventDefault();
+                    console.log(event.target.dataset.name);
+                    var modal = event.target.dataset.name;
+                    document.querySelector('.' + modal).classList.add('active');
+                    var activeModal = document.querySelector(
+                        '.modal-container.active'
+                    );
+                    activeModal.addEventListener('click', e => {
+                        var target = e.target
+                        if(e.target.className.includes('modal-container')) {
+                            e.target.classList.remove('active')
+                        }
+                        console.log(e.target);
+                        console.log(e.currentTarget);
+                    });
+                });
+            });
+
+            var modals = Array.prototype.slice.call(
+                document.querySelectorAll('.modal-container')
+            );
+
+            modals.forEach(e => {
+                e.addEventListener('click', event => {
+                    console.log(eventevent.target);
+                    console.log(event.currentTarget);
+                });
+            });
         </script>
     </body>
 </html>
+<div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="wechat"
+    aria-hidden="true"
+>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="wechat">Modal title</h5>
+                <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                >
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="https://picsum.photos/200/200" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-content">
+    <h3>关注微信公众号</h3>
+    <p>
+        <img src="https://picsum.photos/200/200" alt="placeholder" />
+    </p>
+    <p>
+        <span>微信号: unixxxxx</span>
+    </p>
+</div>
