@@ -1,0 +1,24 @@
+<script>
+    var modalSwitches = Array.prototype.slice.call(
+        document.querySelectorAll('.modal-switch')
+    );
+    modalSwitches.forEach(e => {
+        e.addEventListener('click', event => {
+            event.preventDefault();
+            console.dir(event.target);
+            var modal = event.target.hash.slice(1)
+            // console.dir(hash.slice(1));
+            // var modal = event.target.dataset.name;
+            document.querySelector('.' + modal).classList.add('active');
+            var activeModal = document.querySelector('.modal-container.active');
+            activeModal.addEventListener('click', e => {
+                var target = e.target;
+                if (e.target.className.includes('modal-container')) {
+                    e.target.classList.remove('active');
+                }
+                console.log(e.target);
+                console.log(e.currentTarget);
+            });
+        });
+    });
+</script>
