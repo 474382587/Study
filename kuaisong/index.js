@@ -20,6 +20,7 @@ window.addEventListener('resize', function(event) {
     }, 100);
 });
 
+// form
 var cancel = document.querySelector('.cancel')
 cancel.addEventListener('click', function(event) {
     event.preventDefault()
