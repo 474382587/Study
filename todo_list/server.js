@@ -1,60 +1,50 @@
-const express = require('express')
-const mysql = require('mysql')
+const express = require('express');
+const mysql = require('mysql');
 
-const app = express()
-const port = 3000
+const app = express();
+const port = 3000;
 
 // mysql connection
 const connection = mysql.createConnection({
-    host: "104.200.16.180",
+    host: '104.200.16.180',
     database: 'webdevjo_todo_list',
-    user: "webdevjo_todo",
-    password: ""
-})
-
+    user: 'webdevjo_todo',
+    password: ''
+});
 
 connection.connect(err => {
     if (err) {
-        console.log('err occured')
-        return
+        console.log('err occured');
+        return;
     }
-    console.log('connected to Database!')
+    console.log('connected to Database!');
     // var sql = "CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))";
     // connection.query(sql, function(err, result) {
     //     if (err) throw err;
     //     console.log("Table created");
     // });
-})
+});
 // var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
 // connection.query(sql, function(err, result) {
 //     if (err) throw err;
 //     console.log("1 record inserted");
 // });
-connection.query("SELECT * FROM customers", function(err, result, fields) {
+connection.query('SELECT * FROM customers', function(err, result, fields) {
     if (err) throw err;
     console.log(result);
 });
 
-
-
-
-
-
-
 app.get('/', (req, res) => {
-    res.send('<h1>Hello World!</h1>')
-})
+    res.send('<h1>Hello World!</h1>');
+});
 app.get('/todo', (req, res) => {
+    let queryString = 'INSERT INTO customers SET ?';
 
-    let queryString = 'INSERT INTO customers SET ?'
-
-
-
-
-    connection.query({
-        sql: 'SELECT * FROM `customers` WHERE `name` = ?',
-        timeout: 40000, // 40s
-    },
+    connection.query(
+        {
+            sql: 'SELECT * FROM `customers` WHERE `name` = ?',
+            timeout: 40000 // 40s
+        },
         ['Joseph'],
         function(error, results, fields) {
             // error will be an Error if one occurred during the query
@@ -64,14 +54,11 @@ app.get('/todo', (req, res) => {
                 results: results,
                 status: 200,
                 message: 'Successful'
-            })
+            });
         }
     );
-
-
-
-})
+});
 
 app.listen(port, () => {
-    console.log('server started at port 3000')
-})
+    console.log('server started at port 3000');
+});
