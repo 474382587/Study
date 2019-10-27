@@ -1,23 +1,23 @@
-const fs = require('fs')
-const os = require('os')
+const fs = require('fs');
+const os = require('os');
 
-const yargs = require('yargs')
-const _ = require('lodash')
+const yargs = require('yargs');
+const _ = require('lodash');
 
-const notes = require('./note.js')
+const notes = require('./note.js');
 
-console.log(process.argv)
+console.log(process.argv);
 
 const titleOptions = {
     describe: 'Title of note',
     demand: true,
     alias: 't'
-}
+};
 const bodyOptions = {
     describe: 'Body of note',
     demand: true,
     alias: 'b'
-}
+};
 
 const argv = yargs
     .command('add', 'Add a new note', {
@@ -31,32 +31,32 @@ const argv = yargs
     .command('remove', 'Remove a new note', {
         title: titleOptions
     })
-    .help().argv
+    .help().argv;
 
-var command = process.argv[2]
-console.log(argv, ' yargs')
-console.log(command, 'command')
+var command = process.argv[2];
+console.log(argv, ' yargs');
+console.log(command, 'command');
 
 switch (command) {
     case 'add':
-        var note = notes.addNote(argv.title, argv.body)
-        note ? console.log('note added') : console.log('duplicate found!')
-        break
+        var note = notes.addNote(argv.title, argv.body);
+        note ? console.log('note added') : console.log('duplicate found!');
+        break;
     case 'list':
-        notes.getAll()
-        break
+        notes.getAll();
+        break;
     case 'read':
-        notes.readNote(argv.title)
-        break
+        notes.readNote(argv.title);
+        break;
     case 'remove':
-        console.log('remove note')
+        console.log('remove note');
         notes.removeNote(argv.title)
             ? console.log('remove note fail')
-            : console.log('remove note success')
-        break
+            : console.log('remove note success');
+        break;
     default:
-        console.log('command not defined')
-        break
+        console.log('command not defined');
+        break;
 }
 
 /**
