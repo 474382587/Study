@@ -1024,9 +1024,9 @@ get_footer();?>
                         '.modal-container.active'
                     );
                     activeModal.addEventListener('click', e => {
-                        var target = e.target
-                        if(e.target.className.includes('modal-container')) {
-                            e.target.classList.remove('active')
+                        var target = e.target;
+                        if (e.target.className.includes('modal-container')) {
+                            e.target.classList.remove('active');
                         }
                         console.log(e.target);
                         console.log(e.currentTarget);
