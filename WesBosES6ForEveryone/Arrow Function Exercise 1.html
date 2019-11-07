@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Arrow Functions</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Arrow Functions</title>
+    </head>
+    <body>
+        <ul>
+            <li data-time="5:17">Flexbox Video</li>
+            <li data-time="8:22">Flexbox Video</li>
+            <li data-time="3:34">Redux Video</li>
+            <li data-time="5:23">Flexbox Video</li>
+            <li data-time="7:12">Flexbox Video</li>
+            <li data-time="7:24">Redux Video</li>
+            <li data-time="6:46">Flexbox Video</li>
+            <li data-time="4:45">Flexbox Video</li>
+            <li data-time="4:40">Flexbox Video</li>
+            <li data-time="7:58">Redux Video</li>
+            <li data-time="11:51">Flexbox Video</li>
+            <li data-time="9:13">Flexbox Video</li>
+            <li data-time="5:50">Flexbox Video</li>
+            <li data-time="5:52">Redux Video</li>
+            <li data-time="5:49">Flexbox Video</li>
+            <li data-time="8:57">Flexbox Video</li>
+            <li data-time="11:29">Flexbox Video</li>
+            <li data-time="3:07">Flexbox Video</li>
+            <li data-time="5:59">Redux Video</li>
+            <li data-time="3:31">Flexbox Video</li>
+        </ul>
 
-<ul>
-  <li data-time="5:17">Flexbox Video</li>
-  <li data-time="8:22">Flexbox Video</li>
-  <li data-time="3:34">Redux Video</li>
-  <li data-time="5:23">Flexbox Video</li>
-  <li data-time="7:12">Flexbox Video</li>
-  <li data-time="7:24">Redux Video</li>
-  <li data-time="6:46">Flexbox Video</li>
-  <li data-time="4:45">Flexbox Video</li>
-  <li data-time="4:40">Flexbox Video</li>
-  <li data-time="7:58">Redux Video</li>
-  <li data-time="11:51">Flexbox Video</li>
-  <li data-time="9:13">Flexbox Video</li>
-  <li data-time="5:50">Flexbox Video</li>
-  <li data-time="5:52">Redux Video</li>
-  <li data-time="5:49">Flexbox Video</li>
-  <li data-time="8:57">Flexbox Video</li>
-  <li data-time="11:29">Flexbox Video</li>
-  <li data-time="3:07">Flexbox Video</li>
-  <li data-time="5:59">Redux Video</li>
-  <li data-time="3:31">Flexbox Video</li>
-</ul>
-
-<script>
-  // Select all the list items on the page and convert to array
-  var listItem = Array.from(document.querySelectorAll("li"));
-  // console.log(listItem);
-  // Filter for only the elements that contain the word 'flexbox'
-  listItem = listItem.filter(element => element.textContent === "Flexbox Video");
-  console.log(listItem);
-  // map down to a list of time strings
-  listItem = listItem.map(element => element.dataset.time);
-  console.log(listItem);
-  // map to an array of seconds
-  listItem = listItem.map(element => Number(element.split(":")[0]*60)+Number(element.split(":")[1]));
-  console.log(listItem);
-  // reduce to get total
-  listItem = listItem.reduce((element,next) =>element+next );
-  console.log(listItem);
-  // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
-</script>
-</body>
+        <script>
+            // Select all the list items on the page and convert to array
+            var listItem = Array.from(document.querySelectorAll('li'));
+            // console.log(listItem);
+            // Filter for only the elements that contain the word 'flexbox'
+            listItem = listItem.filter(
+                element => element.textContent === 'Flexbox Video'
+            );
+            console.log(listItem);
+            // map down to a list of time strings
+            listItem = listItem.map(element => element.dataset.time);
+            console.log(listItem);
+            // map to an array of seconds
+            listItem = listItem.map(
+                element =>
+                    Number(element.split(':')[0] * 60) +
+                    Number(element.split(':')[1])
+            );
+            console.log(listItem);
+            // reduce to get total
+            listItem = listItem.reduce((element, next) => element + next);
+            console.log(listItem);
+            // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
+        </script>
+    </body>
 </html>
