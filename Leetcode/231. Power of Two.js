@@ -8,4 +8,4 @@ var isPowerOfTwo = function(n) {
     } else {
         return isPowerOfTwo(n / 2)
     }
-};
+}
