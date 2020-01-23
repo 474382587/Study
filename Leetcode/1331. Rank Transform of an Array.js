@@ -12,7 +12,6 @@ var arrayRankTransform = function(arr) {
             hash[arr[i]] = true
         }
     }
-    // console.log(arr2)
     arr2.sort((a, b) => a - b)
     for(var i = 0; i < arr2.length; i++) {
         hash[arr2[i]] = i + 1
