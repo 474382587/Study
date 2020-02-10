@@ -14,7 +14,6 @@ var checkIfExist = function(arr) {
             }
         }
     } 
-    console.log(hash)
     var result = false
     for(var i = 0; i < arr.length; i++) {
         if(hash[hash[arr[i]]] !== undefined) {
