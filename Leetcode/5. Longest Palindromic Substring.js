@@ -18,7 +18,7 @@ var longestPalindrome = function(s) {
             arr[i].push(false)
         }
     }
-    // console.log(arr)
+
     for(let j = 1; j < s.length; j++) {
         for(let i = 0; i < j; i++) {
             
