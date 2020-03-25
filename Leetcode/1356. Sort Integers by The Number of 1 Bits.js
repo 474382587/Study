@@ -21,6 +21,7 @@ var sortByBits = function(arr) {
     }
     result.sort((a, b) => a - b)
     
+    
     var res = []
     for(var i =0; i < result.length; i++) {
         res = res.concat(hash[result[i]])
