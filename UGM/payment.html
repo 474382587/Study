@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="image-container">
+            <img src="./logo.png"/>
+        </div>
+        <div>
+            <h3>100% Secure</h3>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>
+            You are donating <span id="donation-amount"></span> <span id="one-time" class="freq">One Time</span><span id="monthly" class="freq">Monthly</span>
+        </h1>
+        <script type="text/javascript" src="https://www.iatspayments.com/AURA/AURA.aspx?PID=PAA8BDF1A12340243D"></script>        
+    </div>
+    <script defer>
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log()
+            var interval = setInterval(function() {
+                if(document.getElementById('IATS_ProcessAction_Button') !== null) {
+                    clearInterval(interval)
+                    console.log(document.getElementById('IATS_ProcessAction_Button'))
+                    initAura()
+                }
+            }, 100)
+        })
+        
+    function initAura() {
+        
+        var params = getQueryParameters()
+        var amount = Number(params.amount) || 60
+        var monthly = params.monthly ? true : false
+        
+        console.log(amount)
+        console.log(monthly)
+        updateAmount(amount)
+        if(monthly) {
+            document.getElementById('monthly').classList.add('active')
+            document.getElementById('IATS_Payment_RecurringPayment').click()
+        } else {
+            document.getElementById('one-time').classList.add('active')
+            document.getElementById('IATS_Payment_SinglePayment').click()
+        }
+        //IATS_AmountListItem_NewOtherAmount0
+        document.querySelector('#IATS_AmountListItem_NewOtherAmount0').value = amount
+        
+        
+        
+        
+        document.querySelector('#IATS_AmountListItem_NewOtherAmount0').addEventListener('change', e => {
+            updateAmount((e.target.value - 0).toFixed(2))
+        })
+    }
+    
+    function updateAmount(amount) {
+        document.getElementById('donation-amount').innerText = `$${amount}`
+    }
+    
+    // Returns object containing key-value pairs from URL Query Parameters
+    function getQueryParameters() {
+        var query = decodeURI(window.location.search.substring(1));
+        var vars = query.split("&");
+        var params = {};
+    
+        for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        params[pair[0]] = pair[1];
+        }
+        return params;
+    }
+        
+        
+    </script>
+    <style>
+        .freq {
+            display: none;
+        }
+        .freq.active {
+            display: inline;
+        }
+        .IATS_AmountItemDiv > table {
+            display: none;
+        }
+        
+        
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 6%;
+            align-items: center;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+    </style>
+</body>
+</html>
+

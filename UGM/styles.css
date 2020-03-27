@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background: url('./bgtax.png');
+}
+img {
+    width: 100%;
+}
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 3px #666;
+}
+.image-container {
+    width: 200px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 6%;
+    align-items: center;
+}
+
+.form-container {
+    background-image: url('https://via.placeholder.com/1600x800');
+    padding: 80px 20px;
+    background-size: contain;
+}
+form {
+    margin: 0 auto;
+    width: 500px;
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 15px 0 #e3e3e3;
+}
+.options {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.option {
+    font-weight: 800;
+    font-size: 32px;
+    padding: 8px 0px;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    width: 23%;
+    border-radius: 10px;
+}
+.option:hover {
+    cursor: pointer;
+    background-color: #00b1b0;
+    color: #fff;
+}
+.option.active {
+    background-color: #00b1b0;
+    color: #fff;
+}
+.button-groups {
+    display: flex;
+    justify-content: space-between;
+}
+.donate-btn {
+    flex: 1;
+    margin: 0 5px;
+    font-size: 18px;
+    padding: 14px 0;
+    border-radius: 8px;
+    background-color: #00b1b0;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.input {
+    border: 1px solid #e3e3e3;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.input > input {
+    flex: 1;
+    border: none;
+    font-size: 36px;
+    max-width: 300px;
+    outline: none;
+}
+.input > p {
+    padding: 2px 10px;
+    font-size: 36px;
+}
+.links {
+    margin-top: 60px;
+    padding: 20px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+.link > a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 1px solid #00b1b0;
+    color: #00b1b0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 550px) {
+    .form-container {
+        padding: 30px 10px;
+        /* box-sizing: border-box; */
+    }
+    form {
+        width: auto;
+        padding: 20px 15px;
+    }
+    .option {
+        font-weight: 800;
+        font-size: 20px;
+        padding: 8px 0px;
+        text-align: center;
+        border: 1px solid #e3e3e3;
+        width: 23%;
+        border-radius: 10px;
+    }
+    .input > p {
+        font-size: 20px;
+    }
+    .input > input {
+        flex: 1;
+        font-size: 20px;
+        max-width: 160px;
+    }
+    .button-groups {
+        flex-direction: column;
+    }
+    .button-groups > * {
+        margin-top: 10px;
+    }
+}
+footer {
+    text-align: center;
+    padding: 52px;
+    background-color: #00b1b0;
+    margin-top: 0;
+    color: #fff;
+}
