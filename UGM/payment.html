@@ -32,6 +32,12 @@
                     initAura()
                 }
             }, 100)
+            
+            var amount = document.getElementById('donation-amount')
+            amount.addEventListener('click', function() {
+                document.querySelector('.IATS_AmountDiv').style.display = 'block'
+            })
+            
         })
         
     function initAura() {
@@ -90,18 +96,116 @@
         .IATS_AmountItemDiv > table {
             display: none;
         }
-        
-        
-        
+        #IATS_Amount_Other0 {
+            display: none;
+        }
+        #IATS_AmountName_Order_Other0 {
+            padding-left: 0;
+            margin-left: 0;
+        }
+        .IATS_AmountSpan {
+            padding-left: 0 !important;
+        }
+        #IATS_PaymentBoxDiv {
+            margin: 0 auto;
+        }
+        #donation-amount {
+            border-bottom: 1px solid #00b1b0;
+            color: #00b1b0;
+            cursor: pointer;
+        }
+        div.IATS_AmountDiv {
+            display: none;
+        }
+        span.IATS_AmountSectionTitle {
+            display: none;
+        }
+        #IATS_Payment_PaymentFrequencyDiv, #IATS_Payment_AccountTypeDiv, #IATS_ReoccurringDiv_ScheduleType {
+            display: none !important;
+        }
+        body {
+            background: url('./bgtax.png');
+        }
         header {
+            background-color: #fff;
             display: flex;
             justify-content: space-between;
             padding: 30px 6%;
             align-items: center;
+            max-width: 1080px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border-bottom: 1px solid #e3e3e3;
         }
         .container {
+            padding: 30px 0;
             max-width: 1080px;
             margin: 0 auto;
+            background-color: #fff;
+        }
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+        .IATS_ContentDiv .IATS_PaymentItemDiv input:not([type=checkbox]):not([type=radio]), #IATS_AmountListItem_NewOtherAmount0 {
+            border-radius: 2px;
+            background-color: #ffffff;
+            border: solid 1px #d1d3d4;
+            color: #4d4d4d;
+            font-size: 22px;
+            margin: 0;
+            padding: 0 10px;
+            height: 44px;
+            width: 100%;
+        }
+        .IATS_ContentDiv .IATS_PaymentItemDiv label, .IATS_ContentDiv .IATS_RadioAmtLabel {
+            align-self: center;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 150%;
+            margin: 0;
+            padding: 0 0 0 0.3em;
+        }
+        select#IATS_PaymentItemInput_Country {
+            width: 100%;
+            box-sizing: content-box;
+            border: solid 1px #d1d3d4;
+            margin: 0;
+            font-size: 18px;
+        }
+        span.IATS_PaymentSectionNote {
+            display: none;
+        }
+        span.IATS_PaymentSectionTitle {
+            display: none;
+        }
+        select {
+            width: 24%;
+            border-radius: 2px;
+            background-color: #ffffff;
+            border: solid 1px #d1d3d4;
+            color: #4d4d4d;
+            font-size: 22px;
+            margin: 0;
+            padding: 0 10px;
+            height: 44px;
+            margin: 0 4px;
+        }
+        #IATS_PaymentSectionDiv > div {
+            margin-bottom: 10px;
+        }
+        #IATS_ProcessAction_Button {
+            background-color: #00b1b0;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 0.25px;
+            margin: 0 auto 30px auto;
+            padding: 20px 0;
+            width: 100%;
+            cursor: pointer;
         }
     </style>
 </body>
