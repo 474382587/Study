@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     document.querySelector('.one-time').addEventListener('click', e => {
-        const url = `/UGM/payment.html?amount=${displayValue}`
+        const url = `/UGM/payment.html?caid=7016g000000I3TkAAK&amount=${displayValue}`
         window.location.href = url
     })
     document.querySelector('.monthly').addEventListener('click', e => {
-        const url = `/UGM/payment.html?amount=${displayValue}&monthly=true`
+        const url = `/UGM/payment.html?caid=7016g000000I3TpAAK&amount=${displayValue}&monthly=true`
         window.location.href = url
     })
     
