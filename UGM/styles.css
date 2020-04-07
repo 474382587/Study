@@ -27,16 +27,17 @@ header {
 }
 
 .form-container {
-    background-image: url('https://via.placeholder.com/1600x800');
-    padding: 80px 20px;
-    background-size: contain;
+    background-image: url('./Donation Page BG.jpeg');
+    padding: 150px 20px;
+    background-size: cover;
+    background-position: center;
 }
 form {
-    margin: 0 auto;
+    margin: 0 0 0 7%;
     width: 500px;
     background-color: #fff;
     padding: 40px;
-    box-shadow: 0 0 15px 0 #e3e3e3;
+    box-shadow: 0 0 15px 0 #666;
 }
 .options {
     margin: 20px 0;
