@@ -43,7 +43,7 @@
     function initAura() {
         
         var params = getQueryParameters()
-        var amount = Number(params.amount) || 60
+        var amount = Number(params.amount) || 60.00
         var monthly = params.monthly ? true : false
         
         console.log(amount)
@@ -58,13 +58,19 @@
         }
         //IATS_AmountListItem_NewOtherAmount0
         document.querySelector('#IATS_AmountListItem_NewOtherAmount0').value = amount
-        
+        var keyupEvent = new Event('keyup');
+        document.querySelector('#IATS_AmountListItem_NewOtherAmount0').dispatchEvent(keyupEvent)
         
         
         
         document.querySelector('#IATS_AmountListItem_NewOtherAmount0').addEventListener('change', e => {
             updateAmount((e.target.value - 0).toFixed(2))
         })
+    }
+    
+    function setAmount() {
+        var donationAmount = document.getElementById('IATS_AmountListItem_NewOtherAmount0')
+        donationAmount.value = amount
     }
     
     function updateAmount(amount) {
