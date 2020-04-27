@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //判断是否是函数
+        const isFunction = variable => typeof variable === 'function'
+
+        class myPromise {
+            constructor(handle) {
+                if (!isFunction(handle)) {
+                    throw new Error('你傳入的不是一個函數')
+                }
+                this._status = 'pending'
+                this._value = undefined
+                this.callbackRes = [];
+                this.callbackRej = [];
+                try {
+                    handle(this._reslove.bind(this), this._reject.bind(this))
+                } catch (error) {
+                    this._reject(err)
+                }
+            }
+
+            _reslove(val) {
+                if (this._status !== 'pending') return
+                this._status = 'resloved'
+                this._value = val
+                //遍历this中的函数数组
+                this.callbackRes.forEach(fn => fn())
+            }
+            _reject(err) {
+                if (this._status !== 'pending') return
+                this._status = 'rejected'
+                this._value = err
+                this.callbackRej.forEach(fn => fn())
+            }
+            //通过then把传进来的两个函数挂载到promise原型链上
+            then(res, rej) {
+                if (!isFunction(res) || !isFunction(rej)) {
+                    throw new Error('呀屎拉你，，不穿函数')
+                }
+                let { _status, _value } = this;
+                //promise A+规范
+                let Promise2 = new myPromise((onFulfilled, onRejected) => {
+                    let x;
+                    console.log('这里走的是成功回调',_status)
+                    if (_status === 'resloved') {
+                        setTimeout(() => {
+                            x = res(_value);
+                            
+                            reslovePromise(Promise2, x, onFulfilled, onRejected)
+                        }, 0);
+                    }
+                    if (_status === 'rejected') {
+                        setTimeout(() => {
+                            x = rej(_value);//如果用户没有链式调用，此时x应为null
+                            reslovePromise(Promise2, x, onFulfilled, onRejected)
+                        }, 0);
+                    }
+                    if (_status === 'pending') {
+                        //进行中不知道成功还是失败，将成功和失败函数全部push进this的数组里面
+                        this.callbackRes.push(() => {
+                            setTimeout(() => {
+                                x = res(_value)
+                                console.log(_value)
+                                reslovePromise(Promise2, x, onFulfilled, onRejected)
+                            }, 0);
+                        })
+                        this.callbackRej.push(() => {
+                            setTimeout(() => {
+                                x = rej(_value)
+                                reslovePromise(Promise2, x, onFulfilled, onRejected)
+                            }, 0);
+                        })
+                    }
+                })
+                return Promise2;
+            }
+        }
+        //x参数，是用户then调用的函数的返回结果
+        function reslovePromise(Promise2, x, onFulfilled, onRejected) {
+            if (x === Promise2) {
+                return onRejected(new TypeError('呀屎拉你'))
+            }
+            let called; //全局状态
+            if (x !== null && (typeof x === 'object' || typeof x === 'function')) {
+                try {
+                    //promise A+的规范 x是一个promise的实例
+                    let then = x.then;
+                    if (typeof then === 'function') {
+                        //then本身所接受的参数与promise同理，成功函数，和失败函数
+                        then.call(x, res => {
+                            if (called) return
+                            called = true;
+                            reslovePromise(Promise2, res, onFulfilled, onRejected)
+                        }, err => {
+                            //失败直接抛出异常，停止链式调用
+                            console.log('执行错误报错')
+                            if (called) return
+                            called = true;
+                            onRejected(error)
+                        })
+                    } else {
+                        onFulfilled(x)
+                    }
+                } catch (error) {
+                    console.log('执行错误报错')
+                    if (called) return;
+                    called = true;
+                    // 取then出错了 那就不要再继续执行了
+                    onRejected(error)
+                }
+            } else {
+                console.log('非链式调用返回',x)
+                onFulfilled(x)
+            }
+        }
+
+
+
+
+        let my = new myPromise((res, rej) => {
+            setTimeout(() => {
+                res('成功')
+            }, 1000);
+        }).then((res) => {
+            console.log(res)
+        }, (rej) => { console.log(rej) });
+    </script>
+</body>
+
+</html>
