@@ -138,7 +138,7 @@ get_footer();?>
 
                         <div class="col-sm-12 col-lg-5">
                             <div class="spiner"></div>
-                            <div class="carbox" style="display:none;">
+                            <div class="carbox" style="display: none;">
                                 <img
                                     src="http://www.foodhwy.com/iconfont/img/car.svg"
                                     width="80"
@@ -983,8 +983,8 @@ get_footer();?>
         ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
-            $(document).ready(function() {
-                $('a.nav-link').click(function() {
+            $(document).ready(function () {
+                $('a.nav-link').click(function () {
                     $('html, body').animate(
                         {
                             scrollTop:
@@ -1002,8 +1002,8 @@ get_footer();?>
             var modalSwitches = Array.prototype.slice.call(
                 document.querySelectorAll('.modal-switch')
             );
-            modalSwitches.forEach(e => {
-                e.addEventListener('click', event => {
+            modalSwitches.forEach((e) => {
+                e.addEventListener('click', (event) => {
                     var modal = event.target.dataset.name;
                     document.querySelector('.' + modal).classList.add('active');
                 });
@@ -1014,8 +1014,8 @@ get_footer();?>
             var modalSwitches = Array.prototype.slice.call(
                 document.querySelectorAll('.modal-switch')
             );
-            modalSwitches.forEach(e => {
-                e.addEventListener('click', event => {
+            modalSwitches.forEach((e) => {
+                e.addEventListener('click', (event) => {
                     event.preventDefault();
                     console.log(event.target.dataset.name);
                     var modal = event.target.dataset.name;
@@ -1023,7 +1023,7 @@ get_footer();?>
                     var activeModal = document.querySelector(
                         '.modal-container.active'
                     );
-                    activeModal.addEventListener('click', e => {
+                    activeModal.addEventListener('click', (e) => {
                         var target = e.target;
                         if (e.target.className.includes('modal-container')) {
                             e.target.classList.remove('active');
@@ -1038,8 +1038,8 @@ get_footer();?>
                 document.querySelectorAll('.modal-container')
             );
 
-            modals.forEach(e => {
-                e.addEventListener('click', event => {
+            modals.forEach((e) => {
+                e.addEventListener('click', (event) => {
                     console.log(eventevent.target);
                     console.log(event.currentTarget);
                 });
